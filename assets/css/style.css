@@ -67,6 +67,8 @@ img{max-width:100%}
 .cat-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;
   font-size:22px;color:#fff;flex-shrink:0}
 .cat-head h2{font-size:22px;font-weight:750}
+.cat-head h2 a{color:var(--text)}
+.cat-head h2 a:hover{color:var(--primary);text-decoration:none}
 .cat-head p{color:var(--muted);font-size:14px}
 
 /* ---------- tool cards ---------- */
