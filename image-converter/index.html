@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Converter — PNG JPG WebP | Salman SEO Tools</title>
+<meta name="description" content="Free online image converter by Salman SEO Tools. Convert images between PNG, JPG and WebP formats in your browser with adjustable quality — no sign-up needed.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/image-converter/">
+<meta property="og:title" content="Image Converter | Salman SEO Tools">
+<meta property="og:description" content="Convert images between PNG, JPG and WebP — free, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/image-converter/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Image Converter","applicationCategory":"Multimedia","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/image-converter/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Image Converter</h1>
+  <p>Convert images between PNG, JPG and WebP in seconds — right in your browser.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#image-tools">Image Tools</a> / Image Converter</p>
+
+<div class="tool-app">
+  <label class="lbl">Choose an image</label>
+  <div class="btn-row" style="margin-top:0">
+    <label class="btn btn-primary btn-sm" style="cursor:pointer">Select Image
+      <input type="file" id="cvFile" accept="image/*" hidden>
+    </label>
+    <span id="cvName" class="note" style="align-self:center"></span>
+  </div>
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="cvFormat">Convert to</label>
+      <select id="cvFormat">
+        <option value="image/png">PNG</option>
+        <option value="image/jpeg">JPG</option>
+        <option value="image/webp">WebP</option>
+      </select>
+    </div>
+    <div id="cvQWrap">
+      <label class="lbl" for="cvQuality">Quality: <span id="cvQVal">90</span>%</label>
+      <input type="range" id="cvQuality" min="10" max="100" value="90" style="width:100%;padding:0;border:0;background:none">
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-accent" id="cvBtn" onclick="convertImage()" disabled>Convert Image</button>
+  </div>
+  <div id="cvResult" style="display:none">
+    <div class="stat-grid">
+      <div class="stat"><b id="cvOrig">–</b><span>Original size</span></div>
+      <div class="stat"><b id="cvNew">–</b><span>Converted size</span></div>
+      <div class="stat"><b id="cvType">–</b><span>New format</span></div>
+    </div>
+    <label class="lbl">Preview</label>
+    <div style="text-align:center"><img id="cvPreview" alt="Converted preview" style="max-width:100%;border-radius:12px;border:1px solid var(--border);max-height:420px"></div>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-sm" id="cvDownload" href="#" download style="text-decoration:none">Download Converted Image</a>
+    </div>
+  </div>
+  <p class="note">Conversion happens locally on your device — your image is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Image Converter</h2>
+  <ol class="steps">
+    <li>Click <strong>Select Image</strong> and choose any image file from your device.</li>
+    <li>Pick the target format — PNG, JPG or WebP — and set quality for JPG/WebP.</li>
+    <li>Press <strong>Convert Image</strong> to transform the file instantly.</li>
+    <li>Preview the result and download it with the correct file extension.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Which Format Should You Choose?</h2>
+  <p>Each image format has a job it does best. Picking the right one keeps your site fast without sacrificing how things look — a balance search engines and visitors both appreciate.</p>
+  <ul>
+    <li><strong>PNG</strong> — lossless quality with transparency; best for logos, icons and graphics.</li>
+    <li><strong>JPG</strong> — small files for photographs; no transparency, but great compression.</li>
+    <li><strong>WebP</strong> — modern format that is smaller than both, supported by all current browsers.</li>
+    <li><strong>Quality control</strong> — fine-tune JPG and WebP output from 10% to 100%.</li>
+    <li><strong>Private &amp; free</strong> — everything runs on your device, no limits.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Will converting change my image's dimensions?</summary><p>No. Conversion only changes the file format (and quality, if you set it). Width and height stay exactly the same.</p></details>
+  <details><summary>What happens to transparency when converting to JPG?</summary><p>JPG does not support transparency, so transparent areas are filled with white. Use PNG or WebP if you need to keep transparency.</p></details>
+  <details><summary>Why is the quality slider hidden for PNG?</summary><p>PNG is always lossless, so a quality setting would have no effect. The slider only applies to JPG and WebP, which use lossy compression.</p></details>
+  <details><summary>Is my image uploaded to a server?</summary><p>Never. The file is read locally and re-encoded on a canvas element in your browser — it stays on your device the whole time.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free image utilities for your workflow.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/image-compressor/"><span class="tool-ico" style="background:#059669">🗜️</span><span><h3>Image Compressor</h3><p>Compress JPG, PNG and WebP images online.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/favicon-generator/"><span class="tool-ico" style="background:#dc2626">⭐</span><span><h3>Favicon Generator</h3><p>Create favicon PNGs from any image.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/text-to-image/"><span class="tool-ico" style="background:#6366f1">🖼️</span><span><h3>Text to Image</h3><p>Turn text into a downloadable PNG image.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/lorem-ipsum-generator/"><span class="tool-ico" style="background:#64748b">📄</span><span><h3>Lorem Ipsum Generator</h3><p>Generate placeholder text for layouts and mockups.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var dataUrl = null, origSize = 0, baseName = 'image';
+  var fmtSel = document.getElementById('cvFormat');
+  var qWrap = document.getElementById('cvQWrap');
+  var q = document.getElementById('cvQuality');
+  q.addEventListener('input', function(){ document.getElementById('cvQVal').textContent = q.value; });
+  function toggleQ(){ qWrap.style.display = fmtSel.value === 'image/png' ? 'none' : ''; }
+  fmtSel.addEventListener('change', toggleQ); toggleQ();
+  function fmtKB(b){
+    var kb = b / 1024;
+    return kb >= 1024 ? (kb/1024).toFixed(2) + ' MB' : Math.round(kb) + ' KB';
+  }
+  document.getElementById('cvFile').addEventListener('change', function(e){
+    var f = e.target.files[0];
+    if(!f) return;
+    origSize = f.size;
+    baseName = f.name.replace(/\.[^.]+$/, '') || 'image';
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      dataUrl = ev.target.result;
+      document.getElementById('cvName').textContent = f.name + ' (' + fmtKB(f.size) + ')';
+      document.getElementById('cvBtn').disabled = false;
+      document.getElementById('cvResult').style.display = 'none';
+    };
+    reader.readAsDataURL(f);
+  });
+  window.convertImage = function(){
+    if(!dataUrl) return;
+    var img = new Image();
+    img.onload = function(){
+      var mime = fmtSel.value;
+      var canvas = document.createElement('canvas');
+      canvas.width = img.width; canvas.height = img.height;
+      var ctx = canvas.getContext('2d');
+      if(mime === 'image/jpeg'){ ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, canvas.width, canvas.height); }
+      ctx.drawImage(img, 0, 0);
+      var quality = parseInt(q.value, 10) / 100;
+      canvas.toBlob(function(blob){
+        if(!blob){ alert('Could not convert this image.'); return; }
+        var ext = mime === 'image/png' ? 'png' : (mime === 'image/webp' ? 'webp' : 'jpg');
+        var label = mime === 'image/png' ? 'PNG' : (mime === 'image/webp' ? 'WebP' : 'JPG');
+        document.getElementById('cvOrig').textContent = fmtKB(origSize);
+        document.getElementById('cvNew').textContent = fmtKB(blob.size);
+        document.getElementById('cvType').textContent = label;
+        var url = URL.createObjectURL(blob);
+        document.getElementById('cvPreview').src = url;
+        var dl = document.getElementById('cvDownload');
+        dl.href = url;
+        dl.download = baseName + '-converted.' + ext;
+        document.getElementById('cvResult').style.display = 'block';
+      }, mime, quality);
+    };
+    img.onerror = function(){ alert('That file could not be read as an image.'); };
+    img.src = dataUrl;
+  };
+})();
+</script>
+</body>
+</html>

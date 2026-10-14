@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder Decoder — Free Tool | Salman SEO Tools</title>
+<meta name="description" content="Free Base64 encoder and decoder by Salman SEO Tools. Convert text to Base64 and decode Base64 strings back — with full UTF-8 support, in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/base64-encoder-decoder/">
+<meta property="og:title" content="Base64 Encoder / Decoder | Salman SEO Tools">
+<meta property="og:description" content="Encode text to Base64 or decode Base64 strings — free, private, UTF-8 safe.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/base64-encoder-decoder/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Base64 Encoder / Decoder","applicationCategory":"DeveloperApplication","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/base64-encoder-decoder/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Base64 Encoder / Decoder</h1>
+  <p>Encode any text to Base64 or decode Base64 strings back to readable text — with full UTF-8 support.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / Base64 Encoder / Decoder</p>
+
+<div class="tool-app">
+  <label class="lbl" for="b64Input">Enter text or a Base64 string</label>
+  <textarea id="b64Input" placeholder="Type text to encode, or paste a Base64 string to decode..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="b64Encode()">Encode to Base64</button>
+    <button class="btn btn-accent" onclick="b64Decode()">Decode from Base64</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('b64Input').value='';document.getElementById('b64Out').value='';document.getElementById('b64Msg').innerHTML='';b64Counts()">Clear</button>
+  </div>
+  <div id="b64Msg"></div>
+  <label class="lbl" for="b64Out">Result</label>
+  <textarea id="b64Out" readonly placeholder="The result will appear here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-ghost btn-sm" onclick="copyText('b64Out',this)">Copy Result</button>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><b id="b64InLen">0</b><span>Input chars</span></div>
+    <div class="stat"><b id="b64OutLen">0</b><span>Output chars</span></div>
+  </div>
+  <p class="note">Everything runs locally in your browser — your data is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Base64 Encoder / Decoder</h2>
+  <ol class="steps">
+    <li>Type or paste your text into the box — or paste a Base64 string you want to decode.</li>
+    <li>Click <strong>Encode to Base64</strong> to convert text, or <strong>Decode from Base64</strong> to convert it back.</li>
+    <li>Copy the result with one click and use it in your code, API payload or data URI.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Use Base64?</h2>
+  <p>Base64 turns any data into a safe string of letters, numbers and a few symbols — perfect for embedding images in CSS, passing binary data through JSON APIs, or encoding credentials in HTTP headers. This tool handles the UTF-8 conversion correctly, so emoji and non-English text encode without corruption.</p>
+  <ul>
+    <li><strong>UTF-8 safe</strong> — encodes international characters and emoji correctly.</li>
+    <li><strong>Two-way conversion</strong> — encode and decode with dedicated buttons.</li>
+    <li><strong>Helpful errors</strong> — invalid Base64 input is flagged instead of failing silently.</li>
+    <li><strong>Character counts</strong> — see input and output sizes at a glance.</li>
+    <li><strong>100% private</strong> — conversion happens on your device; nothing leaves the page.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What is Base64 encoding used for?</summary><p>Common uses include embedding images in HTML/CSS as data URIs, encoding binary data for JSON APIs, and encoding credentials in Authorization headers.</p></details>
+  <details><summary>Is Base64 encryption?</summary><p>No. Base64 is just an encoding — anyone can decode it. Never use it to "protect" passwords or secrets.</p></details>
+  <details><summary>Why do I get "Invalid Base64 input"?</summary><p>The string may contain characters outside the Base64 alphabet, have incorrect padding (=), or be truncated. Double-check the full string was copied.</p></details>
+  <details><summary>Does it support non-English text and emoji?</summary><p>Yes. The tool converts text to UTF-8 before encoding, so any Unicode characters round-trip correctly.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More encoding and hashing utilities for developers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/url-encoder-decoder/"><span class="tool-ico" style="background:#06b6d4">🔗</span><span><h3>URL Encoder / Decoder</h3><p>Encode or decode URLs and query strings safely.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/html-encoder-decoder/"><span class="tool-ico" style="background:#c026d3">🔣</span><span><h3>HTML Encoder / Decoder</h3><p>Encode or decode HTML entities.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/hash-generator/"><span class="tool-ico" style="background:#f97316">🔐</span><span><h3>Hash Generator</h3><p>Generate MD5, SHA-1, SHA-256 and SHA-512 hashes.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/binary-converter/"><span class="tool-ico" style="background:#1d4ed8">01</span><span><h3>Binary Converter</h3><p>Convert text to binary and back.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+function b64Counts(){
+  document.getElementById('b64InLen').textContent=document.getElementById('b64Input').value.length.toLocaleString();
+  document.getElementById('b64OutLen').textContent=document.getElementById('b64Out').value.length.toLocaleString();
+}
+function b64Encode(){
+  var v=document.getElementById('b64Input').value;
+  var m=document.getElementById('b64Msg');m.innerHTML='';
+  if(!v){m.innerHTML='<div class="alert alert-err">Please enter some text first.</div>';return;}
+  try{
+    document.getElementById('b64Out').value=btoa(unescape(encodeURIComponent(v)));
+    b64Counts();
+  }catch(e){m.innerHTML='<div class="alert alert-err">Encoding failed — please try again.</div>';}
+}
+function b64Decode(){
+  var v=document.getElementById('b64Input').value.trim().replace(/\s+/g,'');
+  var m=document.getElementById('b64Msg');m.innerHTML='';
+  if(!v){m.innerHTML='<div class="alert alert-err">Please enter a Base64 string first.</div>';return;}
+  try{
+    document.getElementById('b64Out').value=decodeURIComponent(escape(atob(v)));
+    b64Counts();
+  }catch(e){m.innerHTML='<div class="alert alert-err">Invalid Base64 input — please check the string and try again.</div>';}
+}
+document.getElementById('b64Input').addEventListener('input',b64Counts);
+b64Counts();
+</script>
+</body>
+</html>

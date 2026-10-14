@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorem Ipsum Generator — Dummy Text Maker | Salman SEO Tools</title>
+<meta name="description" content="Generate free lorem ipsum dummy text. Pick paragraphs, sentences or words, and optionally start with the classic line — all in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/lorem-ipsum-generator/">
+<meta property="og:title" content="Lorem Ipsum Generator | Salman SEO Tools">
+<meta property="og:description" content="Create lorem ipsum placeholder text in seconds — paragraphs, sentences or exact word counts. Free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/lorem-ipsum-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Lorem Ipsum Generator","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/lorem-ipsum-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Lorem Ipsum Generator</h1>
+  <p>Create clean lorem ipsum placeholder text in seconds — paragraphs, sentences or exact word counts, ready to paste into any design.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Lorem Ipsum Generator</p>
+
+<div class="tool-app">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="liType">Generate</label>
+      <select id="liType" onchange="liTypeChanged()">
+        <option value="paragraphs">Paragraphs</option>
+        <option value="sentences">Sentences</option>
+        <option value="words">Words</option>
+      </select>
+    </div>
+    <div>
+      <label class="lbl" for="liAmount">How many</label>
+      <input type="number" id="liAmount" value="3" min="1" max="50">
+    </div>
+  </div>
+  <label class="checkline"><input type="checkbox" id="liClassic" checked> Start with "Lorem ipsum dolor sit amet…"</label>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="genLorem()">Generate</button>
+    <button class="btn btn-ghost" onclick="copyText('liOut',this)">Copy Text</button>
+  </div>
+  <div class="output-area" id="liOut"><p style="color:var(--muted)">Click "Generate" to create your dummy text.</p></div>
+  <p class="note" id="liNote"></p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Lorem Ipsum Generator</h2>
+  <ol class="steps">
+    <li>Choose whether you want paragraphs, sentences or an exact number of words.</li>
+    <li>Type how many you need (up to 50 paragraphs, 200 sentences or 2,000 words).</li>
+    <li>Keep or uncheck the classic "Lorem ipsum dolor sit amet…" opening line.</li>
+    <li>Hit Generate, then copy the text straight into your mockup, theme or document.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Designers Still Use Lorem Ipsum</h2>
+  <p>Placeholder text lets clients, designers and developers judge layout, spacing and typography without getting distracted by real content. Because lorem ipsum looks like natural language but carries no meaning, it fills wireframes and templates without suggesting the copy is final.</p>
+  <ul>
+    <li><strong>Three generation modes</strong> — full paragraphs for layouts, single sentences for headings, or an exact word count for tight spaces.</li>
+    <li><strong>Classic opening line toggle</strong> — start with the famous "Lorem ipsum dolor sit amet…" line or get pure random text.</li>
+    <li><strong>Natural-looking sentences</strong> — each sentence is 8–16 words, capitalised and punctuated like real prose.</li>
+    <li><strong>One-click copy</strong> — grab everything with a single button and paste anywhere.</li>
+    <li><strong>Instant and private</strong> — generation happens in your browser; nothing is uploaded or tracked.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What does lorem ipsum actually mean?</summary><p>Nothing — it is scrambled, meaningless Latin-style text. That is the point: it mimics the rhythm of real language so viewers focus on the design instead of reading the words.</p></details>
+  <details><summary>Can I generate an exact number of words?</summary><p>Yes. Choose "Words" from the dropdown and type any number from 1 to 2,000 — the tool returns exactly that many words.</p></details>
+  <details><summary>Is the generated text safe to use in my designs?</summary><p>Absolutely. Lorem ipsum has been the standard placeholder text in publishing and design for decades, and this tool generates it freely for any use.</p></details>
+  <details><summary>Why does the text always start with "Lorem ipsum…"?</summary><p>That is the traditional opening of the classic passage. It is checked by default for authenticity, but you can uncheck the box to get fully randomised text.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Keep polishing your content with these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" data-name="word counter count words characters" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="case converter upper lower title" href="/case-converter/"><span class="tool-ico" style="background:#0ea5e9">🔠</span><span><h3>Case Converter</h3><p>Convert text between upper, lower and title case.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="meta tag generator seo title description" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="article rewriter rewrite paraphrase" href="/article-rewriter/"><span class="tool-ico" style="background:#7c3aed">🔄</span><span><h3>Article Rewriter</h3><p>Rewrite articles with fresh wording in seconds.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var LI_WORDS = ("lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor " +
+    "incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation " +
+    "ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure in reprehenderit voluptate " +
+    "velit esse cillum fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt culpa " +
+    "qui officia deserunt mollit anim id est laborum perspiciatis unde omnis iste natus error voluptatem " +
+    "accusantium doloremque laudantium totam rem aperiam eaque ab illo inventore veritatis quasi " +
+    "architecto beatae vitae dicta explicabo nemo enim ipsam voluptatem quia voluptas aspernatur odit " +
+    "aut fugit ratione consequuntur magni dolores eos qui sequi nesciunt neque porro quisquam dolorem " +
+    "numquam eius modi tempora incidunt magnam quaerat").split(" ");
+  var CLASSIC_OPEN = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+  var typeSel = document.getElementById('liType');
+  var amountEl = document.getElementById('liAmount');
+  var classicEl = document.getElementById('liClassic');
+  var outEl = document.getElementById('liOut');
+  var noteEl = document.getElementById('liNote');
+
+  function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+  function cap(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function genSentence(){
+    var n = 8 + Math.floor(Math.random()*9), w = [], i;
+    for(i=0;i<n;i++){ w.push(pick(LI_WORDS)); }
+    return cap(w.join(' ')) + '.';
+  }
+  function genParagraph(){
+    var n = 4 + Math.floor(Math.random()*3), s = [], i;
+    for(i=0;i<n;i++){ s.push(genSentence()); }
+    return s.join(' ');
+  }
+
+  window.liTypeChanged = function(){
+    var max = typeSel.value === 'paragraphs' ? 50 : typeSel.value === 'sentences' ? 200 : 2000;
+    amountEl.max = max;
+    var v = parseInt(amountEl.value, 10);
+    if(isNaN(v) || v < 1){ amountEl.value = 3; }
+    else if(v > max){ amountEl.value = max; }
+  };
+
+  window.genLorem = function(){
+    var type = typeSel.value;
+    var max = type === 'paragraphs' ? 50 : type === 'sentences' ? 200 : 2000;
+    var n = parseInt(amountEl.value, 10);
+    if(isNaN(n) || n < 1){ n = 3; }
+    n = Math.min(n, max);
+    amountEl.value = n;
+
+    var paras = [], i, words;
+    if(type === 'words'){
+      words = [];
+      for(i=0;i<n;i++){ words.push(pick(LI_WORDS)); }
+      paras.push(cap(words.join(' ')) + '.');
+    } else if(type === 'sentences'){
+      var ss = [];
+      for(i=0;i<n;i++){ ss.push(genSentence()); }
+      paras.push(ss.join(' '));
+    } else {
+      for(i=0;i<n;i++){ paras.push(genParagraph()); }
+    }
+    if(classicEl.checked && paras.length){
+      paras[0] = CLASSIC_OPEN + ' ' + paras[0];
+    }
+    outEl.innerHTML = paras.map(function(p){ return '<p style="margin-bottom:12px">' + esc(p) + '</p>'; }).join('');
+    var totalWords = paras.join(' ').trim().split(/\s+/).length;
+    noteEl.textContent = 'Generated ' + paras.length + ' paragraph' + (paras.length === 1 ? '' : 's') +
+      ' — ' + totalWords.toLocaleString() + ' words total.';
+  };
+})();
+</script>
+</body>
+</html>

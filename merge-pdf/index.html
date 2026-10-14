@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merge PDF — Combine PDFs Free | Salman SEO Tools</title>
+<meta name="description" content="Free PDF merger by Salman SEO Tools. Combine multiple PDF files into one document right in your browser. No sign-up, no uploads, no watermarks.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/merge-pdf/">
+<meta property="og:title" content="Merge PDF | Salman SEO Tools">
+<meta property="og:description" content="Combine multiple PDF files into one document in your browser — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/merge-pdf/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Merge PDF","applicationCategory":"Utilities",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/merge-pdf/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Merge PDF</h1>
+  <p>Combine two or more PDF files into a single document, arranged in exactly the order you choose.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#pdf-tools">PDF Tools</a> / Merge PDF</p>
+
+<div class="tool-app">
+  <div id="mgAlert"></div>
+  <label class="lbl" for="mgFiles">Select PDF files (any order — reorder them below)</label>
+  <input type="file" id="mgFiles" accept="application/pdf" multiple>
+  <div id="mgList"></div>
+  <div class="stat-grid" id="mgStats" style="display:none">
+    <div class="stat"><b id="mgCount">0</b><span>Files</span></div>
+    <div class="stat"><b id="mgPages">0</b><span>Total pages</span></div>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="mgBtn" onclick="mergePDFs()">Merge PDFs</button>
+    <button class="btn btn-ghost" onclick="clearMerge()">Clear All</button>
+  </div>
+  <p class="note">This tool loads the open-source pdf-lib library from a CDN; your PDFs are processed in your browser and never uploaded.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Merge PDF Tool</h2>
+  <ol class="steps">
+    <li>Click the file picker and select two or more PDF files from your device.</li>
+    <li>Use the ↑ and ↓ buttons to arrange the files in the order you want them merged.</li>
+    <li>Press <strong>Merge PDFs</strong> and wait a moment while the files are combined.</li>
+    <li>Your new <strong>merged.pdf</strong> downloads automatically — check your downloads folder.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Merge PDFs Online?</h2>
+  <p>Scattered PDFs are hard to share and easy to lose. Joining invoices, reports, certificates or scanned pages into one file keeps everything in a single, tidy document that is simpler to email, archive or print.</p>
+  <ul>
+    <li><strong>Custom page order</strong> — rearrange files before merging with one click.</li>
+    <li><strong>No file-size games</strong> — merge as many pages as your device can handle.</li>
+    <li><strong>Private by design</strong> — documents are combined locally; nothing is uploaded.</li>
+    <li><strong>No watermarks</strong> — the output is a clean PDF, exactly your pages.</li>
+    <li><strong>Free forever</strong> — no account, no daily limits, no sign-up.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this PDF merger really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Are my PDF files uploaded anywhere?</summary><p>No. The merge happens entirely in your browser using JavaScript, so your files never leave your device.</p></details>
+  <details><summary>How many PDFs can I merge at once?</summary><p>There is no fixed limit — select as many as you need. Very large files may take a few extra seconds depending on your device.</p></details>
+  <details><summary>Will the merged PDF keep the original quality?</summary><p>Yes. Pages are copied directly from the source files without re-compression, so text and images keep their original quality.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free PDF and file utilities you may need.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/split-pdf/"><span class="tool-ico" style="background:#c2410c">🗂️</span><span><h3>Split PDF</h3><p>Extract pages from a PDF file.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/rotate-pdf/"><span class="tool-ico" style="background:#a21caf">🔃</span><span><h3>Rotate PDF</h3><p>Rotate PDF pages online free.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-converter/"><span class="tool-ico" style="background:#0891b2">🔁</span><span><h3>Image Converter</h3><p>Convert images between PNG, JPG and WebP.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-compressor/"><span class="tool-ico" style="background:#059669">🗜️</span><span><h3>Image Compressor</h3><p>Compress JPG, PNG and WebP images online.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var mgDocs = [];
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function libOk(){
+    if(!window.PDFLib){
+      document.getElementById('mgAlert').innerHTML = '<p class="alert alert-err">PDF library failed to load. Check your connection and reload the page to retry.</p>';
+      return false;
+    }
+    return true;
+  }
+  window.renderMergeList = function(){
+    var box = document.getElementById('mgList');
+    if(!mgDocs.length){ box.innerHTML = ''; document.getElementById('mgStats').style.display = 'none'; return; }
+    var html = '<table class="data"><tr><th>#</th><th>File</th><th>Pages</th><th>Order</th><th></th></tr>';
+    mgDocs.forEach(function(d, i){
+      html += '<tr><td>' + (i+1) + '</td><td>' + esc(d.name) + '</td><td>' + d.pages + '</td>' +
+        '<td><button class="btn btn-ghost btn-sm" onclick="mgMove(' + i + ',-1)"' + (i===0?' disabled':'') + '>↑</button> ' +
+        '<button class="btn btn-ghost btn-sm" onclick="mgMove(' + i + ',1)"' + (i===mgDocs.length-1?' disabled':'') + '>↓</button></td>' +
+        '<td><button class="btn btn-ghost btn-sm" onclick="mgRemove(' + i + ')">✕</button></td></tr>';
+    });
+    html += '</table>';
+    box.innerHTML = html;
+    document.getElementById('mgStats').style.display = '';
+    document.getElementById('mgCount').textContent = mgDocs.length;
+    document.getElementById('mgPages').textContent = mgDocs.reduce(function(a,d){ return a + d.pages; }, 0);
+  };
+  window.mgMove = function(i, dir){
+    var j = i + dir;
+    if(j < 0 || j >= mgDocs.length) return;
+    var t = mgDocs[i]; mgDocs[i] = mgDocs[j]; mgDocs[j] = t;
+    renderMergeList();
+  };
+  window.mgRemove = function(i){ mgDocs.splice(i, 1); renderMergeList(); };
+  window.clearMerge = function(){
+    mgDocs = [];
+    document.getElementById('mgFiles').value = '';
+    document.getElementById('mgAlert').innerHTML = '';
+    renderMergeList();
+  };
+  window.mergePDFs = async function(){
+    document.getElementById('mgAlert').innerHTML = '';
+    if(!libOk()) return;
+    if(mgDocs.length < 2){
+      document.getElementById('mgAlert').innerHTML = '<p class="alert alert-warn">Please select at least two PDF files to merge.</p>';
+      return;
+    }
+    var btn = document.getElementById('mgBtn');
+    btn.disabled = true; var old = btn.textContent; btn.textContent = 'Merging…';
+    try{
+      var out = await PDFLib.PDFDocument.create();
+      for(var k = 0; k < mgDocs.length; k++){
+        var pages = await out.copyPages(mgDocs[k].doc, mgDocs[k].doc.getPageIndices());
+        pages.forEach(function(p){ out.addPage(p); });
+      }
+      var bytes = await out.save();
+      downloadFile('merged.pdf', bytes, 'application/pdf');
+      document.getElementById('mgAlert').innerHTML = '<p class="alert alert-ok">Done! Your merged PDF has been downloaded.</p>';
+    }catch(e){
+      document.getElementById('mgAlert').innerHTML = '<p class="alert alert-err">Could not merge these files. One of them may be corrupted or password-protected.</p>';
+    }
+    btn.disabled = false; btn.textContent = old;
+  };
+  document.getElementById('mgFiles').addEventListener('change', async function(e){
+    document.getElementById('mgAlert').innerHTML = '';
+    if(!libOk()){ e.target.value = ''; return; }
+    var bad = 0;
+    for(var i = 0; i < e.target.files.length; i++){
+      var f = e.target.files[i];
+      try{
+        var doc = await PDFLib.PDFDocument.load(await f.arrayBuffer());
+        mgDocs.push({ name: f.name, doc: doc, pages: doc.getPageCount() });
+      }catch(err){ bad++; }
+    }
+    e.target.value = '';
+    if(bad) document.getElementById('mgAlert').innerHTML = '<p class="alert alert-warn">' + bad + ' file(s) could not be read (corrupted or password-protected) and were skipped.</p>';
+    renderMergeList();
+  });
+})();
+</script>
+</body>
+</html>

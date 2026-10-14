@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Tags Analyzer — Check Meta Tags | Salman SEO Tools</title>
+<meta name="description" content="Free meta tags analyzer by Salman SEO Tools. Paste any page's HTML to inspect its title, meta description, Open Graph tags and canonical URL in seconds.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/meta-tags-analyzer/">
+<meta property="og:title" content="Meta Tags Analyzer | Salman SEO Tools">
+<meta property="og:description" content="Paste page HTML and inspect its meta tags — title, description, Open Graph and canonical — instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/meta-tags-analyzer/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Meta Tags Analyzer","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/meta-tags-analyzer/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Meta Tags Analyzer</h1>
+  <p>Paste a page's HTML and get an instant breakdown of its title, meta description, Open Graph tags and canonical URL — with SEO warnings.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#seo-tools">SEO Tools</a> / Meta Tags Analyzer</p>
+
+<div class="tool-app">
+  <label class="lbl" for="mtaInput">Paste the page HTML below</label>
+  <textarea id="mtaInput" placeholder="Paste the <head> section (or the full page HTML) here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="analyzeMeta()">Analyze Meta Tags</button>
+    <button class="btn btn-ghost btn-sm" onclick="loadSample()">Load Sample</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('mtaInput').value='';document.getElementById('mtaResult').innerHTML=''">Clear</button>
+  </div>
+  <div id="mtaResult"></div>
+  <p class="note">Analysis runs entirely in your browser — the HTML you paste is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Meta Tags Analyzer</h2>
+  <ol class="steps">
+    <li>Open the page you want to check, view its source (Ctrl+U) and copy the HTML — the <code>&lt;head&gt;</code> section is enough.</li>
+    <li>Paste it into the box above and click <strong>Analyze Meta Tags</strong>.</li>
+    <li>Review the tag table and fix any warnings, such as a missing description or an over-long title.</li>
+    <li>Re-paste and re-analyze after making changes to confirm everything is clean.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Analyze Meta Tags?</h2>
+  <p>Meta tags are the first thing search engines and social networks read about your page. A missing description, a truncated title or a broken canonical can quietly cost you clicks and rankings. This analyzer gives you the same quick audit an SEO specialist runs before publishing — in seconds and for free.</p>
+  <ul>
+    <li><strong>Full tag inventory</strong> — title, description, keywords, robots, viewport, canonical, Open Graph and Twitter tags in one table.</li>
+    <li><strong>Smart SEO warnings</strong> — flags missing tags and length problems against current best practice.</li>
+    <li><strong>Character counts</strong> — see exactly how long your title and description are before Google truncates them.</li>
+    <li><strong>100% private</strong> — parsing happens on your device; nothing is sent to a server.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What HTML should I paste?</summary><p>The &lt;head&gt; section is enough, but pasting the full page HTML works too — the analyzer only reads the head tags.</p></details>
+  <details><summary>Is my HTML uploaded anywhere?</summary><p>No. The HTML is parsed with your browser's built-in DOMParser, so it never leaves your device.</p></details>
+  <details><summary>What is the ideal title and description length?</summary><p>Keep titles between 10 and 60 characters and meta descriptions between 50 and 160 characters so they display fully in search results.</p></details>
+  <details><summary>Can it check a live URL directly?</summary><p>Not directly — browsers block fetching other sites' pages. Copy the page source (Ctrl+U) and paste it here instead.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Fix what the analyzer finds with these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/open-graph-generator/"><span class="tool-ico" style="background:#9333a1">📣</span><span><h3>Open Graph Generator</h3><p>Generate social media preview meta tags.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/keyword-density-checker/"><span class="tool-ico" style="background:#f59e0b">🎯</span><span><h3>Keyword Density Checker</h3><p>Measure keyword frequency and density percentage.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/robots-txt-generator/"><span class="tool-ico" style="background:#84cc16">🤖</span><span><h3>Robots.txt Generator</h3><p>Build a robots.txt file to guide search crawlers.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+function escHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function trunc(s,n){s=String(s);return s.length>n?s.slice(0,n-1)+'…':s;}
+function loadSample(){
+  document.getElementById('mtaInput').value =
+    '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n'+
+    '<title>Best Running Shoes 2026 — Reviews &amp; Buying Guide</title>\n'+
+    '<meta name="description" content="We tested 24 running shoes to find the best pairs for comfort, speed and value. See our 2026 buying guide.">\n'+
+    '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'+
+    '<link rel="canonical" href="https://example.com/best-running-shoes/">\n'+
+    '<meta name="robots" content="index, follow">\n'+
+    '<meta property="og:title" content="Best Running Shoes 2026">\n'+
+    '<meta property="og:description" content="We tested 24 running shoes — here are the winners.">\n'+
+    '<meta property="og:image" content="https://example.com/img/shoes.jpg">\n'+
+    '<meta property="og:type" content="article">\n'+
+    '<meta name="twitter:card" content="summary_large_image">\n'+
+    '</head>\n<body></body>\n</html>';
+}
+function analyzeMeta(){
+  var html=document.getElementById('mtaInput').value;
+  var out=document.getElementById('mtaResult');
+  if(!html.trim()){out.innerHTML='<div class="alert alert-err">Please paste some HTML first.</div>';return;}
+  var doc;
+  try{doc=new DOMParser().parseFromString(html,'text/html');}
+  catch(e){out.innerHTML='<div class="alert alert-err">Could not parse the HTML. Please check it and try again.</div>';return;}
+  var rows=[],warns=[];
+  function okB(ok){return ok?'<b style="color:#065f46">✓ OK</b>':'<b style="color:#92400e">⚠ Check</b>';}
+  function row(tag,content,ok){rows.push('<tr><td><b>'+escHtml(tag)+'</b></td><td title="'+escHtml(content)+'">'+escHtml(trunc(content,80))+'</td><td>'+okB(ok)+'</td></tr>');}
+  // title
+  var tEl=doc.querySelector('title');
+  var title=tEl?(tEl.textContent||'').trim():'';
+  if(!title){warns.push('The page has no <title> tag — every page needs one for SEO.');row('title','(missing)',false);}
+  else{var tOk=title.length>=10&&title.length<=60;
+    if(title.length>60)warns.push('Title is '+title.length+' characters — Google truncates titles past ~60 characters.');
+    if(title.length<10)warns.push('Title is only '+title.length+' characters — make it more descriptive (10–60 characters).');
+    row('title',title+'  ['+title.length+' chars]',tOk);}
+  // description
+  var dEl=doc.querySelector('meta[name="description"]');
+  var desc=dEl?((dEl.getAttribute('content')||'').trim()):'';
+  if(!desc){warns.push('Meta description is missing — add one of 50–160 characters to control your search snippet.');row('meta:description','(missing)',false);}
+  else{var dOk=desc.length<=160;
+    if(!dOk)warns.push('Meta description is '+desc.length+' characters — keep it under ~160 so it is not cut off.');
+    row('meta:description',desc+'  ['+desc.length+' chars]',dOk);}
+  // charset
+  var cEl=doc.querySelector('meta[charset]');
+  row('meta:charset',cEl?cEl.getAttribute('charset'):'(missing)',!!cEl);
+  if(!cEl)warns.push('Charset meta tag is missing — declare UTF-8 to avoid broken characters.');
+  // viewport
+  var vEl=doc.querySelector('meta[name="viewport"]');
+  var vp=vEl?(vEl.getAttribute('content')||'').trim():'';
+  if(!vp){warns.push('Viewport meta tag is missing — the page may not display well on mobile.');row('meta:viewport','(missing)',false);}
+  else row('meta:viewport',vp,true);
+  // canonical
+  var cL=doc.querySelector('link[rel="canonical"]');
+  var can=cL?(cL.getAttribute('href')||'').trim():'';
+  if(!can){warns.push('No canonical link found — add one to prevent duplicate-content issues.');row('link:canonical','(missing)',false);}
+  else row('link:canonical',can,true);
+  // robots
+  var rEl=doc.querySelector('meta[name="robots"]');
+  row('meta:robots',rEl?((rEl.getAttribute('content')||'').trim()||'(empty)'):'(not set — defaults to index, follow)',true);
+  // keywords
+  var kEl=doc.querySelector('meta[name="keywords"]');
+  if(kEl)row('meta:keywords',(kEl.getAttribute('content')||'').trim()||'(empty)',true);
+  // open graph
+  var ogs=doc.querySelectorAll('meta[property^="og:"]');
+  ogs.forEach(function(m){var p=m.getAttribute('property');row(p,(m.getAttribute('content')||'').trim()||'(empty)',true);});
+  if(!ogs.length)warns.push('No Open Graph tags found — add og:title, og:description and og:image for rich social previews.');
+  // twitter
+  doc.querySelectorAll('meta[name^="twitter:"]').forEach(function(m){row(m.getAttribute('name'),(m.getAttribute('content')||'').trim()||'(empty)',true);});
+  var htmlOut='<div class="stat-grid"><div class="stat"><b>'+rows.length+'</b><span>Tags found</span></div>'+
+    '<div class="stat"><b>'+warns.length+'</b><span>Warnings</span></div></div>';
+  if(warns.length){
+    htmlOut+='<div class="alert alert-warn"><b>SEO warnings:</b><ul style="margin:8px 0 0;padding-left:20px">';
+    warns.forEach(function(w){htmlOut+='<li>'+escHtml(w)+'</li>';});
+    htmlOut+='</ul></div>';
+  }else{
+    htmlOut+='<div class="alert alert-ok"><b>All good ✓</b> — all essential meta tags are present and within recommended lengths.</div>';
+  }
+  htmlOut+='<table class="data"><tr><th>Tag</th><th>Content</th><th>Status</th></tr>'+rows.join('')+'</table>';
+  out.innerHTML=htmlOut;
+}
+</script>
+</body>
+</html>

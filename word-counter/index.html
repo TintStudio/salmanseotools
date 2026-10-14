@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter — Count Words & Characters Free | Salman SEO Tools</title>
+<meta name="description" content="Free online word counter by Salman SEO Tools. Count words, characters, sentences, paragraphs and reading time instantly in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/word-counter/">
+<meta property="og:title" content="Word Counter | Salman SEO Tools">
+<meta property="og:description" content="Count words, characters, sentences and paragraphs instantly — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/word-counter/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Word Counter","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/word-counter/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Word Counter</h1>
+  <p>Paste your text and instantly see word, character, sentence and paragraph counts — plus estimated reading time.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Word Counter</p>
+
+<div class="tool-app">
+  <label class="lbl" for="wcInput">Enter or paste your text below</label>
+  <textarea id="wcInput" placeholder="Type or paste your text here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('wcInput').value='';updateCounts()">Clear</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('wcInput',this)">Copy Text</button>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><b id="stWords">0</b><span>Words</span></div>
+    <div class="stat"><b id="stChars">0</b><span>Characters</span></div>
+    <div class="stat"><b id="stCharsNoSp">0</b><span>Characters (no spaces)</span></div>
+    <div class="stat"><b id="stSent">0</b><span>Sentences</span></div>
+    <div class="stat"><b id="stPara">0</b><span>Paragraphs</span></div>
+    <div class="stat"><b id="stRead">0s</b><span>Reading time</span></div>
+    <div class="stat"><b id="stSpeak">0s</b><span>Speaking time</span></div>
+    <div class="stat"><b id="stLines">0</b><span>Lines</span></div>
+  </div>
+  <p class="note">Everything runs locally in your browser — your text is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Word Counter</h2>
+  <ol class="steps">
+    <li>Type directly into the box or paste any text from a document, article or web page.</li>
+    <li>Watch the counters update live as you type — no button clicks needed.</li>
+    <li>Use the stats to hit content targets, e.g. a 1,500-word article or a 160-character meta description.</li>
+    <li>Copy the text back out or clear the box to start over.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Count Words?</h2>
+  <p>Writers, students, bloggers and SEO professionals all work against length targets. Search engines tend to favour in-depth content, clients pay per word, and platforms like meta descriptions or ad headlines enforce strict character limits. A fast, accurate counter removes the guesswork so you can focus on the writing itself.</p>
+  <ul>
+    <li><strong>Live counting</strong> — every stat updates the moment you type.</li>
+    <li><strong>Reading &amp; speaking time</strong> — estimated at 200 wpm reading and 150 wpm speaking pace.</li>
+    <li><strong>Sentence &amp; paragraph breakdown</strong> — spot walls of text before you publish.</li>
+    <li><strong>100% private</strong> — counting happens on your device; nothing leaves the page.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this word counter really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Does my text get uploaded to a server?</summary><p>No. The counting is done with JavaScript in your own browser, so your text never leaves your device.</p></details>
+  <details><summary>How is reading time calculated?</summary><p>We divide the word count by 200 words per minute, the average adult reading speed. Speaking time uses 150 words per minute.</p></details>
+  <details><summary>What counts as a word?</summary><p>Any sequence of characters separated by whitespace. Hyphenated compounds like "well-known" count as one word.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Keep polishing your content with these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/article-rewriter/"><span class="tool-ico" style="background:#7c3aed">🔄</span><span><h3>Article Rewriter</h3><p>Rewrite text with fresh wording in seconds.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/plagiarism-checker/"><span class="tool-ico" style="background:#ef4444">🛡️</span><span><h3>Plagiarism Checker</h3><p>Compare texts and find duplicate sentences.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/keyword-density-checker/"><span class="tool-ico" style="background:#f59e0b">🎯</span><span><h3>Keyword Density Checker</h3><p>Measure keyword frequency and density.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/grammar-checker/"><span class="tool-ico" style="background:#10b981">✍️</span><span><h3>Grammar Checker</h3><p>Catch grammar and spelling mistakes.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var input = document.getElementById('wcInput');
+  function fmtTime(words, wpm){
+    if(!words) return '0s';
+    var mins = words / wpm;
+    if(mins < 1){ var s = Math.round(mins*60); return s + 's'; }
+    var m = Math.floor(mins), s = Math.round((mins-m)*60);
+    return s ? m+'m '+s+'s' : m+'m';
+  }
+  window.updateCounts = function(){
+    var t = input.value;
+    var words = (t.trim().match(/\S+/g) || []).length;
+    var chars = t.length;
+    var charsNoSp = t.replace(/\s/g,'').length;
+    var sent = (t.match(/[^.!?…\n]+[.!?…]+/g) || []).length;
+    if(!sent && words) sent = 1;
+    var para = t.trim() ? t.trim().split(/\n\s*\n|\r\n\s*\r\n/).length : 0;
+    var lines = t ? t.split('\n').length : 0;
+    document.getElementById('stWords').textContent = words.toLocaleString();
+    document.getElementById('stChars').textContent = chars.toLocaleString();
+    document.getElementById('stCharsNoSp').textContent = charsNoSp.toLocaleString();
+    document.getElementById('stSent').textContent = sent.toLocaleString();
+    document.getElementById('stPara').textContent = para.toLocaleString();
+    document.getElementById('stLines').textContent = lines.toLocaleString();
+    document.getElementById('stRead').textContent = fmtTime(words,200);
+    document.getElementById('stSpeak').textContent = fmtTime(words,150);
+  };
+  input.addEventListener('input', updateCounts);
+  updateCounts();
+})();
+</script>
+</body>
+</html>

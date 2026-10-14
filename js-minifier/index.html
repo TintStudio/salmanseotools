@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Minifier — Compress JavaScript | Salman SEO Tools</title>
+<meta name="description" content="Free JavaScript minifier by Salman SEO Tools. Compress JS code by removing comments and whitespace safely — right in your browser, no upload.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/js-minifier/">
+<meta property="og:title" content="JS Minifier | Salman SEO Tools">
+<meta property="og:description" content="Minify JavaScript by removing comments and whitespace — free, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/js-minifier/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"JS Minifier","applicationCategory":"Developer","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/js-minifier/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>JS Minifier</h1>
+  <p>Shrink JavaScript files by safely stripping comments and whitespace — strings and regex handled with care.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / JS Minifier</p>
+
+<div class="tool-app">
+  <label class="lbl" for="jmIn">Paste your JavaScript below</label>
+  <textarea id="jmIn" placeholder="Paste JavaScript code here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="jmBtn">Minify JS</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('jmOut',this)">Copy Result</button>
+    <button class="btn btn-ghost btn-sm" id="jmDl">Download app.min.js</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('jmIn').value='';document.getElementById('jmOut').value=''">Clear</button>
+  </div>
+  <label class="lbl" for="jmOut">Minified output</label>
+  <textarea id="jmOut" readonly placeholder="Minified code will appear here..."></textarea>
+  <div class="stat-grid">
+    <div class="stat"><b id="jmOrig">0</b><span>Original bytes</span></div>
+    <div class="stat"><b id="jmMin">0</b><span>Minified bytes</span></div>
+    <div class="stat"><b id="jmSave">0%</b><span>Size saved</span></div>
+  </div>
+  <p class="note"><strong>Basic minifier:</strong> it removes comments and whitespace but does not rename variables. Always test the output before using it in production. Your code never leaves your browser.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the JS Minifier</h2>
+  <ol class="steps">
+    <li>Paste your JavaScript code into the input box.</li>
+    <li>Press "Minify JS" — comments are stripped and whitespace is collapsed safely.</li>
+    <li>Check the size saved, then copy the result or download it as app.min.js.</li>
+    <li>Test the minified file in your project before deploying it live.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Minify JavaScript?</h2>
+  <p>Every byte of JavaScript has to be downloaded and parsed before your page becomes interactive. Minification removes everything the browser doesn't need — comments, extra spaces, line breaks — so files transfer faster and pages feel snappier, especially on mobile connections.</p>
+  <ul>
+    <li><strong>String-safe</strong> — single, double and template literal strings are never touched inside.</li>
+    <li><strong>Regex-aware</strong> — regular expression literals are detected and preserved verbatim.</li>
+    <li><strong>Comment stripping</strong> — both // line and /* block */ comments removed.</li>
+    <li><strong>Smart spacing</strong> — spaces kept only where syntax requires them (like between keywords).</li>
+    <li><strong>Free and private</strong> — no sign-up, no uploads, unlimited use.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this JS minifier really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Is the minified code safe to use?</summary><p>For typical scripts, yes — strings, template literals and regex are preserved. It is a basic minifier (no variable renaming), so always test the output in your project before deploying.</p></details>
+  <details><summary>Does my code get uploaded to a server?</summary><p>No. Minification runs entirely in your browser with JavaScript, so your code never leaves your device.</p></details>
+  <details><summary>How much smaller will my file get?</summary><p>It depends on the code style — heavily commented, spaced-out code often shrinks 30–50%. The tool shows your exact saving after each run.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free code tools for developers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/css-minifier/"><span class="tool-ico" style="background:#4d7c0f">✂️</span><span><h3>CSS Minifier</h3><p>Minify CSS by removing whitespace.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/html-formatter/"><span class="tool-ico" style="background:#3f6212">🧩</span><span><h3>HTML Formatter</h3><p>Format and beautify HTML code.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/json-formatter/"><span class="tool-ico" style="background:#65a30d">🧾</span><span><h3>JSON Formatter</h3><p>Format, validate and minify JSON.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/html-encoder-decoder/"><span class="tool-ico" style="background:#c026d3">🔣</span><span><h3>HTML Encoder / Decoder</h3><p>Encode or decode HTML entities.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  function isWord(c){ return /[a-zA-Z0-9_$]/.test(c); }
+  function minifyJS(src){
+    var out = '', i = 0, n = src.length;
+    var pendingSpace = false, lastChar = '';
+    function emit(c){ out += c; lastChar = c; pendingSpace = false; }
+    function maybeSpace(next){
+      if(!pendingSpace) return;
+      if((isWord(lastChar) && isWord(next)) ||
+         (lastChar === '+' && next === '+') ||
+         (lastChar === '-' && next === '-')) out += ' ';
+      pendingSpace = false;
+    }
+    while(i < n){
+      var c = src[i], nx = src[i + 1] || '';
+      // string literals: copy verbatim
+      if(c === '"' || c === "'" || c === '`'){
+        maybeSpace(c);
+        var q = c;
+        emit(c); i++;
+        while(i < n){
+          var d = src[i];
+          emit(d);
+          if(d === '\\'){ i++; if(i < n) emit(src[i]); }
+          else if(d === q){ i++; break; }
+          i++;
+        }
+        continue;
+      }
+      // line comment (// cannot start a regex)
+      if(c === '/' && nx === '/'){ i += 2; while(i < n && src[i] !== '\n') i++; pendingSpace = true; continue; }
+      // block comment
+      if(c === '/' && nx === '*'){ i += 2; while(i < n && !(src[i] === '*' && src[i+1] === '/')) i++; i += 2; pendingSpace = true; continue; }
+      // regex literal vs division: heuristic on previous token
+      if(c === '/'){
+        var exprStart = !lastChar || '([{,=:!&|?;'.indexOf(lastChar) >= 0 ||
+          /(^|[^a-zA-Z0-9_$])(return|typeof|instanceof|in|of|new|delete|void|throw|case|do|else|yield|await)$/.test(out);
+        if(exprStart){
+          maybeSpace(c);
+          emit(c); i++;
+          var inClass = false;
+          while(i < n){
+            var r = src[i];
+            emit(r);
+            if(r === '\\'){ i++; if(i < n) emit(src[i]); }
+            else if(r === '[') inClass = true;
+            else if(r === ']') inClass = false;
+            else if(r === '/' && !inClass){ i++; break; }
+            i++;
+          }
+          while(i < n && /[a-z]/i.test(src[i])){ emit(src[i]); i++; }
+          continue;
+        }
+        maybeSpace(c); emit(c); i++; continue; // division
+      }
+      if(/\s/.test(c)){ pendingSpace = true; i++; continue; }
+      maybeSpace(c); emit(c); i++;
+    }
+    return out.replace(/^\s+/, '');
+  }
+  document.getElementById('jmBtn').addEventListener('click', function(){
+    var src = document.getElementById('jmIn').value;
+    var outEl = document.getElementById('jmOut');
+    if(!src.trim()){
+      outEl.value = '';
+      document.getElementById('jmOrig').textContent = '0';
+      document.getElementById('jmMin').textContent = '0';
+      document.getElementById('jmSave').textContent = '0%';
+      return;
+    }
+    var min = minifyJS(src);
+    outEl.value = min;
+    document.getElementById('jmOrig').textContent = src.length.toLocaleString();
+    document.getElementById('jmMin').textContent = min.length.toLocaleString();
+    var saved = src.length ? Math.round((1 - min.length / src.length) * 100) : 0;
+    document.getElementById('jmSave').textContent = saved + '%';
+  });
+  document.getElementById('jmDl').addEventListener('click', function(){
+    var v = document.getElementById('jmOut').value;
+    if(v.trim()) downloadFile('app.min.js', v, 'text/javascript');
+  });
+})();
+</script>
+</body>
+</html>

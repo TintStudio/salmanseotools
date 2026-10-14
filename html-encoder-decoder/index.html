@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Encoder Decoder — Entities Tool | Salman SEO Tools</title>
+<meta name="description" content="Free HTML encoder and decoder from Salman SEO Tools. Convert characters like < > & into HTML entities and decode them back instantly — no sign-up needed.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/html-encoder-decoder/">
+<meta property="og:title" content="HTML Encoder / Decoder | Salman SEO Tools">
+<meta property="og:description" content="Encode special characters as HTML entities or decode entities back to characters — free, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/html-encoder-decoder/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"HTML Encoder / Decoder","applicationCategory":"DeveloperApplication",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/html-encoder-decoder/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>HTML Encoder / Decoder</h1>
+  <p>Convert special characters into safe HTML entities, or decode entities back into readable characters.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / HTML Encoder / Decoder</p>
+
+<div class="tool-app">
+  <label class="lbl" for="heInput">Enter your text or code</label>
+  <textarea id="heInput" placeholder="Paste text or HTML here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="encodeHTML()">Encode → Entities</button>
+    <button class="btn btn-accent" onclick="decodeHTML()">Decode → Text</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('heOutput',this)">Copy Result</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('heInput').value='';document.getElementById('heOutput').value='';updateHECounts()">Clear</button>
+  </div>
+  <label class="lbl" for="heOutput">Result</label>
+  <textarea id="heOutput" readonly placeholder="The converted result will appear here..."></textarea>
+  <div class="stat-grid">
+    <div class="stat"><b id="heInLen">0</b><span>Input chars</span></div>
+    <div class="stat"><b id="heOutLen">0</b><span>Output chars</span></div>
+  </div>
+  <p class="note">Everything runs locally in your browser — nothing you paste is uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the HTML Encoder / Decoder</h2>
+  <ol class="steps">
+    <li>Paste your text, code snippet or HTML into the input box.</li>
+    <li>Click <strong>Encode → Entities</strong> to convert special characters like <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, quotes and apostrophes into their entity equivalents.</li>
+    <li>Click <strong>Decode → Text</strong> to turn entities such as <code>&amp;lt;</code> back into readable characters.</li>
+    <li>Copy the result with one click and use it in your page, email or CMS.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Encode HTML Characters?</h2>
+  <p>Browsers treat characters like <code>&lt;</code> and <code>&gt;</code> as markup. If you want to display code samples, user input or literal angle brackets on a page, those characters must be escaped as entities — otherwise the browser tries to parse them as tags and your content breaks or disappears.</p>
+  <ul>
+    <li><strong>Two-way conversion</strong> — encode text to entities and decode entities back, in one place.</li>
+    <li><strong>Correct escaping order</strong> — ampersands are encoded first, so existing entities are never double-escaped.</li>
+    <li><strong>Full entity support on decode</strong> — named, decimal and hexadecimal entities are all decoded.</li>
+    <li><strong>Instant and private</strong> — conversion happens on your device with no server round-trip.</li>
+    <li><strong>Free, no limits</strong> — encode as much text as you like, no account needed.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What is an HTML entity?</summary><p>An HTML entity is a text code that represents a special character, e.g. <code>&amp;lt;</code> renders as &lt;. Entities let you display characters that would otherwise be interpreted as HTML markup.</p></details>
+  <details><summary>Which characters get encoded?</summary><p>The encoder converts <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, double quotes and apostrophes — the five characters that must be escaped inside HTML.</p></details>
+  <details><summary>Will encoding break my existing entities?</summary><p>No. Because <code>&amp;</code> is encoded before anything else, an existing entity like <code>&amp;lt;</code> becomes <code>&amp;amp;lt;</code> rather than being mangled — and decoding reverses it cleanly.</p></details>
+  <details><summary>Is my pasted code sent to a server?</summary><p>No. Encoding and decoding run entirely in your browser, so your code never leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More handy encoders and utilities for developers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/url-encoder-decoder/"><span class="tool-ico" style="background:#06b6d4">🔗</span><span><h3>URL Encoder / Decoder</h3><p>Encode or decode URLs and query strings safely.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/base64-encoder-decoder/"><span class="tool-ico" style="background:#0e7490">📦</span><span><h3>Base64 Encoder / Decoder</h3><p>Encode and decode Base64 strings.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/json-formatter/"><span class="tool-ico" style="background:#65a30d">🧾</span><span><h3>JSON Formatter</h3><p>Format, validate and minify JSON.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var inp = document.getElementById('heInput');
+  var out = document.getElementById('heOutput');
+  window.updateHECounts = function(){
+    document.getElementById('heInLen').textContent = inp.value.length.toLocaleString();
+    document.getElementById('heOutLen').textContent = out.value.length.toLocaleString();
+  };
+  window.encodeHTML = function(){
+    out.value = inp.value
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+    updateHECounts();
+  };
+  window.decodeHTML = function(){
+    var el = document.createElement('textarea');
+    el.innerHTML = inp.value;
+    out.value = el.value;
+    updateHECounts();
+  };
+  inp.addEventListener('input', updateHECounts);
+  out.addEventListener('input', updateHECounts);
+  updateHECounts();
+})();
+</script>
+</body>
+</html>

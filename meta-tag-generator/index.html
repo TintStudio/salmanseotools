@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Tag Generator — Create SEO Meta Tags | Salman SEO Tools</title>
+<meta name="description" content="Free meta tag generator by Salman SEO Tools. Build SEO title, description, keywords, Open Graph and Twitter Card tags for any page in seconds, right in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/meta-tag-generator/">
+<meta property="og:title" content="Meta Tag Generator | Salman SEO Tools">
+<meta property="og:description" content="Create SEO meta tags for any web page — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/meta-tag-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Meta Tag Generator","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/meta-tag-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Meta Tag Generator</h1>
+  <p>Fill in a few fields and get a complete set of SEO, Open Graph and Twitter Card meta tags, ready to paste into your page.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#seo-tools">SEO Tools</a> / Meta Tag Generator</p>
+
+<div class="tool-app">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="mtTitle">Page Title</label>
+      <input type="text" id="mtTitle" placeholder="e.g. Best Hiking Backpacks 2026 — Trail Guide">
+    </div>
+    <div>
+      <label class="lbl" for="mtDesc">Meta Description</label>
+      <input type="text" id="mtDesc" placeholder="A short summary shown in search results...">
+    </div>
+    <div>
+      <label class="lbl" for="mtKeys">Keywords (comma separated)</label>
+      <input type="text" id="mtKeys" placeholder="e.g. hiking backpacks, trail gear, outdoor">
+    </div>
+    <div>
+      <label class="lbl" for="mtAuthor">Author</label>
+      <input type="text" id="mtAuthor" placeholder="e.g. Jane Smith">
+    </div>
+    <div>
+      <label class="lbl" for="mtRobots">Robots</label>
+      <select id="mtRobots">
+        <option value="index,follow">index, follow</option>
+        <option value="noindex,follow">noindex, follow</option>
+        <option value="index,nofollow">index, nofollow</option>
+        <option value="noindex,nofollow">noindex, nofollow</option>
+      </select>
+    </div>
+    <div>
+      <span class="lbl">Include</span>
+      <label class="checkline"><input type="checkbox" id="mtOG" checked> Open Graph tags (Facebook, LinkedIn)</label>
+      <label class="checkline"><input type="checkbox" id="mtTw" checked> Twitter Card tags</label>
+      <label class="checkline"><input type="checkbox" id="mtBase" checked> Viewport &amp; charset tags</label>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="generateMeta()">Generate Meta Tags</button>
+  </div>
+  <div id="mtWrap" style="display:none">
+    <div class="result-box" id="mtOut" style="white-space:pre-wrap;font-family:monospace"></div>
+    <div class="btn-row">
+      <button class="btn btn-accent btn-sm" onclick="copyText('mtOut',this)">Copy Tags</button>
+      <button class="btn btn-ghost btn-sm" onclick="downloadMeta()">Download meta-tags.html</button>
+    </div>
+  </div>
+  <p class="note">Tags are generated on your device — nothing you type is sent anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Meta Tag Generator</h2>
+  <ol class="steps">
+    <li>Enter your page title and a meta description of around 150 characters.</li>
+    <li>Add keywords, the author name, and pick the robots directive that fits the page.</li>
+    <li>Tick the Open Graph, Twitter Card and viewport options you want included.</li>
+    <li>Click "Generate Meta Tags", then copy or download the code and paste it into your page's <code>&lt;head&gt;</code>.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Do Meta Tags Matter?</h2>
+  <p>Meta tags are the hidden instructions that shape how your page appears in search results and when shared on social media. A sharp title and description win more clicks from Google, while Open Graph and Twitter Card tags control the preview image and headline people see on Facebook, X and LinkedIn.</p>
+  <ul>
+    <li><strong>SEO basics covered</strong> — title, description, keywords, author and robots in one click.</li>
+    <li><strong>Social previews</strong> — Open Graph and Twitter Card tags for rich, on-brand shares.</li>
+    <li><strong>Copy or download</strong> — take the code as plain text or as an HTML file.</li>
+    <li><strong>No markup mistakes</strong> — every tag is written with correct, valid syntax.</li>
+    <li><strong>Private by design</strong> — generation runs locally; nothing leaves your browser.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Where do I paste the generated meta tags?</summary><p>Inside the &lt;head&gt; section of your HTML page, before the closing &lt;/head&gt; tag. If you use a CMS, most SEO plugins have a field where you can paste this code.</p></details>
+  <details><summary>How long should my meta description be?</summary><p>Aim for 140–160 characters. Shorter than that wastes space; much longer and Google will cut it off in the results.</p></details>
+  <details><summary>Do keywords meta tags still help SEO?</summary><p>Google ignores the keywords tag for ranking, but other search engines and internal site tools may still read it. It costs nothing to include, so we generate it for you.</p></details>
+  <details><summary>What's the difference between Open Graph and Twitter Cards?</summary><p>Open Graph tags are the standard used by Facebook, LinkedIn and most platforms; Twitter Card tags are Twitter/X's own format. Including both guarantees a good-looking preview everywhere your link is shared.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Keep polishing your content with these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" data-name="keyword density checker keywords seo" href="/keyword-density-checker/"><span class="tool-ico" style="background:#f59e0b">🎯</span><span><h3>Keyword Density Checker</h3><p>Measure keyword frequency and density percentage.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="robots txt generator crawler" href="/robots-txt-generator/"><span class="tool-ico" style="background:#84cc16">🤖</span><span><h3>Robots.txt Generator</h3><p>Build a robots.txt file to guide search crawlers.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="xml sitemap generator urls" href="/xml-sitemap-generator/"><span class="tool-ico" style="background:#14b8a6">🗺️</span><span><h3>XML Sitemap Generator</h3><p>Generate an XML sitemap from your URL list.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="word counter count words characters" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var mtRaw = '';
+  function escAttr(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  window.generateMeta = function(){
+    var title = document.getElementById('mtTitle').value.trim();
+    var desc = document.getElementById('mtDesc').value.trim();
+    var keys = document.getElementById('mtKeys').value.trim();
+    var author = document.getElementById('mtAuthor').value.trim();
+    var robots = document.getElementById('mtRobots').value;
+    var og = document.getElementById('mtOG').checked;
+    var tw = document.getElementById('mtTw').checked;
+    var base = document.getElementById('mtBase').checked;
+    if(!title && !desc && !keys && !author){
+      document.getElementById('mtWrap').style.display = '';
+      document.getElementById('mtOut').innerHTML =
+        '<div class="alert alert-warn">Please fill in at least one field (title or description) before generating.</div>';
+      mtRaw = '';
+      return;
+    }
+    var L = [];
+    if(base){
+      L.push('<meta charset="UTF-8">');
+      L.push('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+    }
+    if(title) L.push('<title>' + escAttr(title) + '</title>');
+    if(desc) L.push('<meta name="description" content="' + escAttr(desc) + '">');
+    if(keys) L.push('<meta name="keywords" content="' + escAttr(keys) + '">');
+    if(author) L.push('<meta name="author" content="' + escAttr(author) + '">');
+    L.push('<meta name="robots" content="' + robots + '">');
+    if(og){
+      if(title) L.push('<meta property="og:title" content="' + escAttr(title) + '">');
+      if(desc) L.push('<meta property="og:description" content="' + escAttr(desc) + '">');
+      L.push('<meta property="og:type" content="website">');
+    }
+    if(tw){
+      L.push('<meta name="twitter:card" content="summary_large_image">');
+      if(title) L.push('<meta name="twitter:title" content="' + escAttr(title) + '">');
+      if(desc) L.push('<meta name="twitter:description" content="' + escAttr(desc) + '">');
+    }
+    mtRaw = L.join('\n');
+    var display = escAttr(mtRaw).replace(/&lt;/g,"&lt;");
+    document.getElementById('mtOut').innerHTML = display;
+    document.getElementById('mtWrap').style.display = '';
+  };
+  window.downloadMeta = function(){
+    if(!mtRaw) return;
+    var html = '<!DOCTYPE html>\n<html lang="en">\n<head>\n' + mtRaw + '\n</head>\n<body>\n</body>\n</html>\n';
+    downloadFile('meta-tags.html', html, 'text/html');
+  };
+})();
+</script>
+</body>
+</html>

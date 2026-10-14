@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator — Exact Age Finder | Salman SEO Tools</title>
+<meta name="description" content="Free age calculator by Salman SEO Tools. Enter your date of birth to get your exact age in years, months and days — plus days lived and next birthday countdown.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/age-calculator/">
+<meta property="og:title" content="Age Calculator | Salman SEO Tools">
+<meta property="og:description" content="Find your exact age in years, months and days — free, instant, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/age-calculator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Age Calculator","applicationCategory":"Utilities","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/age-calculator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Age Calculator</h1>
+  <p>Enter your date of birth to find your exact age in years, months and days — plus fun stats like days lived and your next birthday countdown.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#calculators">Calculators</a> / Age Calculator</p>
+
+<div class="tool-app">
+  <label class="lbl" for="dob">Select your date of birth</label>
+  <input type="date" id="dob" max="2026-10-14">
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="calcAge()">Calculate Age</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('dob').value='';document.getElementById('ageMsg').innerHTML='';document.getElementById('ageResult').innerHTML=''">Clear</button>
+  </div>
+  <div id="ageMsg"></div>
+  <div id="ageResult"></div>
+  <p class="note">Calculation happens entirely in your browser — your date of birth is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Age Calculator</h2>
+  <ol class="steps">
+    <li>Pick your date of birth from the date picker above.</li>
+    <li>Click <strong>Calculate Age</strong>.</li>
+    <li>See your exact age in years, months and days, plus bonus stats below.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Use an Age Calculator?</h2>
+  <p>Forms, applications and eligibility checks often ask for your exact age — not just the year count. Instead of doing calendar math by hand, this calculator handles month lengths and leap years for you and even tells you which weekday you were born on.</p>
+  <ul>
+    <li><strong>Exact age</strong> — precise years, months and days as of today.</li>
+    <li><strong>Bonus stats</strong> — total days lived, total months, birth weekday and days until your next birthday.</li>
+    <li><strong>Leap-year aware</strong> — correct results even for February 29 birthdays.</li>
+    <li><strong>100% private</strong> — everything is computed on your device.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>How is the exact age calculated?</summary><p>We subtract your birth date from today's date, borrowing months and days where needed — accounting for different month lengths and leap years.</p></details>
+  <details><summary>What if I was born on February 29?</summary><p>The calculator still works: in non-leap years your "birthday" is treated as March 1 for the next-birthday countdown.</p></details>
+  <details><summary>Is my date of birth stored anywhere?</summary><p>No. The date is used only for the calculation in your browser and is never sent to any server.</p></details>
+  <details><summary>Can I calculate someone else's age?</summary><p>Yes — just enter their date of birth instead of your own.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More handy free tools you might like.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/lorem-ipsum-generator/"><span class="tool-ico" style="background:#64748b">📄</span><span><h3>Lorem Ipsum Generator</h3><p>Generate placeholder text for layouts and mockups.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/case-converter/"><span class="tool-ico" style="background:#0ea5e9">🔠</span><span><h3>Case Converter</h3><p>Convert text between upper, lower and title case.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/online-text-editor/"><span class="tool-ico" style="background:#334155">📓</span><span><h3>Online Text Editor</h3><p>A clean notepad with word count and download.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+function calcAge(){
+  var dv=document.getElementById('dob').value;
+  var m=document.getElementById('ageMsg');
+  var r=document.getElementById('ageResult');
+  m.innerHTML='';r.innerHTML='';
+  if(!dv){m.innerHTML='<div class="alert alert-err">Please select your date of birth.</div>';return;}
+  var d=new Date(dv+'T00:00:00');
+  var t=new Date();t.setHours(0,0,0,0);
+  if(isNaN(d.getTime())){m.innerHTML='<div class="alert alert-err">That date does not look valid — please pick again.</div>';return;}
+  if(d>t){m.innerHTML='<div class="alert alert-err">Date of birth cannot be in the future.</div>';return;}
+  var y=t.getFullYear()-d.getFullYear();
+  var mo=t.getMonth()-d.getMonth();
+  var da=t.getDate()-d.getDate();
+  if(da<0){mo--;da+=new Date(t.getFullYear(),t.getMonth(),0).getDate();}
+  if(mo<0){y--;mo+=12;}
+  var totalDays=Math.floor((t-d)/86400000);
+  var weekday=d.toLocaleDateString('en-US',{weekday:'long'});
+  var next=new Date(t.getFullYear(),d.getMonth(),d.getDate());
+  if(next<t)next=new Date(t.getFullYear()+1,d.getMonth(),d.getDate());
+  var until=Math.round((next-t)/86400000);
+  var note;
+  if(until===0){note='🎉 <b>Happy birthday!</b> Today is your birthday — you were born on a '+weekday+'.';}
+  else{note='You were born on a <b>'+weekday+'</b> — that is <b>'+totalDays.toLocaleString()+'</b> days '+
+    '('+(y*12+mo).toLocaleString()+' months) ago. Your next birthday is in <b>'+until+'</b> day'+(until===1?'':'s')+'.';}
+  r.innerHTML='<div class="stat-grid">'+
+    '<div class="stat"><b>'+y+'</b><span>Years</span></div>'+
+    '<div class="stat"><b>'+mo+'</b><span>Months</span></div>'+
+    '<div class="stat"><b>'+da+'</b><span>Days</span></div></div>'+
+    '<p class="note">'+note+'</p>';
+}
+</script>
+</body>
+</html>

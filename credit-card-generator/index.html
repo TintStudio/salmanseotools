@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Credit Card Generator — Developers | Salman SEO Tools</title>
+<meta name="description" content="Free test credit card generator by Salman SEO Tools. Create Luhn-valid dummy card numbers, expiries and CVVs for development and QA testing — no real value.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/credit-card-generator/">
+<meta property="og:title" content="Test Credit Card Generator | Salman SEO Tools">
+<meta property="og:description" content="Generate Luhn-valid dummy card numbers for testing payment forms — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/credit-card-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Test Credit Card Generator","applicationCategory":"SEO",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/credit-card-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Test Credit Card Generator</h1>
+  <p>Generate valid-looking dummy card numbers for testing payment forms — never real, never usable.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / Test Credit Card Generator</p>
+
+<div class="tool-app">
+  <div class="alert alert-warn"><strong>Test data only.</strong> These are randomly generated dummy numbers for development and QA testing. They are not real cards, hold no value, and cannot be used for payments.</div>
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="ccType">Card type</label>
+      <select id="ccType">
+        <option value="visa">Visa</option>
+        <option value="mastercard">Mastercard</option>
+        <option value="amex">American Express</option>
+        <option value="discover">Discover</option>
+      </select>
+    </div>
+    <div>
+      <label class="lbl" for="ccCount">How many</label>
+      <select id="ccCount">
+        <option value="1">1 card</option>
+        <option value="5" selected>5 cards</option>
+        <option value="10">10 cards</option>
+      </select>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="ccGo">Generate Cards</button>
+  </div>
+  <div id="ccOut"></div>
+  <p class="note">Numbers are generated locally with a valid Luhn checksum so they pass format validation in test environments.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Test Card Generator</h2>
+  <ol class="steps">
+    <li>Choose a card type — Visa, Mastercard, American Express or Discover.</li>
+    <li>Select how many test cards you need (1, 5 or 10).</li>
+    <li>Click <strong>Generate Cards</strong> to get numbers with expiry dates and CVVs.</li>
+    <li>Copy any row and paste it into your sandbox or staging payment form.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Developers Need Test Cards</h2>
+  <p>Payment forms validate card numbers before they ever reach a gateway: the format, the brand prefix and the Luhn checksum must all look right. Real card numbers must never touch test environments, so developers use dummy numbers that pass client-side validation without representing any actual account.</p>
+  <ul>
+    <li><strong>Luhn-valid numbers</strong> — every card passes the standard checksum validation.</li>
+    <li><strong>Correct brand formats</strong> — right prefixes and lengths for Visa, Mastercard, Amex and Discover.</li>
+    <li><strong>Full test details</strong> — each card comes with a future expiry date and CVV.</li>
+    <li><strong>One-click copy</strong> — copy any number straight into your test form.</li>
+    <li><strong>100% safe</strong> — randomly generated locally; no real accounts exist behind them.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Can these cards be used to buy anything?</summary><p>No. They are random numbers with no bank account behind them. They will always be declined by real payment processors — they exist only to pass format validation in test environments.</p></details>
+  <details><summary>What does "Luhn-valid" mean?</summary><p>The Luhn algorithm is the checksum formula payment forms use to reject mistyped numbers. Our generator computes a correct check digit, so the numbers pass that validation like real card numbers do.</p></details>
+  <details><summary>Is it legal to generate these numbers?</summary><p>Yes. Generating random numbers that merely follow a public format is completely legal. They are the standard way developers test checkout flows.</p></details>
+  <details><summary>Should I use these in production?</summary><p>Never. Use your payment provider's official test cards (e.g. Stripe's 4242…) for integration testing, and only real customer cards — handled by the provider — in production.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More test-data utilities for developers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/fake-name-generator/"><span class="tool-ico" style="background:#86198f">👤</span><span><h3>Fake Name Generator</h3><p>Generate fake names and profiles for testing.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/password-generator/"><span class="tool-ico" style="background:#b91c1c">🎲</span><span><h3>Password Generator</h3><p>Create strong random passwords.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/hash-generator/"><span class="tool-ico" style="background:#f97316">🔐</span><span><h3>Hash Generator</h3><p>Generate MD5, SHA-1, SHA-256 and SHA-512 hashes.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/base64-encoder-decoder/"><span class="tool-ico" style="background:#0e7490">📦</span><span><h3>Base64 Encoder / Decoder</h3><p>Encode and decode Base64 strings.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var TYPES = {
+    visa:       { prefixes: ['4'],              len: 16, cvv: 3, label: 'Visa' },
+    mastercard: { prefixes: ['51','52','53','54','55'], len: 16, cvv: 3, label: 'Mastercard' },
+    amex:       { prefixes: ['34','37'],         len: 15, cvv: 4, label: 'Amex' },
+    discover:   { prefixes: ['6011'],           len: 16, cvv: 3, label: 'Discover' }
+  };
+
+  function randDigit(){ return Math.floor(Math.random() * 10); }
+
+  // Luhn check digit for a number body (without the final digit)
+  function luhnCheckDigit(body){
+    var sum = 0, dbl = true;
+    for(var i = body.length - 1; i >= 0; i--){
+      var d = parseInt(body.charAt(i), 10);
+      if(dbl){ d *= 2; if(d > 9) d -= 9; }
+      sum += d; dbl = !dbl;
+    }
+    return String((10 - (sum % 10)) % 10);
+  }
+
+  function genCard(type){
+    var cfg = TYPES[type];
+    var prefix = cfg.prefixes[Math.floor(Math.random() * cfg.prefixes.length)];
+    var body = prefix;
+    while(body.length < cfg.len - 1){ body += randDigit(); }
+    var number = body + luhnCheckDigit(body);
+    var grouped = number.replace(/(.{4})/g, '$1 ').trim();
+    var now = new Date();
+    var mm = String(1 + Math.floor(Math.random() * 12)).padStart(2, '0');
+    var yy = String((now.getFullYear() % 100) + 1 + Math.floor(Math.random() * 5)).padStart(2, '0');
+    var cvv = '';
+    for(var i = 0; i < cfg.cvv; i++){ cvv += randDigit(); }
+    return { number: grouped, raw: number, expiry: mm + '/' + yy, cvv: cvv, type: cfg.label };
+  }
+
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  document.getElementById('ccGo').addEventListener('click', function(){
+    var type = document.getElementById('ccType').value;
+    var count = parseInt(document.getElementById('ccCount').value, 10);
+    var rows = '';
+    var cards = [];
+    for(var i = 0; i < count; i++){
+      var c = genCard(type);
+      cards.push(c);
+      rows += '<tr><td style="font-family:ui-monospace,monospace">' + esc(c.number) + '</td>' +
+              '<td>' + esc(c.expiry) + '</td><td>' + esc(c.cvv) + '</td>' +
+              '<td><button class="btn btn-ghost btn-sm" data-copy="' + i + '">Copy</button></td></tr>';
+    }
+    document.getElementById('ccOut').innerHTML =
+      '<table class="data"><thead><tr><th>Card Number</th><th>Expiry</th><th>CVV</th><th></th></tr></thead><tbody>' + rows + '</tbody></table>';
+    var btns = document.querySelectorAll('#ccOut [data-copy]');
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        var c = cards[parseInt(b.getAttribute('data-copy'), 10)];
+        navigator.clipboard.writeText(c.raw).then(function(){
+          var o = b.textContent; b.textContent = 'Copied ✓';
+          setTimeout(function(){ b.textContent = o; }, 1500);
+        });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

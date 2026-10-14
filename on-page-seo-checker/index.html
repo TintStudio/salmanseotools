@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On-Page SEO Checker — Free SEO Audit | Salman SEO Tools</title>
+<meta name="description" content="Free on-page SEO checker by Salman SEO Tools. Audit any page's HTML for titles, headings, meta tags, images and more — with a score and fixes.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/on-page-seo-checker/">
+<meta property="og:title" content="On-Page SEO Checker | Salman SEO Tools">
+<meta property="og:description" content="Audit any page's on-page SEO factors and get a score with fix tips — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/on-page-seo-checker/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"On-Page SEO Checker","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/on-page-seo-checker/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>On-Page SEO Checker</h1>
+  <p>Paste any page's HTML and get an instant on-page SEO audit — title, headings, meta tags, images and a score with fixes.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#seo-tools">SEO Tools</a> / On-Page SEO Checker</p>
+
+<div class="tool-app">
+  <label class="lbl" for="opHtml">Paste the page's HTML source below</label>
+  <textarea id="opHtml" placeholder="Paste the full HTML of the page you want to audit..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="opBtn">Run SEO Audit</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('opHtml').value='';document.getElementById('opOut').style.display='none'">Clear</button>
+  </div>
+  <div id="opOut" style="display:none">
+    <div class="stat-grid">
+      <div class="stat"><b id="opScore">0</b><span>SEO score / 100</span></div>
+      <div class="stat"><b id="opPass">0</b><span>Checks passed</span></div>
+      <div class="stat"><b id="opWarn">0</b><span>Warnings</span></div>
+      <div class="stat"><b id="opFail">0</b><span>Failed</span></div>
+    </div>
+    <div id="opVerdict"></div>
+    <table class="data" id="opTable">
+      <thead><tr><th>Check</th><th>Status</th><th>Detail</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div id="opTips"></div>
+  </div>
+  <p class="note">Tip: in your browser press Ctrl+U (view source), copy the code and paste it here. Nothing is uploaded — the audit runs on your device.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the On-Page SEO Checker</h2>
+  <ol class="steps">
+    <li>Open the page you want to audit and view its source (Ctrl+U in most browsers), then copy the HTML.</li>
+    <li>Paste the code into the box above and press "Run SEO Audit".</li>
+    <li>Review your score out of 100 and the check-by-check table.</li>
+    <li>Work through the fix tips, update the page, and re-run the audit to watch the score climb.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>What the Audit Checks</h2>
+  <p>Search engines read the same HTML your browser does, so the fundamentals of on-page SEO live in the page source. This checker inspects the elements that matter most and scores them, so you can spot problems in seconds instead of reading code line by line.</p>
+  <ul>
+    <li><strong>Title tag</strong> — present, and between 30–60 characters so it displays fully in search results.</li>
+    <li><strong>Meta description</strong> — present, and between 120–160 characters for a clean search snippet.</li>
+    <li><strong>Headings</strong> — exactly one H1, plus H2 subheadings that structure the content.</li>
+    <li><strong>Images</strong> — every image carries descriptive alt text for accessibility and image search.</li>
+    <li><strong>Technical basics</strong> — viewport tag, page language, canonical URL and Open Graph tags.</li>
+    <li><strong>Content depth</strong> — a word count check that flags thin pages under 300 words.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this SEO audit really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Why do I paste HTML instead of a URL?</summary><p>Browsers block web pages from fetching other websites directly (a security rule called CORS). Pasting the page source gives the same result without any server involved — and keeps the tool 100% private.</p></details>
+  <details><summary>Is a score of 100 a ranking guarantee?</summary><p>No. On-page basics are only one part of SEO — content quality, backlinks and user experience matter too. Treat the score as a health check for the fundamentals, not a promise of rankings.</p></details>
+  <details><summary>Does my pasted HTML get uploaded?</summary><p>No. The audit runs entirely in your browser with JavaScript, so your code never leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Fix what the audit finds with these related tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/meta-tags-analyzer/"><span class="tool-ico" style="background:#db2777">🔍</span><span><h3>Meta Tags Analyzer</h3><p>Analyze meta tags from pasted HTML code.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/keyword-density-checker/"><span class="tool-ico" style="background:#f59e0b">🎯</span><span><h3>Keyword Density Checker</h3><p>Measure keyword frequency and density percentage.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/open-graph-generator/"><span class="tool-ico" style="background:#9333a1">📣</span><span><h3>Open Graph Generator</h3><p>Generate social media preview meta tags.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  document.getElementById('opBtn').addEventListener('click', function(){
+    var html = document.getElementById('opHtml').value;
+    var out = document.getElementById('opOut');
+    if(!html.trim()){
+      out.style.display = '';
+      document.getElementById('opVerdict').innerHTML = '<p class="alert alert-err">Please paste some HTML first.</p>';
+      document.querySelector('#opTable tbody').innerHTML = '';
+      document.getElementById('opTips').innerHTML = '';
+      return;
+    }
+    var doc;
+    try { doc = new DOMParser().parseFromString(html, 'text/html'); }
+    catch(e){
+      out.style.display = '';
+      document.getElementById('opVerdict').innerHTML = '<p class="alert alert-err">Could not parse that HTML. Please paste valid page source.</p>';
+      return;
+    }
+    var rows = [], score = 100, np = 0, nw = 0, nf = 0, tips = [];
+    function add(check, status, detail, tip){
+      rows.push({check:check, status:status, detail:detail});
+      if(status === 'pass') np++;
+      else if(status === 'warn'){ nw++; score -= 5; if(tip) tips.push(tip); }
+      else { nf++; score -= 10; if(tip) tips.push(tip); }
+    }
+    // Title
+    var titleEl = doc.querySelector('title');
+    var title = titleEl ? titleEl.textContent.trim() : '';
+    if(!title) add('Title tag', 'fail', 'Missing <title> tag.', 'Add a unique, descriptive <title> of 30–60 characters.');
+    else if(title.length < 30) add('Title tag', 'warn', esc(title).slice(0,60) + '… (' + title.length + ' chars — short)', 'Lengthen the title toward 30–60 characters with your main keyword.');
+    else if(title.length > 60) add('Title tag', 'warn', '(' + title.length + ' chars — may be truncated in search results)', 'Trim the title to under 60 characters so it displays fully.');
+    else add('Title tag', 'pass', title.length + ' characters — good length.');
+    // Meta description
+    var md = doc.querySelector('meta[name="description"]');
+    var mdC = md ? (md.getAttribute('content') || '').trim() : '';
+    if(!mdC) add('Meta description', 'fail', 'Missing meta description.', 'Write a 120–160 character meta description that sells the click.');
+    else if(mdC.length < 120) add('Meta description', 'warn', '(' + mdC.length + ' chars — short)', 'Expand the description toward 120–160 characters.');
+    else if(mdC.length > 160) add('Meta description', 'warn', '(' + mdC.length + ' chars — may be truncated)', 'Trim the description to under 160 characters.');
+    else add('Meta description', 'pass', mdC.length + ' characters — good length.');
+    // H1
+    var h1s = doc.querySelectorAll('h1').length;
+    if(h1s === 0) add('H1 heading', 'fail', 'No H1 found.', 'Add exactly one H1 describing the page topic.');
+    else if(h1s > 1) add('H1 heading', 'warn', h1s + ' H1 tags found.', 'Keep a single H1 per page; demote extras to H2.');
+    else add('H1 heading', 'pass', 'Exactly one H1 — good.');
+    // H2
+    var h2s = doc.querySelectorAll('h2').length;
+    if(h2s === 0) add('H2 subheadings', 'warn', 'No H2 tags found.', 'Break long content into sections with descriptive H2 subheadings.');
+    else add('H2 subheadings', 'pass', h2s + ' H2 tag(s) structure the page.');
+    // Images alt
+    var imgs = doc.querySelectorAll('img');
+    var noAlt = 0;
+    imgs.forEach(function(im){ var a = im.getAttribute('alt'); if(a === null || !a.trim()) noAlt++; });
+    if(imgs.length === 0) add('Image alt text', 'pass', 'No images to check.');
+    else if(noAlt > 0) add('Image alt text', 'warn', noAlt + ' of ' + imgs.length + ' image(s) missing alt text.', 'Add short, descriptive alt text to every image.');
+    else add('Image alt text', 'pass', 'All ' + imgs.length + ' image(s) have alt text.');
+    // Viewport
+    if(doc.querySelector('meta[name="viewport"]')) add('Viewport meta tag', 'pass', 'Mobile viewport configured.');
+    else add('Viewport meta tag', 'fail', 'Missing viewport tag.', 'Add <meta name="viewport" content="width=device-width, initial-scale=1"> for mobile friendliness.');
+    // Lang
+    var lang = doc.documentElement.getAttribute('lang');
+    if(lang) add('HTML language', 'pass', 'lang="' + esc(lang) + '" declared.');
+    else add('HTML language', 'warn', 'No lang attribute on <html>.', 'Add lang="en" (or your language) to the <html> tag.');
+    // Canonical
+    if(doc.querySelector('link[rel="canonical"]')) add('Canonical URL', 'pass', 'Canonical link present.');
+    else add('Canonical URL', 'warn', 'No canonical link found.', 'Add a canonical URL to prevent duplicate-content issues.');
+    // Open Graph
+    var ogT = doc.querySelector('meta[property="og:title"]');
+    var ogD = doc.querySelector('meta[property="og:description"]');
+    var ogI = doc.querySelector('meta[property="og:image"]');
+    var ogCount = (ogT?1:0) + (ogD?1:0) + (ogI?1:0);
+    if(ogCount === 3) add('Open Graph tags', 'pass', 'og:title, og:description and og:image present.');
+    else add('Open Graph tags', 'warn', ogCount + ' of 3 core OG tags present.', 'Add og:title, og:description and og:image for rich social shares.');
+    // Word count
+    var bodyText = doc.body ? doc.body.textContent.replace(/\s+/g, ' ').trim() : '';
+    var words = bodyText ? bodyText.split(' ').length : 0;
+    if(words < 300) add('Content depth', 'warn', 'About ' + words + ' words detected.', 'Aim for 300+ words of useful content so the page can rank for its topic.');
+    else add('Content depth', 'pass', 'About ' + words + ' words — solid depth.');
+
+    score = Math.max(0, score);
+    document.getElementById('opScore').textContent = score;
+    document.getElementById('opPass').textContent = np;
+    document.getElementById('opWarn').textContent = nw;
+    document.getElementById('opFail').textContent = nf;
+    var label, cls;
+    if(score >= 90){ label = 'Excellent — the fundamentals look strong.'; cls = 'alert-ok'; }
+    else if(score >= 75){ label = 'Good — a few improvements will polish it up.'; cls = 'alert-ok'; }
+    else if(score >= 50){ label = 'Needs work — several important issues found.'; cls = 'alert-warn'; }
+    else { label = 'Poor — fix the failed checks below first.'; cls = 'alert-err'; }
+    document.getElementById('opVerdict').innerHTML = '<p class="alert ' + cls + '"><strong>Verdict:</strong> ' + label + '</p>';
+    var badge = {pass:'<b style="color:#059669">✓ Pass</b>', warn:'<b style="color:#d97706">⚠ Warning</b>', fail:'<b style="color:#dc2626">✗ Fail</b>'};
+    var html_rows = rows.map(function(r){
+      return '<tr><td><strong>' + esc(r.check) + '</strong></td><td>' + badge[r.status] + '</td><td>' + r.detail + '</td></tr>';
+    }).join('');
+    document.querySelector('#opTable tbody').innerHTML = html_rows;
+    document.getElementById('opTips').innerHTML = tips.length
+      ? '<h3 style="margin:18px 0 8px">How to fix</h3><ul>' + tips.map(function(t){ return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>'
+      : '<p class="alert alert-ok" style="margin-top:14px">No fixes needed — nice work!</p>';
+    out.style.display = '';
+  });
+})();
+</script>
+</body>
+</html>

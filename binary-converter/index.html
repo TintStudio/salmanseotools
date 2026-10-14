@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary Converter — Text to Binary | Salman SEO Tools</title>
+<meta name="description" content="Free text-to-binary converter by Salman SEO Tools. Turn text into 8-bit binary code and decode binary back to text instantly in your browser — no sign-up.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/binary-converter/">
+<meta property="og:title" content="Binary Converter | Salman SEO Tools">
+<meta property="og:description" content="Convert text to binary and binary back to text — free, instant, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/binary-converter/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Binary Converter","applicationCategory":"DeveloperApplication",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/binary-converter/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Binary Converter</h1>
+  <p>Translate plain text into 8-bit binary code, or decode binary strings back into readable text.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / Binary Converter</p>
+
+<div class="tool-app">
+  <label class="lbl" for="binInput">Enter text or binary</label>
+  <textarea id="binInput" style="font-family:ui-monospace,Consolas,monospace;font-size:14px" placeholder="Type text like &quot;Hello&quot; or binary like 01001000 01100101..."></textarea>
+  <div id="binError"></div>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="textToBinary()">Text → Binary</button>
+    <button class="btn btn-accent" onclick="binaryToText()">Binary → Text</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('binOutput',this)">Copy Result</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('binInput').value='';document.getElementById('binOutput').value='';document.getElementById('binError').innerHTML=''">Clear</button>
+  </div>
+  <label class="lbl" for="binOutput">Result</label>
+  <textarea id="binOutput" readonly style="font-family:ui-monospace,Consolas,monospace;font-size:14px" placeholder="The conversion result will appear here..."></textarea>
+  <p class="note">Works with ASCII / basic Latin characters (letters, digits, common symbols). Each character becomes one 8-bit group, e.g. "A" → 01000001.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Binary Converter</h2>
+  <ol class="steps">
+    <li>Type or paste plain text into the input box.</li>
+    <li>Click <strong>Text → Binary</strong> to convert every character into its 8-bit binary code, separated by spaces.</li>
+    <li>To go the other way, paste binary (groups of 8 bits, spaces optional) and click <strong>Binary → Text</strong>.</li>
+    <li>Copy the result with one click.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Convert Text to Binary?</h2>
+  <p>Binary is the language computers actually speak — every letter, number and symbol you type is stored as a pattern of ones and zeros. Converting text to binary is a handy way to learn how encoding works, create geeky messages, or prepare data for low-level programming exercises.</p>
+  <ul>
+    <li><strong>Two-way conversion</strong> — text to binary and binary back to text in one tool.</li>
+    <li><strong>Clean 8-bit output</strong> — every character becomes a full byte, padded with leading zeros.</li>
+    <li><strong>Input validation</strong> — invalid binary (anything other than 0, 1 and spaces) is flagged with a clear error.</li>
+    <li><strong>Instant and private</strong> — conversion runs on your device; nothing is uploaded.</li>
+    <li><strong>Free, no limits</strong> — convert as much text as you like, no account needed.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What is binary code?</summary><p>Binary is a base-2 number system using only 0 and 1. Computers store all data as binary; each group of 8 bits (a byte) represents one character — for example, 01000001 is the letter "A".</p></details>
+  <details><summary>Why is each character 8 bits?</summary><p>This tool uses 8-bit ASCII encoding, where one byte maps to one character. It covers English letters, digits and common symbols — the standard for basic text.</p></details>
+  <details><summary>Can I decode binary without spaces?</summary><p>Yes. The decoder ignores all whitespace, so both "01000001 01000010" and "0100000101000010" decode to "AB". Each group is still read as 8 bits.</p></details>
+  <details><summary>Does it work with emoji or non-English text?</summary><p>Only partially. Characters outside basic Latin need multi-byte encodings like UTF-8, which this simple converter does not handle — stick to standard ASCII text for accurate results.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More encoding and text utilities.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/base64-encoder-decoder/"><span class="tool-ico" style="background:#0e7490">📦</span><span><h3>Base64 Encoder / Decoder</h3><p>Encode and decode Base64 strings.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/url-encoder-decoder/"><span class="tool-ico" style="background:#06b6d4">🔗</span><span><h3>URL Encoder / Decoder</h3><p>Encode or decode URLs and query strings safely.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/reverse-text-generator/"><span class="tool-ico" style="background:#7c2d12">🙃</span><span><h3>Reverse Text Generator</h3><p>Reverse text, words or lines instantly.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/hash-generator/"><span class="tool-ico" style="background:#f97316">🔐</span><span><h3>Hash Generator</h3><p>Generate MD5, SHA-1, SHA-256 and SHA-512 hashes.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var inp = document.getElementById('binInput');
+  var out = document.getElementById('binOutput');
+  var errBox = document.getElementById('binError');
+  function showErr(msg){
+    errBox.innerHTML = '<p class="alert alert-err">' + msg + '</p>';
+  }
+  window.textToBinary = function(){
+    errBox.innerHTML = '';
+    var t = inp.value;
+    if(!t){ showErr('Please enter some text first.'); return; }
+    var bits = [];
+    for(var i = 0; i < t.length; i++){
+      var c = t.charCodeAt(i);
+      if(c > 255){ showErr('Character "' + t[i] + '" is outside basic ASCII — only basic Latin characters are supported.'); return; }
+      bits.push(c.toString(2).padStart(8, '0'));
+    }
+    out.value = bits.join(' ');
+  };
+  window.binaryToText = function(){
+    errBox.innerHTML = '';
+    var t = inp.value.trim();
+    if(!t){ showErr('Please enter some binary first.'); return; }
+    if(!/^[01\s]+$/.test(t)){ showErr('Invalid binary: use only 0, 1 and spaces.'); return; }
+    var clean = t.replace(/\s+/g, '');
+    if(clean.length % 8 !== 0){ showErr('Invalid binary: total bits must be a multiple of 8.'); return; }
+    var chars = [];
+    for(var i = 0; i < clean.length; i += 8){
+      chars.push(String.fromCharCode(parseInt(clean.substr(i, 8), 2)));
+    }
+    out.value = chars.join('');
+  };
+})();
+</script>
+</body>
+</html>

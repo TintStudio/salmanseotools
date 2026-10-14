@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image to Text — Free OCR Online | Salman SEO Tools</title>
+<meta name="description" content="Free image to text OCR tool by Salman SEO Tools. Extract text from photos and screenshots in English, Urdu, Hindi, Arabic or Spanish — right in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/image-to-text/">
+<meta property="og:title" content="Image to Text | Salman SEO Tools">
+<meta property="og:description" content="Extract text from any image with free online OCR — no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/image-to-text/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Image to Text","applicationCategory":"SEO",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/image-to-text/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Image to Text</h1>
+  <p>Upload any photo or screenshot and extract the text inside it with free OCR — right in your browser.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Image to Text</p>
+
+<div class="tool-app">
+  <label class="lbl" for="ocrFile">Choose an image</label>
+  <input type="file" id="ocrFile" accept="image/*" style="margin-bottom:14px">
+  <div><img id="ocrPreview" alt="Uploaded preview" style="display:none;max-height:220px;border-radius:12px;border:1px solid #e6ebf3"></div>
+  <label class="lbl" for="ocrLang">Text language in the image</label>
+  <select id="ocrLang">
+    <option value="eng">English</option>
+    <option value="urd">Urdu</option>
+    <option value="hin">Hindi</option>
+    <option value="ara">Arabic</option>
+    <option value="spa">Spanish</option>
+  </select>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="ocrGo" disabled>Extract Text</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('ocrOut',this)">Copy Text</button>
+  </div>
+  <div id="ocrMsg"></div>
+  <div id="ocrProg" style="display:none;margin:14px 0"><div class="bar"><i id="ocrBar" style="width:0%"></i></div><p class="note" id="ocrPct">Preparing…</p></div>
+  <label class="lbl" for="ocrOut">Extracted text</label>
+  <textarea id="ocrOut" readonly placeholder="The recognized text will appear here..."></textarea>
+  <p class="note">This tool loads the open-source Tesseract.js library from a CDN; your files are still processed in your browser and never uploaded.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Image to Text Tool</h2>
+  <ol class="steps">
+    <li>Click the file button and choose a photo, screenshot or scanned document.</li>
+    <li>Select the language of the text inside the image.</li>
+    <li>Press <strong>Extract Text</strong> and wait a few seconds while the OCR runs.</li>
+    <li>Copy the recognized text and paste it wherever you need it.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Extract Text from Images?</h2>
+  <p>Text trapped inside images cannot be searched, copied or edited — until you run it through OCR (optical character recognition). Students digitize handwritten notes, businesses pull data from receipts and invoices, and content teams rescue text from old screenshots. Doing it in the browser means no uploads, no waiting rooms and no accounts.</p>
+  <ul>
+    <li><strong>Five languages</strong> — English, Urdu, Hindi, Arabic and Spanish recognition.</li>
+    <li><strong>Live progress bar</strong> — see exactly how far the recognition has got.</li>
+    <li><strong>Private processing</strong> — the image is analyzed on your device; it is never uploaded.</li>
+    <li><strong>Works with photos &amp; screenshots</strong> — signs, documents, receipts, memes, anything.</li>
+    <li><strong>Free forever</strong> — no sign-up, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is the image uploaded to a server?</summary><p>No. The OCR engine runs entirely in your browser via the Tesseract.js library. Your image never leaves your device.</p></details>
+  <details><summary>How accurate is the text extraction?</summary><p>Accuracy is best with clear, high-contrast text — screenshots and clean scans work very well. Blurry photos, decorative fonts or handwriting may produce errors you will want to proofread.</p></details>
+  <details><summary>Can it read handwriting?</summary><p>It is designed for printed and typed text. Neat handwriting sometimes works, but results vary widely — printed text is far more reliable.</p></details>
+  <details><summary>Which image formats are supported?</summary><p>Anything your browser can display: JPG, PNG, WebP, GIF and BMP. Very large images are fine, though smaller files process faster.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Work with your extracted text using these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/image-converter/"><span class="tool-ico" style="background:#0891b2">🔁</span><span><h3>Image Converter</h3><p>Convert images between PNG, JPG and WebP.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-compressor/"><span class="tool-ico" style="background:#059669">🗜️</span><span><h3>Image Compressor</h3><p>Compress JPG, PNG and WebP images online.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/text-summarizer/"><span class="tool-ico" style="background:#8b5cf6">📋</span><span><h3>Text Summarizer</h3><p>Summarize long text into key sentences.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/online-text-editor/"><span class="tool-ico" style="background:#334155">📓</span><span><h3>Online Text Editor</h3><p>A clean notepad with word count and download.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var fileInput = document.getElementById('ocrFile');
+  var goBtn = document.getElementById('ocrGo');
+  var out = document.getElementById('ocrOut');
+  var msg = document.getElementById('ocrMsg');
+  var prog = document.getElementById('ocrProg');
+  var bar = document.getElementById('ocrBar');
+  var pct = document.getElementById('ocrPct');
+  var preview = document.getElementById('ocrPreview');
+  var imageDataUrl = null, busy = false;
+
+  function showMsg(html, cls){ msg.innerHTML = '<div class="alert ' + cls + '">' + html + '</div>'; }
+  function clearMsg(){ msg.innerHTML = ''; }
+
+  fileInput.addEventListener('change', function(){
+    var f = fileInput.files && fileInput.files[0];
+    clearMsg(); out.value = '';
+    if(!f){ goBtn.disabled = true; preview.style.display = 'none'; imageDataUrl = null; return; }
+    var reader = new FileReader();
+    reader.onload = function(e){
+      imageDataUrl = e.target.result;
+      preview.src = imageDataUrl;
+      preview.style.display = 'block';
+      goBtn.disabled = false;
+    };
+    reader.readAsDataURL(f);
+  });
+
+  goBtn.addEventListener('click', async function(){
+    if(!imageDataUrl || busy) return;
+    if(typeof Tesseract === 'undefined'){
+      showMsg('The OCR library could not be loaded. Please check your internet connection and reload the page.', 'alert-err');
+      return;
+    }
+    busy = true; goBtn.disabled = true; clearMsg(); out.value = '';
+    prog.style.display = 'block'; bar.style.width = '0%'; pct.textContent = 'Loading OCR engine…';
+    var lang = document.getElementById('ocrLang').value;
+    try{
+      var worker = await Tesseract.createWorker(lang, 1, {
+        logger: function(m){
+          if(m.status === 'recognizing text' && typeof m.progress === 'number'){
+            var p = Math.round(m.progress * 100);
+            bar.style.width = p + '%';
+            pct.textContent = 'Recognizing text… ' + p + '%';
+          } else if(m.status){
+            pct.textContent = m.status.charAt(0).toUpperCase() + m.status.slice(1) + '…';
+          }
+        }
+      });
+      var result = await worker.recognize(imageDataUrl);
+      await worker.terminate();
+      var text = (result && result.data && result.data.text || '').trim();
+      prog.style.display = 'none';
+      if(text){
+        out.value = text;
+        showMsg('<strong>Done.</strong> Text extracted — proofread it before use, as OCR can misread unclear characters.', 'alert-ok');
+      } else {
+        showMsg('No readable text was found in this image. Try a clearer, higher-contrast image.', 'alert-warn');
+      }
+    }catch(err){
+      prog.style.display = 'none';
+      showMsg('Something went wrong during recognition: ' + String(err && err.message || err) + '. Please try again with a different image.', 'alert-err');
+    }
+    busy = false; goBtn.disabled = false;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Duplicate Lines — Dedupe Tool | Salman SEO Tools</title>
+<meta name="description" content="Free duplicate line remover by Salman SEO Tools. Delete repeated lines from any list instantly, with optional case-sensitivity and A–Z sorting, in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/remove-duplicate-lines/">
+<meta property="og:title" content="Remove Duplicate Lines | Salman SEO Tools">
+<meta property="og:description" content="Delete duplicate lines from any list instantly — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/remove-duplicate-lines/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Remove Duplicate Lines","applicationCategory":"Utilities","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/remove-duplicate-lines/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Remove Duplicate Lines</h1>
+  <p>Paste any list and instantly delete repeated lines — keep it clean and unique.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Remove Duplicate Lines</p>
+
+<div class="tool-app">
+  <label class="lbl" for="rdInput">Paste your list (one item per line)</label>
+  <textarea id="rdInput" placeholder="apple&#10;banana&#10;apple&#10;cherry&#10;banana"></textarea>
+  <div class="checkline"><input type="checkbox" id="rdCase" checked> <label for="rdCase">Case-sensitive (Apple and apple count as different)</label></div>
+  <div class="checkline"><input type="checkbox" id="rdSort"> <label for="rdSort">Sort lines A–Z after removing duplicates</label></div>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="dedupe()">Remove Duplicates</button>
+    <button class="btn btn-ghost" onclick="document.getElementById('rdInput').value='';document.getElementById('rdOut').value='';resetRdStats()">Clear</button>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><b id="rdOrig">0</b><span>Original lines</span></div>
+    <div class="stat"><b id="rdUniq">0</b><span>Unique lines</span></div>
+    <div class="stat"><b id="rdRem">0</b><span>Removed</span></div>
+  </div>
+  <label class="lbl" for="rdOut">Cleaned result</label>
+  <textarea id="rdOut" readonly placeholder="Unique lines will appear here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-ghost btn-sm" onclick="copyText('rdOut',this)">Copy Result</button>
+  </div>
+  <p class="note">Deduping happens locally in your browser — your list is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Duplicate Line Remover</h2>
+  <ol class="steps">
+    <li>Paste your list into the box — one item per line.</li>
+    <li>Choose options: keep case-sensitivity on for exact matching, or tick A–Z sorting.</li>
+    <li>Press <strong>Remove Duplicates</strong> and see the cleaned list with counts.</li>
+    <li>Copy the unique lines and use them wherever you need.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Remove Duplicate Lines?</h2>
+  <p>Duplicate entries sneak into keyword lists, email lists, URL lists and data exports all the time. Cleaning them by hand is slow and error-prone; this tool scans thousands of lines in milliseconds and keeps only the first occurrence of each.</p>
+  <ul>
+    <li><strong>Instant deduping</strong> — handles long lists without breaking a sweat.</li>
+    <li><strong>Order preserved</strong> — the first occurrence of each line keeps its position.</li>
+    <li><strong>Case control</strong> — decide whether "Apple" and "apple" are the same.</li>
+    <li><strong>Optional A–Z sort</strong> — get a tidy alphabetised list in one step.</li>
+    <li><strong>Private &amp; free</strong> — runs on your device, no sign-up needed.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Which duplicate is kept?</summary><p>The first occurrence. If a line appears three times, the first one stays in its original position and the later two are removed.</p></details>
+  <details><summary>What does case-sensitive mean here?</summary><p>With it on, "Apple" and "apple" are treated as different lines and both are kept. Turn it off and they count as the same line.</p></details>
+  <details><summary>Are empty lines removed?</summary><p>Yes — blank lines are dropped from the result so your list stays clean.</p></details>
+  <details><summary>Is there a limit on list size?</summary><p>No hard limit. The tool comfortably handles tens of thousands of lines in a modern browser.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free tools for cleaning and measuring text.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/case-converter/"><span class="tool-ico" style="background:#0ea5e9">🔠</span><span><h3>Case Converter</h3><p>Convert text between upper, lower and title case.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/invisible-character-cleaner/"><span class="tool-ico" style="background:#475569">🫧</span><span><h3>Invisible Character Cleaner</h3><p>Find and remove hidden unicode characters.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/online-text-editor/"><span class="tool-ico" style="background:#334155">📓</span><span><h3>Online Text Editor</h3><p>A clean notepad with word count and download.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+function resetRdStats(){
+  document.getElementById('rdOrig').textContent = '0';
+  document.getElementById('rdUniq').textContent = '0';
+  document.getElementById('rdRem').textContent = '0';
+}
+function dedupe(){
+  var raw = document.getElementById('rdInput').value.split('\n');
+  var caseSens = document.getElementById('rdCase').checked;
+  var sort = document.getElementById('rdSort').checked;
+  var seen = {}, uniq = [];
+  var nonEmpty = 0;
+  raw.forEach(function(line){
+    if(!line.trim()) return;
+    nonEmpty++;
+    var key = caseSens ? line : line.toLowerCase();
+    if(!seen[key]){ seen[key] = true; uniq.push(line); }
+  });
+  if(sort) uniq.sort(function(a,b){ return a.localeCompare(b); });
+  document.getElementById('rdOut').value = uniq.join('\n');
+  document.getElementById('rdOrig').textContent = nonEmpty.toLocaleString();
+  document.getElementById('rdUniq').textContent = uniq.length.toLocaleString();
+  document.getElementById('rdRem').textContent = (nonEmpty - uniq.length).toLocaleString();
+}
+</script>
+</body>
+</html>

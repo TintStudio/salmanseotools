@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotate PDF — Rotate Pages Online | Salman SEO Tools</title>
+<meta name="description" content="Free PDF rotator by Salman SEO Tools. Rotate all or selected PDF pages by 90°, 180° or 270° right in your browser. No sign-up, no uploads, no limits.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/rotate-pdf/">
+<meta property="og:title" content="Rotate PDF | Salman SEO Tools">
+<meta property="og:description" content="Rotate PDF pages by 90°, 180° or 270° in your browser — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/rotate-pdf/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Rotate PDF","applicationCategory":"Utilities",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/rotate-pdf/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Rotate PDF</h1>
+  <p>Fix sideways or upside-down pages — rotate the whole document or just the pages you pick.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#pdf-tools">PDF Tools</a> / Rotate PDF</p>
+
+<div class="tool-app">
+  <div id="rtAlert"></div>
+  <label class="lbl" for="rtFile">Select a PDF file</label>
+  <input type="file" id="rtFile" accept="application/pdf">
+  <div class="stat-grid" id="rtStats" style="display:none">
+    <div class="stat"><b id="rtPages">0</b><span>Pages in file</span></div>
+  </div>
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="rtAngle">Rotation angle</label>
+      <select id="rtAngle">
+        <option value="90">90° clockwise</option>
+        <option value="180">180° (upside down)</option>
+        <option value="270">270° clockwise (90° counter-clockwise)</option>
+      </select>
+    </div>
+    <div>
+      <label class="lbl" for="rtScope">Apply to</label>
+      <select id="rtScope">
+        <option value="all">All pages</option>
+        <option value="range">Selected pages</option>
+      </select>
+    </div>
+  </div>
+  <div id="rtRangeWrap" style="display:none">
+    <label class="lbl" for="rtRange">Pages to rotate</label>
+    <input type="text" id="rtRange" placeholder="e.g. 1-3,5">
+    <p class="note">List single pages and ranges separated by commas. Page numbers start at 1.</p>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="rtBtn" onclick="rotatePDF()">Rotate PDF</button>
+    <button class="btn btn-ghost" onclick="clearRotate()">Clear</button>
+  </div>
+  <p class="note">This tool loads the open-source pdf-lib library from a CDN; your PDFs are processed in your browser and never uploaded.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Rotate PDF Tool</h2>
+  <ol class="steps">
+    <li>Choose the PDF file with pages that need rotating.</li>
+    <li>Pick an angle — 90°, 180° or 270° clockwise — and choose all pages or a selection.</li>
+    <li>Press <strong>Rotate PDF</strong> and the rotation is applied instantly.</li>
+    <li>Your corrected <strong>rotated.pdf</strong> downloads automatically.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Rotate PDF Pages?</h2>
+  <p>Scanned documents and phone photos often land sideways or upside down in a PDF, making them unreadable and unprofessional. Rotating the affected pages puts everything upright for reading, sharing and printing.</p>
+  <ul>
+    <li><strong>Whole file or hand-picked pages</strong> — fix one bad page or the entire document.</li>
+    <li><strong>Three angles</strong> — 90°, 180° and 270° cover every orientation problem.</li>
+    <li><strong>Content untouched</strong> — only the page orientation changes, quality stays identical.</li>
+    <li><strong>Fully private</strong> — rotation runs locally in your browser.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this PDF rotator really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Is my PDF uploaded to a server?</summary><p>No. The rotation is done with JavaScript in your own browser, so your file never leaves your device.</p></details>
+  <details><summary>Can I rotate only some pages?</summary><p>Yes. Choose "Selected pages" and enter pages like 2,5-7 — only those pages are rotated, the rest stay as they are.</p></details>
+  <details><summary>Does rotating reduce PDF quality?</summary><p>No. Rotation only changes the page orientation flag, so text and images keep their exact original quality.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free PDF and file utilities you may need.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/merge-pdf/"><span class="tool-ico" style="background:#991b1b">📑</span><span><h3>Merge PDF</h3><p>Combine multiple PDFs into one.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/split-pdf/"><span class="tool-ico" style="background:#c2410c">🗂️</span><span><h3>Split PDF</h3><p>Extract pages from a PDF file.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-converter/"><span class="tool-ico" style="background:#0891b2">🔁</span><span><h3>Image Converter</h3><p>Convert images between PNG, JPG and WebP.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-compressor/"><span class="tool-ico" style="background:#059669">🗜️</span><span><h3>Image Compressor</h3><p>Compress JPG, PNG and WebP images online.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var rtDoc = null, rtCount = 0;
+  function libOk(){
+    if(!window.PDFLib){
+      document.getElementById('rtAlert').innerHTML = '<p class="alert alert-err">PDF library failed to load. Check your connection and reload the page to retry.</p>';
+      return false;
+    }
+    return true;
+  }
+  function parseRanges(str, n){
+    var idx = [], skipped = [];
+    str.split(',').forEach(function(part){
+      part = part.trim();
+      if(!part) return;
+      var m1 = part.match(/^(\d+)$/), m2 = part.match(/^(\d+)\s*-\s*(\d+)$/);
+      if(m1){
+        var p = parseInt(m1[1], 10);
+        (p >= 1 && p <= n) ? idx.push(p - 1) : skipped.push(part);
+      }else if(m2){
+        var a = parseInt(m2[1], 10), b = parseInt(m2[2], 10);
+        if(a < 1 || b > n || a > b){ skipped.push(part); return; }
+        for(var p2 = a; p2 <= b; p2++) idx.push(p2 - 1);
+      }else{
+        skipped.push(part);
+      }
+    });
+    idx = Array.from(new Set(idx)).sort(function(a,b){ return a - b; });
+    return { idx: idx, skipped: skipped };
+  }
+  window.clearRotate = function(){
+    rtDoc = null; rtCount = 0;
+    document.getElementById('rtFile').value = '';
+    document.getElementById('rtRange').value = '';
+    document.getElementById('rtScope').value = 'all';
+    document.getElementById('rtRangeWrap').style.display = 'none';
+    document.getElementById('rtAlert').innerHTML = '';
+    document.getElementById('rtStats').style.display = 'none';
+  };
+  window.rotatePDF = async function(){
+    document.getElementById('rtAlert').innerHTML = '';
+    if(!libOk()) return;
+    if(!rtDoc){
+      document.getElementById('rtAlert').innerHTML = '<p class="alert alert-err">Please select a PDF file first.</p>';
+      return;
+    }
+    var angle = parseInt(document.getElementById('rtAngle').value, 10);
+    var idx, skipped = [];
+    if(document.getElementById('rtScope').value === 'range'){
+      var r = parseRanges(document.getElementById('rtRange').value, rtCount);
+      idx = r.idx; skipped = r.skipped;
+      if(!idx.length){
+        document.getElementById('rtAlert').innerHTML = '<p class="alert alert-err">No valid pages found. Use a format like 1-3,5.</p>';
+        return;
+      }
+    }else{
+      idx = [];
+      for(var i = 0; i < rtCount; i++) idx.push(i);
+    }
+    var btn = document.getElementById('rtBtn');
+    btn.disabled = true; var old = btn.textContent; btn.textContent = 'Rotating…';
+    try{
+      idx.forEach(function(p){
+        var pg = rtDoc.getPage(p);
+        var cur = pg.getRotation().angle;
+        pg.setRotation(PDFLib.degrees((cur + angle) % 360));
+      });
+      var bytes = await rtDoc.save();
+      downloadFile('rotated.pdf', bytes, 'application/pdf');
+      var msg = '<p class="alert alert-ok">Done! ' + idx.length + ' page(s) rotated and downloaded.</p>';
+      if(skipped.length) msg += '<p class="alert alert-warn">Skipped invalid entries: ' + skipped.join(', ') + '.</p>';
+      document.getElementById('rtAlert').innerHTML = msg;
+    }catch(e){
+      document.getElementById('rtAlert').innerHTML = '<p class="alert alert-err">Could not rotate this file. It may be corrupted or password-protected.</p>';
+    }
+    btn.disabled = false; btn.textContent = old;
+  };
+  document.getElementById('rtScope').addEventListener('change', function(){
+    document.getElementById('rtRangeWrap').style.display = this.value === 'range' ? '' : 'none';
+  });
+  document.getElementById('rtFile').addEventListener('change', async function(e){
+    document.getElementById('rtAlert').innerHTML = '';
+    if(!libOk()){ e.target.value = ''; return; }
+    var f = e.target.files[0];
+    if(!f) return;
+    try{
+      rtDoc = await PDFLib.PDFDocument.load(await f.arrayBuffer());
+      rtCount = rtDoc.getPageCount();
+      document.getElementById('rtPages').textContent = rtCount;
+      document.getElementById('rtStats').style.display = '';
+    }catch(err){
+      rtDoc = null; rtCount = 0;
+      document.getElementById('rtAlert').innerHTML = '<p class="alert alert-err">Could not read this PDF. It may be corrupted or password-protected.</p>';
+    }
+  });
+})();
+</script>
+</body>
+</html>

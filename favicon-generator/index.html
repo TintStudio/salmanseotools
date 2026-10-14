@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favicon Generator — Make Favicons Free | Salman SEO Tools</title>
+<meta name="description" content="Free favicon generator by Salman SEO Tools. Turn any image into 16, 32, 48 and 180px favicon PNGs with previews, downloads and the HTML snippet included.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/favicon-generator/">
+<meta property="og:title" content="Favicon Generator | Salman SEO Tools">
+<meta property="og:description" content="Create favicon PNGs in every size from any image — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/favicon-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Favicon Generator","applicationCategory":"Multimedia","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/favicon-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Favicon Generator</h1>
+  <p>Turn any image into crisp favicon PNGs in every standard size — free, in your browser.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#image-tools">Image Tools</a> / Favicon Generator</p>
+
+<div class="tool-app">
+  <label class="lbl">Choose a source image (square works best)</label>
+  <div class="btn-row" style="margin-top:0">
+    <label class="btn btn-primary btn-sm" style="cursor:pointer">Select Image
+      <input type="file" id="fgFile" accept="image/*" hidden>
+    </label>
+    <button class="btn btn-accent btn-sm" id="fgBtn" onclick="generateFavicons()" disabled>Generate Favicons</button>
+    <span id="fgName" class="note" style="align-self:center"></span>
+  </div>
+  <div id="fgResult" style="display:none">
+    <label class="lbl">Previews &amp; downloads</label>
+    <div class="stat-grid" id="fgGrid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))"></div>
+    <label class="lbl" for="fgSnippet">Add this to your page's &lt;head&gt;</label>
+    <div class="result-box" id="fgSnippet"></div>
+    <div class="btn-row">
+      <button class="btn btn-ghost btn-sm" onclick="copyText('fgSnippet',this)">Copy Snippet</button>
+    </div>
+  </div>
+  <p class="note">Your image never leaves this page — everything is generated locally on a canvas.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Favicon Generator</h2>
+  <ol class="steps">
+    <li>Click <strong>Select Image</strong> and pick your logo or icon (a square image gives the best result).</li>
+    <li>Press <strong>Generate Favicons</strong> to create 16, 32, 48 and 180 px versions.</li>
+    <li>Preview each size and download the PNG files you need.</li>
+    <li>Copy the HTML snippet and paste it into your page's <code>&lt;head&gt;</code> section.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Every Site Needs a Favicon</h2>
+  <p>A favicon is the tiny icon browsers show in tabs, bookmarks and search results. Sites without one look unfinished, while a crisp icon builds instant recognition and trust — a small detail with an outsized effect on how professional your site feels.</p>
+  <ul>
+    <li><strong>All key sizes</strong> — 16, 32 and 48 px for browsers, 180 px for Apple touch icons.</li>
+    <li><strong>Live previews</strong> — see exactly how each size looks before downloading.</li>
+    <li><strong>Ready-made snippet</strong> — the <code>&lt;link&gt;</code> tags are written for you.</li>
+    <li><strong>Private &amp; fast</strong> — generated on your device, no uploads, no waiting.</li>
+    <li><strong>Free forever</strong> — no account, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What image should I use as a source?</summary><p>A square logo or simple icon works best. The tool centre-crops non-square images to a square before resizing, so wide or tall photos may lose their edges.</p></details>
+  <details><summary>Which sizes do I actually need?</summary><p>16×16 is the classic browser tab icon, 32×32 covers retina displays, 48×48 is used by some browsers and shortcuts, and 180×180 is the Apple touch icon for iOS home screens. This tool gives you all four.</p></details>
+  <details><summary>Where do I put the downloaded files?</summary><p>Upload the PNGs to your website's root folder (or an /icons/ folder) and paste the provided snippet into the <code>&lt;head&gt;</code> of your pages, adjusting the href paths to match where you placed them.</p></details>
+  <details><summary>Is my logo uploaded anywhere?</summary><p>No. The image is read locally and drawn onto canvas elements in your browser. It never leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free image and SEO utilities.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/image-converter/"><span class="tool-ico" style="background:#0891b2">🔁</span><span><h3>Image Converter</h3><p>Convert images between PNG, JPG and WebP.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-compressor/"><span class="tool-ico" style="background:#059669">🗜️</span><span><h3>Image Compressor</h3><p>Compress JPG, PNG and WebP images online.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/text-to-image/"><span class="tool-ico" style="background:#6366f1">🖼️</span><span><h3>Text to Image</h3><p>Turn text into a downloadable PNG image.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var dataUrl = null;
+  document.getElementById('fgFile').addEventListener('change', function(e){
+    var f = e.target.files[0];
+    if(!f) return;
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      dataUrl = ev.target.result;
+      document.getElementById('fgName').textContent = f.name;
+      document.getElementById('fgBtn').disabled = false;
+      document.getElementById('fgResult').style.display = 'none';
+    };
+    reader.readAsDataURL(f);
+  });
+  window.generateFavicons = function(){
+    if(!dataUrl) return;
+    var img = new Image();
+    img.onload = function(){
+      var sizes = [16, 32, 48, 180];
+      var grid = document.getElementById('fgGrid');
+      grid.innerHTML = '';
+      var side = Math.min(img.width, img.height);
+      var sx = (img.width - side) / 2, sy = (img.height - side) / 2;
+      sizes.forEach(function(s){
+        var canvas = document.createElement('canvas');
+        canvas.width = s; canvas.height = s;
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(img, sx, sy, side, side, 0, 0, s, s);
+        var url = canvas.toDataURL('image/png');
+        var cell = document.createElement('div');
+        cell.className = 'stat';
+        var label = s === 180 ? '180 px — Apple touch' : s + ' px';
+        cell.innerHTML = '<img src="' + url + '" alt="Favicon ' + s + 'px" style="width:' +
+          Math.min(s, 64) + 'px;height:' + Math.min(s, 64) + 'px;image-rendering:' +
+          (s <= 32 ? 'pixelated' : 'auto') + ';border:1px solid var(--border);border-radius:8px;background:#fff">' +
+          '<span style="display:block;margin:8px 0">' + label + '</span>';
+        var a = document.createElement('a');
+        a.href = url; a.download = 'favicon-' + s + 'x' + s + '.png';
+        a.className = 'btn btn-ghost btn-sm'; a.textContent = 'Download';
+        a.style.textDecoration = 'none';
+        cell.appendChild(a);
+        grid.appendChild(cell);
+      });
+      document.getElementById('fgSnippet').textContent =
+        '<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">\n' +
+        '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">\n' +
+        '<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">\n' +
+        '<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">';
+      document.getElementById('fgResult').style.display = 'block';
+    };
+    img.onerror = function(){ alert('That file could not be read as an image.'); };
+    img.src = dataUrl;
+  };
+})();
+</script>
+</body>
+</html>

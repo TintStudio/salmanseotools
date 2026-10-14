@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse Text Generator — Flip Text | Salman SEO Tools</title>
+<meta name="description" content="Free reverse text generator by Salman SEO Tools. Flip text backwards by character, word or line order instantly — in your browser, no sign-up needed.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/reverse-text-generator/">
+<meta property="og:title" content="Reverse Text Generator | Salman SEO Tools">
+<meta property="og:description" content="Flip text backwards by character, word or line — free and instant.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/reverse-text-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Reverse Text Generator","applicationCategory":"Utilities","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/reverse-text-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Reverse Text Generator</h1>
+  <p>Flip your text backwards — by character, by word, or by line order — in one click.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Reverse Text Generator</p>
+
+<div class="tool-app">
+  <label class="lbl" for="rtInput">Enter your text</label>
+  <textarea id="rtInput" placeholder="Type or paste text to reverse..."></textarea>
+  <label class="lbl" for="rtMode">Reverse mode</label>
+  <select id="rtMode">
+    <option value="chars">Whole text (character by character)</option>
+    <option value="words">Each word reversed (word order kept)</option>
+    <option value="wordorder">Word order reversed</option>
+    <option value="lines">Line order reversed</option>
+  </select>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="doReverse()">Reverse Text</button>
+    <button class="btn btn-ghost" onclick="document.getElementById('rtInput').value='';document.getElementById('rtOut').value='';">Clear</button>
+  </div>
+  <label class="lbl" for="rtOut">Result</label>
+  <textarea id="rtOut" readonly placeholder="Reversed text will appear here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-ghost btn-sm" onclick="copyText('rtOut',this)">Copy Result</button>
+  </div>
+  <p class="note">Reversing happens locally in your browser — your text is never sent anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Reverse Text Generator</h2>
+  <ol class="steps">
+    <li>Type or paste your text into the input box.</li>
+    <li>Pick a reverse mode: whole text, each word, word order, or line order.</li>
+    <li>Press <strong>Reverse Text</strong> to see the flipped result instantly.</li>
+    <li>Copy the result with one click and use it wherever you like.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Reverse Text?</h2>
+  <p>Reversed text is a simple trick with plenty of uses — from playful social media posts and puzzle-making to testing how software handles unusual input. Instead of flipping characters by hand, this tool does it perfectly in a fraction of a second.</p>
+  <ul>
+    <li><strong>Four reverse modes</strong> — character flip, per-word flip, word-order flip and line-order flip.</li>
+    <li><strong>Instant results</strong> — no waiting, no page reloads.</li>
+    <li><strong>Handles long text</strong> — reverse whole paragraphs or lists at once.</li>
+    <li><strong>100% private</strong> — everything runs on your device.</li>
+    <li><strong>Free forever</strong> — no account, no limits.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What is the difference between the reverse modes?</summary><p>"Whole text" flips every character so "hello world" becomes "dlrow olleh". "Each word" reverses letters inside words but keeps their order: "olleh dlrow". "Word order" flips the sequence of words: "world hello". "Line order" reverses the order of lines, useful for lists.</p></details>
+  <details><summary>Is the reversed text readable?</summary><p>Character-reversed text reads backwards, which is the point — it is great for puzzles, jokes and stylised posts. Word-order mode stays readable word by word.</p></details>
+  <details><summary>Does it work with emojis and special characters?</summary><p>Yes. The tool reverses by Unicode code point, so emojis and accented characters are handled correctly.</p></details>
+  <details><summary>Is this tool free?</summary><p>Yes — like every tool on Salman SEO Tools, it is free with no sign-up required.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More playful and practical text utilities.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/case-converter/"><span class="tool-ico" style="background:#0ea5e9">🔠</span><span><h3>Case Converter</h3><p>Convert text between upper, lower and title case.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/small-text-generator/"><span class="tool-ico" style="background:#a855f7">🔤</span><span><h3>Small Text Generator</h3><p>Create tiny, fancy unicode text styles.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/binary-converter/"><span class="tool-ico" style="background:#1d4ed8">01</span><span><h3>Binary Converter</h3><p>Convert text to binary and back.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+function doReverse(){
+  var t = document.getElementById('rtInput').value;
+  var mode = document.getElementById('rtMode').value;
+  if(!t){ document.getElementById('rtOut').value = ''; return; }
+  var out;
+  if(mode === 'chars'){
+    out = Array.from(t).reverse().join('');
+  } else if(mode === 'words'){
+    out = t.split(/(\s+)/).map(function(w){
+      return /^\s+$/.test(w) ? w : Array.from(w).reverse().join('');
+    }).join('');
+  } else if(mode === 'wordorder'){
+    var parts = t.match(/\S+|\s+/g) || [];
+    var words = parts.filter(function(p){ return !/^\s+$/.test(p); }).reverse();
+    var i = 0;
+    out = parts.map(function(p){ return /^\s+$/.test(p) ? p : words[i++]; }).join('');
+  } else {
+    out = t.split('\n').reverse().join('\n');
+  }
+  document.getElementById('rtOut').value = out;
+}
+</script>
+</body>
+</html>

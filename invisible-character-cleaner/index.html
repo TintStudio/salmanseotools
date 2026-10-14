@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invisible Character Remover — Clean Text | Salman SEO Tools</title>
+<meta name="description" content="Free invisible character remover by Salman SEO Tools. Scan any text for hidden zero-width characters and clean them instantly in your browser — no sign-up.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/invisible-character-cleaner/">
+<meta property="og:title" content="Invisible Character Remover | Salman SEO Tools">
+<meta property="og:description" content="Find and remove hidden zero-width characters from any text — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/invisible-character-cleaner/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Invisible Character Remover","applicationCategory":"SEO",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/invisible-character-cleaner/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Invisible Character Remover</h1>
+  <p>Scan any text for hidden zero-width characters and strip them out in one click.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Invisible Character Remover</p>
+
+<div class="tool-app">
+  <label class="lbl" for="icInput">Paste the text to scan</label>
+  <textarea id="icInput" placeholder="Paste text that may contain hidden characters..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="scanClean()">Scan &amp; Clean</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('icInput').value='';document.getElementById('icResults').innerHTML='';document.getElementById('icMsg').innerHTML='';">Clear</button>
+  </div>
+  <div id="icMsg"></div>
+  <div id="icResults"></div>
+  <label class="lbl" for="icOut" style="margin-top:18px">Cleaned text</label>
+  <textarea id="icOut" readonly placeholder="The cleaned result will appear here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-ghost btn-sm" onclick="copyText('icOut',this)">Copy Cleaned Text</button>
+  </div>
+  <p class="note">Everything runs locally in your browser — your text is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Invisible Character Remover</h2>
+  <ol class="steps">
+    <li>Paste the suspicious text into the box above.</li>
+    <li>Click "Scan &amp; Clean" — the tool checks for nine types of invisible characters.</li>
+    <li>Review the report table to see exactly which hidden characters were found and how many.</li>
+    <li>Copy the cleaned text and use it with confidence.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Remove Invisible Characters?</h2>
+  <p>Text copied from websites, PDFs, chat apps and AI tools often carries invisible characters — zero-width spaces, joiners and direction marks you cannot see but software can. They break password fields, corrupt code, confuse plagiarism checkers, and sneak into published articles. A quick scan keeps your text truly clean.</p>
+  <ul>
+    <li><strong>Detects 9 hidden types</strong> — zero-width space, joiners, direction marks, word joiner, BOM, soft hyphen and more.</li>
+    <li><strong>Detailed report</strong> — see each character type by name and codepoint with its count.</li>
+    <li><strong>One-click cleaning</strong> — stripped output ready to copy.</li>
+    <li><strong>Great for developers</strong> — find the invisible culprit breaking your code or data.</li>
+    <li><strong>100% private</strong> — scanning happens on your device; nothing leaves the page.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this invisible character remover really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>What are invisible characters?</summary><p>They are Unicode characters with no visible glyph — such as the zero-width space (U+200B) — that still occupy a position in the text. They often sneak in when copying from websites, PDFs or chat apps.</p></details>
+  <details><summary>Why should I remove them?</summary><p>Hidden characters can break logins and code, corrupt CSV data, trigger false plagiarism matches, and bloat content. Cleaning them ensures your text behaves exactly as it looks.</p></details>
+  <details><summary>Is my text uploaded to a server?</summary><p>No. The scan runs with JavaScript in your own browser, so your text never leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More ways to clean up and check your text.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/case-converter/"><span class="tool-ico" style="background:#0ea5e9">🔠</span><span><h3>Case Converter</h3><p>Convert text between upper, lower and title case.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/remove-duplicate-lines/"><span class="tool-ico" style="background:#b45309">🧹</span><span><h3>Remove Duplicate Lines</h3><p>Delete duplicate lines from any list.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/plagiarism-checker/"><span class="tool-ico" style="background:#ef4444">🛡️</span><span><h3>Plagiarism Checker</h3><p>Compare texts and highlight duplicate sentences.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var INV = [
+    ['\u200B','Zero-width space','U+200B'],
+    ['\u200C','Zero-width non-joiner','U+200C'],
+    ['\u200D','Zero-width joiner','U+200D'],
+    ['\u200E','Left-to-right mark','U+200E'],
+    ['\u200F','Right-to-left mark','U+200F'],
+    ['\u2060','Word joiner','U+2060'],
+    ['\uFEFF','Zero-width no-break space (BOM)','U+FEFF'],
+    ['\u00AD','Soft hyphen','U+00AD'],
+    ['\u180E','Mongolian vowel separator','U+180E']
+  ];
+  function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  window.scanClean = function(){
+    var t = document.getElementById('icInput').value;
+    var msg = document.getElementById('icMsg');
+    var res = document.getElementById('icResults');
+    var out = document.getElementById('icOut');
+    msg.innerHTML = ''; res.innerHTML = ''; out.value = '';
+    if(!t){ msg.innerHTML = '<div class="alert alert-err">Please paste some text to scan.</div>'; return; }
+    var rows = [], total = 0, cleaned = t;
+    INV.forEach(function(def){
+      var re = new RegExp(def[0], 'g');
+      var m = t.match(re);
+      var c = m ? m.length : 0;
+      if(c){ rows.push({cp:def[2], name:def[1], count:c}); total += c; cleaned = cleaned.replace(re, ''); }
+    });
+    if(!total){
+      msg.innerHTML = '<div class="alert alert-ok">No hidden characters found — your text is clean.</div>';
+      out.value = t;
+      return;
+    }
+    var html = '<div class="stat-grid"><div class="stat"><b>' + total + '</b><span>Hidden characters removed</span></div>' +
+      '<div class="stat"><b>' + rows.length + '</b><span>Character types found</span></div></div>';
+    html += '<table class="data"><tr><th>Codepoint</th><th>Character name</th><th>Count</th></tr>' +
+      rows.map(function(r){
+        return '<tr><td style="font-family:ui-monospace,monospace">' + r.cp + '</td><td>' + escapeHtml(r.name) + '</td><td>' + r.count + '</td></tr>';
+      }).join('') + '</table>';
+    res.innerHTML = html;
+    out.value = cleaned;
+    msg.innerHTML = '<div class="alert alert-warn">Found and removed ' + total + ' hidden character' + (total === 1 ? '' : 's') + '. Review the report above, then copy the cleaned text.</div>';
+  };
+})();
+</script>
+</body>
+</html>

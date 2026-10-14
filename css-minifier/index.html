@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Minifier — Compress CSS Free | Salman SEO Tools</title>
+<meta name="description" content="Free online CSS minifier by Salman SEO Tools. Strip comments and whitespace to shrink stylesheets and see bytes saved — right in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/css-minifier/">
+<meta property="og:title" content="CSS Minifier | Salman SEO Tools">
+<meta property="og:description" content="Compress CSS by removing comments and whitespace — free, instant, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/css-minifier/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"CSS Minifier","applicationCategory":"DeveloperApplication",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/css-minifier/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>CSS Minifier</h1>
+  <p>Paste your stylesheet and get a compressed version with comments and extra whitespace removed.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / CSS Minifier</p>
+
+<div class="tool-app">
+  <label class="lbl" for="cssInput">Paste your CSS</label>
+  <textarea id="cssInput" style="min-height:200px;font-family:ui-monospace,Consolas,monospace;font-size:13.5px" placeholder="/* Paste your stylesheet here */&#10;body {&#10;  margin: 0;&#10;  padding: 0;&#10;}"></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="minifyCSS()">Minify CSS</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('cssOutput',this)">Copy Minified</button>
+    <button class="btn btn-ghost btn-sm" onclick="downloadMinified()">Download .css</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('cssInput').value='';document.getElementById('cssOutput').value='';updateCSSStats()">Clear</button>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><b id="cssOrig">0</b><span>Original bytes</span></div>
+    <div class="stat"><b id="cssMin">0</b><span>Minified bytes</span></div>
+    <div class="stat"><b id="cssSaved">0%</b><span>Size saved</span></div>
+  </div>
+  <label class="lbl" for="cssOutput">Minified output</label>
+  <textarea id="cssOutput" readonly style="min-height:140px;font-family:ui-monospace,Consolas,monospace;font-size:13.5px" placeholder="The compressed CSS will appear here..."></textarea>
+  <p class="note">A basic minifier: it removes comments and unnecessary whitespace. Always test minified CSS on a staging copy of your site before deploying.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the CSS Minifier</h2>
+  <ol class="steps">
+    <li>Paste your full stylesheet into the input box.</li>
+    <li>Click <strong>Minify CSS</strong> — comments are stripped and whitespace is collapsed in one step.</li>
+    <li>Check the byte stats to see exactly how much smaller the file became.</li>
+    <li>Copy the result or download it as <code>style.min.css</code> and link it from your pages.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Minify CSS?</h2>
+  <p>Every extra byte in a stylesheet is a byte every visitor must download. Minification removes comments, line breaks and spaces that humans need but browsers don't, shrinking the file and speeding up page loads — a small but real win for user experience and Core Web Vitals.</p>
+  <ul>
+    <li><strong>Comment removal</strong> — <code>/* ... */</code> comments are stripped from the output.</li>
+    <li><strong>Whitespace collapsing</strong> — redundant spaces, tabs and newlines are removed.</li>
+    <li><strong>Safe punctuation cleanup</strong> — spaces around braces, colons, semicolons and commas are trimmed, and the last semicolon in each rule is dropped.</li>
+    <li><strong>Honest stats</strong> — see original vs minified size and the exact percentage saved.</li>
+    <li><strong>Private and free</strong> — your code never leaves the browser; no account, no limits.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Will minification change how my CSS works?</summary><p>No. This tool only removes comments and whitespace that browsers ignore, so the rendered result is identical. Still, keep your original file and test before deploying.</p></details>
+  <details><summary>How much smaller will my CSS get?</summary><p>It depends on formatting, but hand-written CSS typically shrinks by 20–40%. The stats above show your exact saving.</p></details>
+  <details><summary>Does it handle CSS inside HTML style tags?</summary><p>Paste only the CSS itself, not the surrounding <code>&lt;style&gt;</code> tags, for the cleanest result.</p></details>
+  <details><summary>Is my stylesheet uploaded anywhere?</summary><p>No. Minification runs entirely in your browser with JavaScript — your code stays on your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More code and text utilities for developers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/json-formatter/"><span class="tool-ico" style="background:#65a30d">🧾</span><span><h3>JSON Formatter</h3><p>Format, validate and minify JSON.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/html-encoder-decoder/"><span class="tool-ico" style="background:#c026d3">🔣</span><span><h3>HTML Encoder / Decoder</h3><p>Encode or decode HTML entities.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/url-encoder-decoder/"><span class="tool-ico" style="background:#06b6d4">🔗</span><span><h3>URL Encoder / Decoder</h3><p>Encode or decode URLs and query strings safely.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/hash-generator/"><span class="tool-ico" style="background:#f97316">🔐</span><span><h3>Hash Generator</h3><p>Generate MD5, SHA-1, SHA-256 and SHA-512 hashes.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var inp = document.getElementById('cssInput');
+  var out = document.getElementById('cssOutput');
+  window.updateCSSStats = function(){
+    var o = inp.value.length, m = out.value.length;
+    document.getElementById('cssOrig').textContent = o.toLocaleString();
+    document.getElementById('cssMin').textContent = m.toLocaleString();
+    document.getElementById('cssSaved').textContent = o ? Math.round((o - m) / o * 100) + '%' : '0%';
+  };
+  window.minifyCSS = function(){
+    var css = inp.value;
+    if(!css.trim()){ out.value=''; updateCSSStats(); return; }
+    var min = css
+      .replace(/\/\*[\s\S]*?\*\//g, '')          // comments
+      .replace(/\s+/g, ' ')                      // collapse whitespace
+      .replace(/\s*([{}:;,>+~])\s*/g, '$1')      // space around punctuation
+      .replace(/;}/g, '}')                       // trailing semicolon
+      .replace(/\s*!\s*important/g, '!important')
+      .trim();
+    out.value = min;
+    updateCSSStats();
+  };
+  window.downloadMinified = function(){
+    if(!out.value.trim()) return;
+    downloadFile('style.min.css', out.value, 'text/css');
+  };
+  inp.addEventListener('input', updateCSSStats);
+  updateCSSStats();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter — Validate & Format JSON | Salman SEO Tools</title>
+<meta name="description" content="Free JSON formatter by Salman SEO Tools. Validate, pretty-print and minify JSON in your browser — with clear error messages and key statistics.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/json-formatter/">
+<meta property="og:title" content="JSON Formatter | Salman SEO Tools">
+<meta property="og:description" content="Validate, format and minify JSON instantly — free, private, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/json-formatter/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"JSON Formatter","applicationCategory":"DeveloperApplication","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/json-formatter/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>JSON Formatter</h1>
+  <p>Validate, pretty-print and minify JSON instantly — with readable error messages when something is wrong.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / JSON Formatter</p>
+
+<div class="tool-app">
+  <label class="lbl" for="jfInput">Paste your JSON below</label>
+  <textarea id="jfInput" placeholder='{"name": "example", "items": [1, 2, 3]}'></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="jfFormat()">Format</button>
+    <button class="btn btn-accent" onclick="jfMinify()">Minify</button>
+    <button class="btn btn-ghost" onclick="jfValidate()">Validate</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('jfInput').value='';document.getElementById('jfOut').textContent='';document.getElementById('jfMsg').innerHTML=''">Clear</button>
+  </div>
+  <div id="jfMsg"></div>
+  <label class="lbl">Result</label>
+  <div class="result-box" id="jfOut">Your formatted JSON will appear here.</div>
+  <div class="btn-row">
+    <button class="btn btn-ghost btn-sm" onclick="copyText('jfOut',this)">Copy Result</button>
+  </div>
+  <p class="note">Everything runs locally in your browser — your data is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the JSON Formatter</h2>
+  <ol class="steps">
+    <li>Paste your JSON into the box above — formatted, minified or broken, it all works.</li>
+    <li>Click <strong>Format</strong> for readable indented JSON, <strong>Minify</strong> for compact single-line JSON, or <strong>Validate</strong> to just check it.</li>
+    <li>If the JSON is invalid, you'll get the exact error and its position so you can fix it fast.</li>
+    <li>Copy the result back into your code or config file.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Format JSON?</h2>
+  <p>APIs, config files and data exports all speak JSON, but real-world JSON is often a single unreadable line — or worse, subtly broken. A quick format-and-validate pass turns debugging from guesswork into a glance, and minifying shrinks payloads before they ship.</p>
+  <ul>
+    <li><strong>Pretty-print</strong> — 2-space indentation that makes nested structures easy to scan.</li>
+    <li><strong>One-click minify</strong> — strip all unnecessary whitespace for production payloads.</li>
+    <li><strong>Clear validation</strong> — exact error messages instead of silent failures.</li>
+    <li><strong>Key statistics</strong> — see the data type and total key count at a glance.</li>
+    <li><strong>100% private</strong> — parsing happens on your device; nothing leaves the page.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What does "validate" do differently from "format"?</summary><p>Validate only checks whether your JSON is correct and reports its structure, without changing your input. Format checks it and rewrites it with clean indentation.</p></details>
+  <details><summary>Why does my JSON fail with "Unexpected token"?</summary><p>The most common causes are trailing commas, single quotes instead of double quotes, or unquoted keys — all of which are invalid in strict JSON. The error message shows where the problem starts.</p></details>
+  <details><summary>Is there a size limit?</summary><p>The tool handles typical API responses and config files (up to a few megabytes) comfortably in any modern browser.</p></details>
+  <details><summary>Is my data sent to a server?</summary><p>No. Validation and formatting use your browser's built-in JSON parser, so your data never leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More encoding and data utilities for developers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/html-encoder-decoder/"><span class="tool-ico" style="background:#c026d3">🔣</span><span><h3>HTML Encoder / Decoder</h3><p>Encode or decode HTML entities.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/base64-encoder-decoder/"><span class="tool-ico" style="background:#0e7490">📦</span><span><h3>Base64 Encoder / Decoder</h3><p>Encode and decode Base64 strings.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/css-minifier/"><span class="tool-ico" style="background:#4d7c0f">✂️</span><span><h3>CSS Minifier</h3><p>Minify CSS by removing whitespace.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/url-encoder-decoder/"><span class="tool-ico" style="background:#06b6d4">🔗</span><span><h3>URL Encoder / Decoder</h3><p>Encode or decode URLs and query strings safely.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+function jfEsc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function jfParse(){
+  var v=document.getElementById('jfInput').value;
+  if(!v.trim())throw new Error('Input is empty — paste some JSON first.');
+  return JSON.parse(v);
+}
+function jfCountKeys(o){
+  var n=0;
+  if(Array.isArray(o)){o.forEach(function(i){n+=jfCountKeys(i);});}
+  else if(o&&typeof o==='object'){Object.keys(o).forEach(function(k){n++;n+=jfCountKeys(o[k]);});}
+  return n;
+}
+function jfType(o){return Array.isArray(o)?'array':(o===null?'null':typeof o);}
+function jfShowMsg(html){document.getElementById('jfMsg').innerHTML=html;}
+function jfFormat(){
+  try{var o=jfParse();
+    document.getElementById('jfOut').textContent=JSON.stringify(o,null,2);
+    jfShowMsg('<div class="alert alert-ok"><b>Valid JSON ✓</b> — formatted with 2-space indentation. Type: '+jfType(o)+', total keys: '+jfCountKeys(o)+'.</div>');
+  }catch(e){document.getElementById('jfOut').textContent='';jfShowMsg('<div class="alert alert-err"><b>Invalid JSON:</b> '+jfEsc(e.message)+'</div>');}
+}
+function jfMinify(){
+  try{var o=jfParse();var s=JSON.stringify(o);
+    document.getElementById('jfOut').textContent=s;
+    jfShowMsg('<div class="alert alert-ok"><b>Valid JSON ✓</b> — minified to '+s.length.toLocaleString()+' characters.</div>');
+  }catch(e){document.getElementById('jfOut').textContent='';jfShowMsg('<div class="alert alert-err"><b>Invalid JSON:</b> '+jfEsc(e.message)+'</div>');}
+}
+function jfValidate(){
+  try{var o=jfParse();
+    document.getElementById('jfOut').textContent='';
+    jfShowMsg('<div class="alert alert-ok"><b>Valid JSON ✓</b> — root type: '+jfType(o)+', total keys: '+jfCountKeys(o)+'.</div>');
+  }catch(e){document.getElementById('jfOut').textContent='';jfShowMsg('<div class="alert alert-err"><b>Invalid JSON:</b> '+jfEsc(e.message)+'</div>');}
+}
+</script>
+</body>
+</html>

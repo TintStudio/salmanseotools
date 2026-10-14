@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Graph Checker — Preview Link Cards | Salman SEO Tools</title>
+<meta name="description" content="Free Open Graph checker by Salman SEO Tools. Paste page HTML to preview Facebook and Twitter link cards and find missing social meta tags instantly.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/open-graph-checker/">
+<meta property="og:title" content="Open Graph Checker | Salman SEO Tools">
+<meta property="og:description" content="Preview how your page looks when shared on Facebook and Twitter — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/open-graph-checker/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.og-preview{max-width:520px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;margin-top:14px}
+.og-preview img{width:100%;max-height:260px;object-fit:cover;display:block;background:#eef1fb}
+.og-preview .og-body{background:#f1f2f6;padding:12px 14px}
+.og-preview .og-domain{font-size:12px;color:#65676b;text-transform:uppercase;letter-spacing:.4px}
+.og-preview .og-title{font-size:17px;font-weight:700;color:#050505;margin:4px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.og-preview .og-desc{font-size:14px;color:#65676b;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.og-tw{border:1px solid #cfd9de;border-radius:16px}
+.og-tw .og-body{background:#fff}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Open Graph Checker","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/open-graph-checker/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Open Graph Checker</h1>
+  <p>See exactly how your page will look when shared on Facebook, LinkedIn and X — and catch missing social tags.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#seo-tools">SEO Tools</a> / Open Graph Checker</p>
+
+<div class="tool-app">
+  <label class="lbl" for="ogcHtml">Paste the page's HTML source below</label>
+  <textarea id="ogcHtml" placeholder="Paste the full HTML of the page you want to preview..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="ogcBtn">Preview Link Card</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('ogcHtml').value='';document.getElementById('ogcOut').style.display='none'">Clear</button>
+  </div>
+  <div id="ogcOut" style="display:none">
+    <div class="form-grid">
+      <div>
+        <label class="lbl">Facebook / LinkedIn preview</label>
+        <div class="og-preview" id="ogcFb"></div>
+      </div>
+      <div>
+        <label class="lbl">X (Twitter) preview</label>
+        <div class="og-preview og-tw" id="ogcTw"></div>
+      </div>
+    </div>
+    <div id="ogcWarn"></div>
+    <table class="data" id="ogcTable">
+      <thead><tr><th>Tag</th><th>Content</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="note">We ask for pasted HTML because browsers block direct fetching of other websites (CORS) — pasting the source gives the same result, privately, with no server involved.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Open Graph Checker</h2>
+  <ol class="steps">
+    <li>Open the page you want to check and view its source (Ctrl+U in most browsers), then copy the HTML.</li>
+    <li>Paste it into the box above and press "Preview Link Card".</li>
+    <li>Compare the Facebook/LinkedIn and X previews — check the image, title and description look right.</li>
+    <li>Fix any missing-tag warnings, update the page, and re-check.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Check Your Open Graph Tags?</h2>
+  <p>When someone shares your link on Facebook, LinkedIn or X, the platform builds a preview card from your Open Graph and Twitter Card tags — not from your visible page. A missing image or a truncated title means a dull, unclicked share. Previewing the card before you publish lets you control exactly what millions of potential visitors see.</p>
+  <ul>
+    <li><strong>True-to-life previews</strong> — cards styled like the real Facebook and X share layouts.</li>
+    <li><strong>Missing-tag warnings</strong> — instantly see which core tags are absent.</li>
+    <li><strong>Full tag table</strong> — every og: and twitter: tag listed with its content.</li>
+    <li><strong>Image check</strong> — confirm your og:image actually resolves and displays.</li>
+    <li><strong>Private by design</strong> — parsing happens in your browser; nothing is uploaded.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this Open Graph checker really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Why can't I just enter a URL?</summary><p>Browsers enforce a security rule (CORS) that stops web pages from downloading other websites directly. Pasting the page's HTML source works around this honestly — and keeps everything private with no server in the middle.</p></details>
+  <details><summary>Which tags matter most?</summary><p>og:title, og:description and og:image drive the Facebook/LinkedIn card; twitter:card, twitter:title, twitter:description and twitter:image drive the X card. Get those right and your shares will look sharp everywhere.</p></details>
+  <details><summary>The preview image doesn't load — why?</summary><p>The og:image URL may be relative, broken, or blocking hotlinking. Use a full https:// URL to an image at least 1200×630 px for best results.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Create and audit the tags this checker inspects.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/open-graph-generator/"><span class="tool-ico" style="background:#9333a1">📣</span><span><h3>Open Graph Generator</h3><p>Generate social media preview meta tags.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/meta-tags-analyzer/"><span class="tool-ico" style="background:#db2777">🔍</span><span><h3>Meta Tags Analyzer</h3><p>Analyze meta tags from pasted HTML code.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/on-page-seo-checker/"><span class="tool-ico" style="background:#ea580c">📊</span><span><h3>On-Page SEO Checker</h3><p>Audit any page's on-page SEO factors.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function metaContent(doc, sel){
+    var el = doc.querySelector(sel);
+    return el ? (el.getAttribute('content') || '').trim() : '';
+  }
+  document.getElementById('ogcBtn').addEventListener('click', function(){
+    var html = document.getElementById('ogcHtml').value;
+    var out = document.getElementById('ogcOut');
+    if(!html.trim()){
+      out.style.display = '';
+      document.getElementById('ogcFb').innerHTML = '';
+      document.getElementById('ogcTw').innerHTML = '';
+      document.getElementById('ogcWarn').innerHTML = '<p class="alert alert-err">Please paste some HTML first.</p>';
+      document.querySelector('#ogcTable tbody').innerHTML = '';
+      return;
+    }
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var og = {
+      title: metaContent(doc, 'meta[property="og:title"]'),
+      desc: metaContent(doc, 'meta[property="og:description"]'),
+      image: metaContent(doc, 'meta[property="og:image"]'),
+      url: metaContent(doc, 'meta[property="og:url"]'),
+      type: metaContent(doc, 'meta[property="og:type"]')
+    };
+    var tw = {
+      card: metaContent(doc, 'meta[name="twitter:card"]'),
+      title: metaContent(doc, 'meta[name="twitter:title"]'),
+      desc: metaContent(doc, 'meta[name="twitter:description"]'),
+      image: metaContent(doc, 'meta[name="twitter:image"]')
+    };
+    var domain = '';
+    try { domain = og.url ? new URL(og.url).hostname : ''; } catch(e){}
+    var fTitle = og.title || '(no og:title)', fDesc = og.desc || '(no og:description)';
+    var fbHtml = '';
+    if(og.image) fbHtml += '<img src="' + esc(og.image) + '" alt="og:image preview" onerror="this.style.display=\'none\'">';
+    fbHtml += '<div class="og-body"><div class="og-domain">' + esc(domain || 'example.com') + '</div>' +
+              '<div class="og-title">' + esc(fTitle) + '</div>' +
+              '<div class="og-desc">' + esc(fDesc) + '</div></div>';
+    document.getElementById('ogcFb').innerHTML = fbHtml;
+    var tTitle = tw.title || og.title || '(no title)', tDesc = tw.desc || og.desc || '(no description)';
+    var tImg = tw.image || og.image;
+    var twHtml = '';
+    if(tImg) twHtml += '<img src="' + esc(tImg) + '" alt="twitter:image preview" onerror="this.style.display=\'none\'">';
+    twHtml += '<div class="og-body"><div class="og-title">' + esc(tTitle) + '</div>' +
+              '<div class="og-desc">' + esc(tDesc) + '</div></div>';
+    document.getElementById('ogcTw').innerHTML = twHtml;
+
+    var warns = [];
+    if(!og.title) warns.push('Missing <b>og:title</b> — the share card will fall back to the page title.');
+    if(!og.desc) warns.push('Missing <b>og:description</b> — shares will show no description text.');
+    if(!og.image) warns.push('Missing <b>og:image</b> — shares will appear without a preview image.');
+    if(!tw.card) warns.push('Missing <b>twitter:card</b> — X may render a plain link instead of a rich card.');
+    document.getElementById('ogcWarn').innerHTML = warns.length
+      ? '<p class="alert alert-warn"><strong>Missing tags:</strong><br>' + warns.join('<br>') + '</p>'
+      : '<p class="alert alert-ok"><strong>All core social tags present.</strong> Your share cards should render fully.</p>';
+
+    var found = [];
+    doc.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"]').forEach(function(m){
+      var name = m.getAttribute('property') || m.getAttribute('name');
+      var c = (m.getAttribute('content') || '').trim();
+      found.push({name:name, content:c});
+    });
+    document.querySelector('#ogcTable tbody').innerHTML = found.length
+      ? found.map(function(f){
+          var short = f.content.length > 90 ? f.content.slice(0, 90) + '…' : f.content;
+          return '<tr><td><strong>' + esc(f.name) + '</strong></td><td title="' + esc(f.content) + '">' + esc(short) + '</td></tr>';
+        }).join('')
+      : '<tr><td colspan="2">No Open Graph or Twitter Card tags found in this HTML.</td></tr>';
+    out.style.display = '';
+  });
+})();
+</script>
+</body>
+</html>

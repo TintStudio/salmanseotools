@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Generator — Strong Passwords | Salman SEO Tools</title>
+<meta name="description" content="Generate strong random passwords free with Salman SEO Tools. Choose length and character sets, create up to 20 passwords at once — 100% private, in-browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/password-generator/">
+<meta property="og:title" content="Password Generator | Salman SEO Tools">
+<meta property="og:description" content="Create strong, random passwords instantly — free, private, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/password-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Password Generator","applicationCategory":"UtilitiesApplication",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/password-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Password Generator</h1>
+  <p>Create strong, unpredictable passwords with cryptographically secure randomness — free and private.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / Password Generator</p>
+
+<div class="tool-app">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="pwLen">Password length (4–64)</label>
+      <input type="number" id="pwLen" value="16" min="4" max="64">
+    </div>
+    <div>
+      <label class="lbl" for="pwCount">How many passwords (1–20)</label>
+      <input type="number" id="pwCount" value="5" min="1" max="20">
+    </div>
+  </div>
+  <label class="lbl">Include characters</label>
+  <label class="checkline"><input type="checkbox" id="pwUpper" checked> Uppercase (A–Z)</label>
+  <label class="checkline"><input type="checkbox" id="pwLower" checked> Lowercase (a–z)</label>
+  <label class="checkline"><input type="checkbox" id="pwDigits" checked> Digits (0–9)</label>
+  <label class="checkline"><input type="checkbox" id="pwSymbols" checked> Symbols (!@#$…)</label>
+  <div id="pwError"></div>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="generatePasswords()">Generate Passwords</button>
+  </div>
+  <div id="pwStrength"></div>
+  <label class="lbl">Generated passwords</label>
+  <div id="pwList"></div>
+  <p class="note">Passwords are generated with your browser's cryptographic random number generator and never leave your device. Store them in a password manager.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Password Generator</h2>
+  <ol class="steps">
+    <li>Set the password length (longer is stronger — 16+ characters is a good default).</li>
+    <li>Tick the character sets you want: uppercase, lowercase, digits and symbols.</li>
+    <li>Choose how many passwords to create at once (up to 20).</li>
+    <li>Click <strong>Generate Passwords</strong> and copy any password with its Copy button.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Use a Random Password Generator?</h2>
+  <p>Human-made passwords follow patterns — pet names, birthdays, keyboard walks — and attackers know it. A generator picks every character with cryptographic randomness, producing passwords no dictionary or guessing attack can predict.</p>
+  <ul>
+    <li><strong>Cryptographically secure</strong> — uses <code>crypto.getRandomValues</code>, not predictable math randomness.</li>
+    <li><strong>Guaranteed variety</strong> — every selected character set appears at least once in each password.</li>
+    <li><strong>Bulk generation</strong> — create up to 20 passwords in one click for teams or multiple accounts.</li>
+    <li><strong>Strength feedback</strong> — see an estimate of each password's resistance to brute force.</li>
+    <li><strong>Completely private</strong> — generated on your device; nothing is stored or transmitted.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Are these passwords truly random?</summary><p>Yes. The tool uses your browser's built-in cryptographic random number generator (crypto.getRandomValues), the same source of randomness browsers use for TLS keys — far stronger than Math.random().</p></details>
+  <details><summary>What makes a password strong?</summary><p>Length first, then variety. A 16-character password mixing upper/lowercase, digits and symbols has far more possible combinations than any attacker can brute-force in a lifetime.</p></details>
+  <details><summary>Are my generated passwords stored anywhere?</summary><p>No. They exist only on this page until you leave or regenerate. Copy the ones you need into a password manager.</p></details>
+  <details><summary>Can I generate a password without symbols?</summary><p>Yes — untick Symbols. Some older systems reject special characters, so the checkboxes let you match any site's rules.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More security and encoding utilities.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/hash-generator/"><span class="tool-ico" style="background:#f97316">🔐</span><span><h3>Hash Generator</h3><p>Generate MD5, SHA-1, SHA-256 and SHA-512 hashes.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/base64-encoder-decoder/"><span class="tool-ico" style="background:#0e7490">📦</span><span><h3>Base64 Encoder / Decoder</h3><p>Encode and decode Base64 strings.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/url-encoder-decoder/"><span class="tool-ico" style="background:#06b6d4">🔗</span><span><h3>URL Encoder / Decoder</h3><p>Encode or decode URLs and query strings safely.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/case-converter/"><span class="tool-ico" style="background:#0ea5e9">🔠</span><span><h3>Case Converter</h3><p>Convert text between upper, lower and title case.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var SETS = {
+    pwUpper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    pwLower: 'abcdefghijklmnopqrstuvwxyz',
+    pwDigits: '0123456789',
+    pwSymbols: '!@#$%^&*()-_=+[]{};:,.<>?/~'
+  };
+  function randInt(max){
+    var a = new Uint32Array(1);
+    window.crypto.getRandomValues(a);
+    return a[0] % max;
+  }
+  function onePassword(len, sets){
+    var pool = sets.join('');
+    var chars = [];
+    sets.forEach(function(s){ chars.push(s.charAt(randInt(s.length))); }); // one of each
+    while(chars.length < len){ chars.push(pool.charAt(randInt(pool.length))); }
+    for(var i = chars.length - 1; i > 0; i--){           // shuffle
+      var j = randInt(i + 1), t = chars[i]; chars[i] = chars[j]; chars[j] = t;
+    }
+    return chars.join('');
+  }
+  window.generatePasswords = function(){
+    var errBox = document.getElementById('pwError');
+    var list = document.getElementById('pwList');
+    var strBox = document.getElementById('pwStrength');
+    errBox.innerHTML = ''; list.innerHTML = ''; strBox.innerHTML = '';
+    var len = Math.max(4, Math.min(64, parseInt(document.getElementById('pwLen').value, 10) || 16));
+    var count = Math.max(1, Math.min(20, parseInt(document.getElementById('pwCount').value, 10) || 5));
+    document.getElementById('pwLen').value = len;
+    document.getElementById('pwCount').value = count;
+    var sets = Object.keys(SETS).filter(function(id){ return document.getElementById(id).checked; })
+                                .map(function(id){ return SETS[id]; });
+    if(!sets.length){
+      errBox.innerHTML = '<p class="alert alert-err">Please select at least one character set.</p>';
+      return;
+    }
+    if(len < sets.length){
+      errBox.innerHTML = '<p class="alert alert-err">Length must be at least ' + sets.length + ' to include every selected set.</p>';
+      return;
+    }
+    var poolSize = sets.join('').length;
+    var bits = Math.round(len * Math.log2(poolSize));
+    var label = bits < 50 ? 'Weak — use a longer password' : bits < 80 ? 'Good' : bits < 110 ? 'Strong' : 'Very strong';
+    var cls = bits < 50 ? 'alert-warn' : 'alert-ok';
+    strBox.innerHTML = '<p class="alert ' + cls + '">Estimated strength: <strong>' + label + '</strong> (~' + bits + ' bits of entropy).</p>';
+    for(var i = 0; i < count; i++){
+      (function(pw){
+        var row = document.createElement('div');
+        row.className = 'output-area';
+        row.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;min-height:0;padding:12px 16px;';
+        var code = document.createElement('code');
+        code.style.cssText = 'font-family:ui-monospace,Consolas,monospace;font-size:15px;word-break:break-all;';
+        code.textContent = pw;
+        var btn = document.createElement('button');
+        btn.className = 'btn btn-ghost btn-sm';
+        btn.textContent = 'Copy';
+        btn.style.flexShrink = '0';
+        btn.onclick = function(){
+          navigator.clipboard.writeText(pw).then(function(){
+            var o = btn.textContent; btn.textContent = 'Copied ✓';
+            setTimeout(function(){ btn.textContent = o; }, 1500);
+          });
+        };
+        row.appendChild(code); row.appendChild(btn);
+        list.appendChild(row);
+      })(onePassword(len, sets));
+    }
+  };
+})();
+</script>
+</body>
+</html>

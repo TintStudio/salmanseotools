@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Split PDF — Extract Pages Free | Salman SEO Tools</title>
+<meta name="description" content="Free PDF splitter by Salman SEO Tools. Extract pages or page ranges from any PDF right in your browser. No sign-up, no uploads, no watermarks.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/split-pdf/">
+<meta property="og:title" content="Split PDF | Salman SEO Tools">
+<meta property="og:description" content="Extract pages or page ranges from any PDF in your browser — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/split-pdf/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Split PDF","applicationCategory":"Utilities",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/split-pdf/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Split PDF</h1>
+  <p>Pull out exactly the pages you need — single pages, ranges, or any mix — into a brand-new PDF.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#pdf-tools">PDF Tools</a> / Split PDF</p>
+
+<div class="tool-app">
+  <div id="spAlert"></div>
+  <label class="lbl" for="spFile">Select a PDF file</label>
+  <input type="file" id="spFile" accept="application/pdf">
+  <div class="stat-grid" id="spStats" style="display:none">
+    <div class="stat"><b id="spPages">0</b><span>Pages in file</span></div>
+  </div>
+  <label class="lbl" for="spRange">Pages to extract</label>
+  <input type="text" id="spRange" placeholder="e.g. 1-3,5,8-10">
+  <p class="note">List single pages and ranges separated by commas. Page numbers start at 1.</p>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="spBtn" onclick="splitPDF()">Split PDF</button>
+    <button class="btn btn-ghost" onclick="clearSplit()">Clear</button>
+  </div>
+  <p class="note">This tool loads the open-source pdf-lib library from a CDN; your PDFs are processed in your browser and never uploaded.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Split PDF Tool</h2>
+  <ol class="steps">
+    <li>Choose the PDF file you want to split — its page count appears instantly.</li>
+    <li>Type the pages to extract, e.g. <strong>1-3,5,8-10</strong> for pages 1 to 3, page 5, and pages 8 to 10.</li>
+    <li>Press <strong>Split PDF</strong>; invalid entries are skipped and listed for you.</li>
+    <li>Your new <strong>split.pdf</strong> downloads automatically with just those pages.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Split a PDF?</h2>
+  <p>Long PDFs often contain only a few pages you actually need. Extracting them saves you from emailing a 200-page manual when someone asked for one chapter, and keeps sensitive pages out of shared files.</p>
+  <ul>
+    <li><strong>Flexible selection</strong> — mix single pages and ranges in one go.</li>
+    <li><strong>Instant validation</strong> — out-of-range numbers are flagged, never silently dropped.</li>
+    <li><strong>Original quality kept</strong> — pages are copied directly, nothing is re-rendered.</li>
+    <li><strong>Fully private</strong> — the whole split runs on your device.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this PDF splitter really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Is my PDF uploaded to a server?</summary><p>No. Splitting is done with JavaScript in your own browser, so your file never leaves your device.</p></details>
+  <details><summary>What happens if I type a page number that does not exist?</summary><p>It is skipped and shown in a warning message, so you always know exactly which entries were ignored.</p></details>
+  <details><summary>Does the original PDF get changed?</summary><p>No. The tool only reads your file and creates a new PDF with the extracted pages; the original stays untouched.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free PDF and file utilities you may need.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/merge-pdf/"><span class="tool-ico" style="background:#991b1b">📑</span><span><h3>Merge PDF</h3><p>Combine multiple PDFs into one.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/rotate-pdf/"><span class="tool-ico" style="background:#a21caf">🔃</span><span><h3>Rotate PDF</h3><p>Rotate PDF pages online free.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-converter/"><span class="tool-ico" style="background:#0891b2">🔁</span><span><h3>Image Converter</h3><p>Convert images between PNG, JPG and WebP.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-compressor/"><span class="tool-ico" style="background:#059669">🗜️</span><span><h3>Image Compressor</h3><p>Compress JPG, PNG and WebP images online.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var spDoc = null, spCount = 0;
+  function libOk(){
+    if(!window.PDFLib){
+      document.getElementById('spAlert').innerHTML = '<p class="alert alert-err">PDF library failed to load. Check your connection and reload the page to retry.</p>';
+      return false;
+    }
+    return true;
+  }
+  function parseRanges(str, n){
+    var idx = [], skipped = [];
+    str.split(',').forEach(function(part){
+      part = part.trim();
+      if(!part) return;
+      var m1 = part.match(/^(\d+)$/), m2 = part.match(/^(\d+)\s*-\s*(\d+)$/);
+      if(m1){
+        var p = parseInt(m1[1], 10);
+        (p >= 1 && p <= n) ? idx.push(p - 1) : skipped.push(part);
+      }else if(m2){
+        var a = parseInt(m2[1], 10), b = parseInt(m2[2], 10);
+        if(a < 1 || b > n || a > b){ skipped.push(part); return; }
+        for(var p2 = a; p2 <= b; p2++) idx.push(p2 - 1);
+      }else{
+        skipped.push(part);
+      }
+    });
+    idx = Array.from(new Set(idx)).sort(function(a,b){ return a - b; });
+    return { idx: idx, skipped: skipped };
+  }
+  window.clearSplit = function(){
+    spDoc = null; spCount = 0;
+    document.getElementById('spFile').value = '';
+    document.getElementById('spRange').value = '';
+    document.getElementById('spAlert').innerHTML = '';
+    document.getElementById('spStats').style.display = 'none';
+  };
+  window.splitPDF = async function(){
+    document.getElementById('spAlert').innerHTML = '';
+    if(!libOk()) return;
+    if(!spDoc){
+      document.getElementById('spAlert').innerHTML = '<p class="alert alert-err">Please select a PDF file first.</p>';
+      return;
+    }
+    var r = parseRanges(document.getElementById('spRange').value, spCount);
+    if(!r.idx.length){
+      document.getElementById('spAlert').innerHTML = '<p class="alert alert-err">No valid pages found. Use a format like 1-3,5,8-10.</p>';
+      return;
+    }
+    var btn = document.getElementById('spBtn');
+    btn.disabled = true; var old = btn.textContent; btn.textContent = 'Splitting…';
+    try{
+      var out = await PDFLib.PDFDocument.create();
+      var pages = await out.copyPages(spDoc, r.idx);
+      pages.forEach(function(p){ out.addPage(p); });
+      var bytes = await out.save();
+      downloadFile('split.pdf', bytes, 'application/pdf');
+      var msg = '<p class="alert alert-ok">Done! ' + r.idx.length + ' page(s) extracted and downloaded.</p>';
+      if(r.skipped.length) msg += '<p class="alert alert-warn">Skipped invalid entries: ' + r.skipped.join(', ') + '.</p>';
+      document.getElementById('spAlert').innerHTML = msg;
+    }catch(e){
+      document.getElementById('spAlert').innerHTML = '<p class="alert alert-err">Could not split this file. It may be corrupted or password-protected.</p>';
+    }
+    btn.disabled = false; btn.textContent = old;
+  };
+  document.getElementById('spFile').addEventListener('change', async function(e){
+    document.getElementById('spAlert').innerHTML = '';
+    if(!libOk()){ e.target.value = ''; return; }
+    var f = e.target.files[0];
+    if(!f) return;
+    try{
+      spDoc = await PDFLib.PDFDocument.load(await f.arrayBuffer());
+      spCount = spDoc.getPageCount();
+      document.getElementById('spPages').textContent = spCount;
+      document.getElementById('spStats').style.display = '';
+    }catch(err){
+      spDoc = null; spCount = 0;
+      document.getElementById('spAlert').innerHTML = '<p class="alert alert-err">Could not read this PDF. It may be corrupted or password-protected.</p>';
+    }
+  });
+})();
+</script>
+</body>
+</html>

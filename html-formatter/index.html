@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Formatter — Beautify HTML Free | Salman SEO Tools</title>
+<meta name="description" content="Free HTML formatter by Salman SEO Tools. Beautify messy HTML code with clean indentation in your browser — fast, private and simple to use every day.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/html-formatter/">
+<meta property="og:title" content="HTML Formatter | Salman SEO Tools">
+<meta property="og:description" content="Beautify messy HTML with clean indentation — free, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/html-formatter/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"HTML Formatter","applicationCategory":"Developer","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/html-formatter/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>HTML Formatter</h1>
+  <p>Turn minified or messy HTML into clean, readable, properly indented code — instantly, in your browser.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / HTML Formatter</p>
+
+<div class="tool-app">
+  <label class="lbl" for="hfIn">Paste your HTML below</label>
+  <textarea id="hfIn" placeholder="Paste minified or messy HTML here..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="hfBtn">Format HTML</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('hfOut',this)">Copy Result</button>
+    <button class="btn btn-ghost btn-sm" id="hfDl">Download .html</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('hfIn').value='';document.getElementById('hfOut').value=''">Clear</button>
+  </div>
+  <label class="lbl" for="hfOut">Formatted output</label>
+  <textarea id="hfOut" readonly placeholder="Formatted HTML will appear here..."></textarea>
+  <div class="stat-grid">
+    <div class="stat"><b id="hfLines">0</b><span>Output lines</span></div>
+    <div class="stat"><b id="hfInSize">0</b><span>Input bytes</span></div>
+    <div class="stat"><b id="hfOutSize">0</b><span>Output bytes</span></div>
+  </div>
+  <p class="note">Formatting runs locally in your browser — your code is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the HTML Formatter</h2>
+  <ol class="steps">
+    <li>Paste minified, copied, or hand-written HTML into the input box.</li>
+    <li>Press "Format HTML" — tags are placed on their own lines with clean two-space indentation.</li>
+    <li>Copy the result or download it as an .html file.</li>
+    <li>Content inside &lt;pre&gt;, &lt;textarea&gt;, &lt;script&gt; and &lt;style&gt; is left untouched so nothing breaks.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Format HTML?</h2>
+  <p>Minified HTML loads fast but is nearly impossible for humans to read. Whether you're debugging a copied snippet, reviewing generated markup, or learning how a page is structured, properly indented code turns a wall of tags into a clear hierarchy you can actually follow.</p>
+  <ul>
+    <li><strong>Clean two-space indentation</strong> — nesting depth visible at a glance.</li>
+    <li><strong>Smart tag handling</strong> — void elements (img, br, meta…) and self-closing tags handled correctly.</li>
+    <li><strong>Protected blocks</strong> — pre, textarea, script and style contents are never re-indented.</li>
+    <li><strong>Comments preserved</strong> — HTML comments stay in place on their own lines.</li>
+    <li><strong>Free and private</strong> — no sign-up, no uploads, no limits.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this HTML formatter really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Will formatting change how my page renders?</summary><p>No. Formatting only changes whitespace between tags. Content inside pre, textarea, script and style blocks is left exactly as-is to stay safe.</p></details>
+  <details><summary>Does my code get uploaded to a server?</summary><p>No. The formatter runs entirely in your browser with JavaScript, so your code never leaves your device.</p></details>
+  <details><summary>Can it also minify HTML?</summary><p>This tool focuses on beautifying. For shrinking CSS or JavaScript, try our CSS Minifier and JS Minifier tools.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free code tools for developers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/json-formatter/"><span class="tool-ico" style="background:#65a30d">🧾</span><span><h3>JSON Formatter</h3><p>Format, validate and minify JSON.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/css-minifier/"><span class="tool-ico" style="background:#4d7c0f">✂️</span><span><h3>CSS Minifier</h3><p>Minify CSS by removing whitespace.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/html-encoder-decoder/"><span class="tool-ico" style="background:#c026d3">🔣</span><span><h3>HTML Encoder / Decoder</h3><p>Encode or decode HTML entities.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/js-minifier/"><span class="tool-ico" style="background:#a16207">⚙️</span><span><h3>JS Minifier</h3><p>Minify JavaScript by removing whitespace.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var VOID = {area:1,base:1,br:1,col:1,embed:1,hr:1,img:1,input:1,link:1,meta:1,param:1,source:1,track:1,wbr:1};
+  var RAW = {pre:1,textarea:1,script:1,style:1};
+  function tagName(t){
+    var m = /^<\/?([a-zA-Z0-9-]+)/.exec(t);
+    return m ? m[1].toLowerCase() : '';
+  }
+  function indent(n){ var s=''; for(var i=0;i<n;i++) s+='  '; return s; }
+  function formatHTML(src){
+    var tokens = src.split(/(<[^>]+>)/g);
+    var out = [], depth = 0, i = 0;
+    while(i < tokens.length){
+      var tok = tokens[i];
+      if(tok === undefined || !String(tok).trim()){ i++; continue; }
+      if(tok.charAt(0) === '<'){
+        if(/^<!--/.test(tok) || /^<!/.test(tok)){
+          out.push(indent(depth) + tok.trim()); i++; continue;
+        }
+        if(/^\s*<\/\s*/.test(tok)){
+          depth = Math.max(0, depth - 1);
+          out.push(indent(depth) + tok.trim()); i++; continue;
+        }
+        var name = tagName(tok);
+        var selfClose = /\/\s*>$/.test(tok) || VOID[name];
+        out.push(indent(depth) + tok.trim());
+        if(RAW[name] && !selfClose){
+          i++;
+          var raw = '', closeRe = new RegExp('<\\/' + name + '\\s*>', 'i'), guard = 0;
+          while(i < tokens.length && !closeRe.test(tokens[i]) && guard < 100000){ raw += tokens[i]; i++; guard++; }
+          raw.split('\n').forEach(function(line){
+            var t2 = line.replace(/\s+$/, '');
+            if(t2) out.push(indent(depth + 1) + t2);
+          });
+          if(i < tokens.length){ out.push(indent(depth) + tokens[i].trim()); i++; }
+          continue;
+        }
+        if(!selfClose) depth++;
+        i++; continue;
+      }
+      var txt = String(tok).replace(/\s+/g, ' ').trim();
+      if(txt) out.push(indent(depth) + txt);
+      i++;
+    }
+    return out.join('\n');
+  }
+  document.getElementById('hfBtn').addEventListener('click', function(){
+    var src = document.getElementById('hfIn').value;
+    var outEl = document.getElementById('hfOut');
+    if(!src.trim()){
+      outEl.value = '';
+      document.getElementById('hfLines').textContent = '0';
+      document.getElementById('hfInSize').textContent = '0';
+      document.getElementById('hfOutSize').textContent = '0';
+      return;
+    }
+    var formatted = formatHTML(src);
+    outEl.value = formatted;
+    document.getElementById('hfLines').textContent = formatted.split('\n').length.toLocaleString();
+    document.getElementById('hfInSize').textContent = src.length.toLocaleString();
+    document.getElementById('hfOutSize').textContent = formatted.length.toLocaleString();
+  });
+  document.getElementById('hfDl').addEventListener('click', function(){
+    var v = document.getElementById('hfOut').value;
+    if(v.trim()) downloadFile('formatted.html', v, 'text/html');
+  });
+})();
+</script>
+</body>
+</html>

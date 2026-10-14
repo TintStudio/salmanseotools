@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator — Free QR Maker | Salman SEO Tools</title>
+<meta name="description" content="Free QR code generator by Salman SEO Tools. Turn any link or text into a scannable QR code with custom colors and sizes — download as PNG, no sign-up.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/qr-code-generator/">
+<meta property="og:title" content="QR Code Generator | Salman SEO Tools">
+<meta property="og:description" content="Create custom QR codes from any link or text — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/qr-code-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"QR Code Generator","applicationCategory":"SEO",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/qr-code-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>QR Code Generator</h1>
+  <p>Turn any link or text into a scannable QR code with your own colors — download it as a PNG.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#developer-tools">Developer Tools</a> / QR Code Generator</p>
+
+<div class="tool-app">
+  <label class="lbl" for="qrText">Link or text</label>
+  <input type="text" id="qrText" placeholder="https://example.com or any text…">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="qrSize">Size</label>
+      <select id="qrSize">
+        <option value="200">200 × 200 px</option>
+        <option value="300" selected>300 × 300 px</option>
+        <option value="400">400 × 400 px</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:18px;align-items:flex-end;padding-bottom:4px">
+      <span><label class="lbl" for="qrDark" style="margin-top:0">Dark color</label><input type="color" id="qrDark" value="#0f172a" style="width:64px;height:42px;padding:3px"></span>
+      <span><label class="lbl" for="qrLight" style="margin-top:0">Light color</label><input type="color" id="qrLight" value="#ffffff" style="width:64px;height:42px;padding:3px"></span>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="qrGo">Generate QR Code</button>
+    <button class="btn btn-ghost" id="qrDl" disabled>Download PNG</button>
+  </div>
+  <div id="qrMsg"></div>
+  <div id="qrBox" style="display:flex;justify-content:center;padding:18px 0"></div>
+  <p class="note">This tool loads the open-source qrcodejs library from a CDN; your files are still processed in your browser and never uploaded.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the QR Code Generator</h2>
+  <ol class="steps">
+    <li>Type or paste the link, phone number, Wi-Fi details or any text you want to encode.</li>
+    <li>Choose a size and pick dark/light colors to match your brand.</li>
+    <li>Click <strong>Generate QR Code</strong> and preview it instantly.</li>
+    <li>Click <strong>Download PNG</strong> to save the code and use it anywhere.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Where Can You Use QR Codes?</h2>
+  <p>QR codes bridge the gap between the physical and digital worlds: one scan takes a phone straight to your page, menu, app or contact card. They work on packaging, business cards, posters, receipts and presentations — anywhere typing a long URL would be annoying.</p>
+  <ul>
+    <li><strong>Custom colors</strong> — match the code to your brand instead of plain black.</li>
+    <li><strong>Three sizes</strong> — from small web icons to crisp print-ready images.</li>
+    <li><strong>High error correction</strong> — codes stay scannable even if partly damaged or obscured.</li>
+    <li><strong>Instant PNG download</strong> — no account, no watermark, ready to use.</li>
+    <li><strong>Free forever</strong> — generate as many codes as you like.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Do these QR codes expire?</summary><p>No. The code simply encodes the text or link you entered, so it works forever — as long as the link itself stays live.</p></details>
+  <details><summary>Can I track scans of my QR code?</summary><p>Not with a static code like this one. If you need scan analytics, use a dynamic QR service; for simple linking, static codes are faster and free.</p></details>
+  <details><summary>Will my custom colors still scan?</summary><p>Yes, as long as there is good contrast between the dark and light colors. Avoid very light dark-colors or very dark light-colors, and always test-scan before printing.</p></details>
+  <details><summary>What can I put in a QR code?</summary><p>Website URLs, plain text, phone numbers, email addresses, Wi-Fi credentials and more. Keep it short — shorter content makes denser, easier-to-scan codes.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More handy utilities for developers and creators.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/url-encoder-decoder/"><span class="tool-ico" style="background:#06b6d4">🔗</span><span><h3>URL Encoder / Decoder</h3><p>Encode or decode URLs and query strings safely.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/text-to-image/"><span class="tool-ico" style="background:#6366f1">🖼️</span><span><h3>Text to Image</h3><p>Turn text into a downloadable PNG image.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/hash-generator/"><span class="tool-ico" style="background:#f97316">🔐</span><span><h3>Hash Generator</h3><p>Generate MD5, SHA-1, SHA-256 and SHA-512 hashes.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/password-generator/"><span class="tool-ico" style="background:#b91c1c">🎲</span><span><h3>Password Generator</h3><p>Create strong random passwords.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var box = document.getElementById('qrBox');
+  var dlBtn = document.getElementById('qrDl');
+  var msg = document.getElementById('qrMsg');
+
+  function showMsg(html, cls){ msg.innerHTML = '<div class="alert ' + cls + '">' + html + '</div>'; }
+
+  document.getElementById('qrGo').addEventListener('click', function(){
+    var text = document.getElementById('qrText').value.trim();
+    if(!text){ showMsg('Please enter a link or some text first.', 'alert-err'); return; }
+    if(typeof QRCode === 'undefined'){
+      showMsg('The QR library could not be loaded. Please check your internet connection and reload the page.', 'alert-err');
+      return;
+    }
+    msg.innerHTML = '';
+    box.innerHTML = '';
+    var size = parseInt(document.getElementById('qrSize').value, 10);
+    new QRCode(box, {
+      text: text,
+      width: size,
+      height: size,
+      colorDark: document.getElementById('qrDark').value,
+      colorLight: document.getElementById('qrLight').value,
+      correctLevel: QRCode.CorrectLevel.M
+    });
+    dlBtn.disabled = false;
+  });
+
+  dlBtn.addEventListener('click', function(){
+    var canvas = box.querySelector('canvas');
+    var img = box.querySelector('img');
+    var src = null;
+    if(canvas){ src = canvas.toDataURL('image/png'); }
+    else if(img && img.src){ src = img.src; }
+    if(!src){ showMsg('Generate a QR code first.', 'alert-err'); return; }
+    var a = document.createElement('a');
+    a.href = src; a.download = 'qr-code.png';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Resizer — Resize Images Free | Salman SEO Tools</title>
+<meta name="description" content="Free online image resizer by Salman SEO Tools. Resize JPG, PNG and WebP images to exact dimensions, by percentage or max width — right in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/image-resizer/">
+<meta property="og:title" content="Image Resizer | Salman SEO Tools">
+<meta property="og:description" content="Resize images to exact dimensions, by percentage or max width — free, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/image-resizer/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Image Resizer","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/image-resizer/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Image Resizer</h1>
+  <p>Resize JPG, PNG and WebP images to exact dimensions, by percentage or by max width — instantly, in your browser.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#image-tools">Image Tools</a> / Image Resizer</p>
+
+<div class="tool-app">
+  <label class="lbl" for="irFile">Choose an image</label>
+  <input type="file" id="irFile" accept="image/*">
+  <p class="note" id="irOrigInfo">No image selected yet.</p>
+
+  <label class="lbl" for="irMode">Resize mode</label>
+  <select id="irMode">
+    <option value="exact">Exact dimensions</option>
+    <option value="percent">Percentage of original</option>
+    <option value="maxwidth">Max width (keep aspect ratio)</option>
+  </select>
+
+  <div id="irExactRow" class="form-grid">
+    <div><label class="lbl" for="irW">Width (px)</label><input type="number" id="irW" value="800" min="1" max="8000"></div>
+    <div><label class="lbl" for="irH">Height (px)</label><input type="number" id="irH" value="600" min="1" max="8000"></div>
+  </div>
+  <div id="irPercentRow" style="display:none">
+    <label class="lbl" for="irPct">Scale: <b id="irPctVal">50%</b></label>
+    <input type="range" id="irPct" min="10" max="200" value="50" style="width:100%">
+  </div>
+  <div id="irMaxRow" style="display:none">
+    <label class="lbl" for="irMaxW">Max width (px)</label>
+    <input type="number" id="irMaxW" value="1200" min="1" max="8000">
+  </div>
+
+  <label class="checkline"><input type="checkbox" id="irAspect" checked> Keep aspect ratio</label>
+
+  <div class="form-grid">
+    <div><label class="lbl" for="irFmt">Output format</label>
+      <select id="irFmt"><option value="image/jpeg">JPEG</option><option value="image/png">PNG</option><option value="image/webp">WebP</option></select></div>
+    <div><label class="lbl" for="irQ">Quality: <b id="irQVal">85%</b></label>
+      <input type="range" id="irQ" min="10" max="100" value="85" style="width:100%"></div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-primary" id="irBtn" disabled>Resize Image</button>
+  </div>
+
+  <div id="irResult" style="display:none">
+    <div class="stat-grid">
+      <div class="stat"><b id="irOldDim">–</b><span>Original dimensions</span></div>
+      <div class="stat"><b id="irNewDim">–</b><span>New dimensions</span></div>
+      <div class="stat"><b id="irOldSize">–</b><span>Original size</span></div>
+      <div class="stat"><b id="irNewSize">–</b><span>New size</span></div>
+    </div>
+    <img id="irPreview" alt="Resized image preview" style="max-width:100%;border:1px solid var(--border);border-radius:12px;margin-top:10px">
+    <div class="btn-row">
+      <a class="btn btn-accent" id="irDownload" href="#" download="resized.png">Download Resized Image</a>
+    </div>
+  </div>
+  <p class="note">Your image is processed locally with canvas — it is never uploaded to any server.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Image Resizer</h2>
+  <ol class="steps">
+    <li>Choose an image from your device (JPG, PNG, WebP and most other formats work).</li>
+    <li>Pick a resize mode: exact width × height, a percentage of the original, or a maximum width.</li>
+    <li>Tick "Keep aspect ratio" to avoid stretching, choose the output format and quality, then press Resize Image.</li>
+    <li>Preview the result and download it with one click.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Resize Images?</h2>
+  <p>Oversized images are one of the most common reasons pages load slowly — and slow pages rank worse and convert worse. Resizing images to the exact dimensions your layout needs keeps file sizes small and pages snappy, whether it's a blog hero image, a product photo or a social media banner.</p>
+  <ul>
+    <li><strong>Three resize modes</strong> — exact dimensions, percentage scaling, or max-width fitting.</li>
+    <li><strong>Aspect ratio lock</strong> — never stretch or squash an image by accident.</li>
+    <li><strong>Format conversion built in</strong> — resize and convert to JPEG, PNG or WebP in one step.</li>
+    <li><strong>Live quality control</strong> — balance file size against visual quality with the slider.</li>
+    <li><strong>Fully private</strong> — everything happens on your device; nothing is uploaded.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this image resizer really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Are my images uploaded anywhere?</summary><p>No. Resizing is done with the canvas API in your own browser, so your images never leave your device.</p></details>
+  <details><summary>Will resizing reduce image quality?</summary><p>Shrinking an image keeps it sharp. Enlarging beyond the original size can look soft, so we recommend resizing down rather than up, and using 80–90% quality for JPEG/WebP.</p></details>
+  <details><summary>What is the difference between the resize modes?</summary><p>Exact dimensions sets a fixed width and height. Percentage scales the original up or down. Max width shrinks wide images to fit a limit while keeping their proportions.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More free image tools to finish the job.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/image-compressor/"><span class="tool-ico" style="background:#059669">🗜️</span><span><h3>Image Compressor</h3><p>Compress JPG, PNG and WebP images online.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/image-converter/"><span class="tool-ico" style="background:#0891b2">🔁</span><span><h3>Image Converter</h3><p>Convert images between PNG, JPG and WebP.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/favicon-generator/"><span class="tool-ico" style="background:#dc2626">⭐</span><span><h3>Favicon Generator</h3><p>Create favicon PNGs from any image.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/text-to-image/"><span class="tool-ico" style="background:#6366f1">🖼️</span><span><h3>Text to Image</h3><p>Turn text into a downloadable PNG image.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var fileEl = document.getElementById('irFile'),
+      modeEl = document.getElementById('irMode'),
+      btn = document.getElementById('irBtn'),
+      origInfo = document.getElementById('irOrigInfo');
+  var img = null, fileName = '', fileSize = 0, ow = 0, oh = 0;
+
+  function kb(n){ return n > 1048576 ? (n/1048576).toFixed(2)+' MB' : Math.max(1, Math.round(n/1024))+' KB'; }
+
+  modeEl.addEventListener('change', function(){
+    var m = modeEl.value;
+    document.getElementById('irExactRow').style.display = m==='exact' ? '' : 'none';
+    document.getElementById('irPercentRow').style.display = m==='percent' ? '' : 'none';
+    document.getElementById('irMaxRow').style.display = m==='maxwidth' ? '' : 'none';
+  });
+  document.getElementById('irPct').addEventListener('input', function(){
+    document.getElementById('irPctVal').textContent = this.value + '%';
+  });
+  document.getElementById('irQ').addEventListener('input', function(){
+    document.getElementById('irQVal').textContent = this.value + '%';
+  });
+
+  fileEl.addEventListener('change', function(){
+    var f = fileEl.files[0];
+    if(!f) return;
+    fileName = f.name.replace(/\.[^.]+$/, '') || 'image';
+    fileSize = f.size;
+    var reader = new FileReader();
+    reader.onload = function(e){
+      var im = new Image();
+      im.onload = function(){
+        img = im; ow = im.naturalWidth; oh = im.naturalHeight;
+        origInfo.textContent = 'Selected: ' + f.name + ' — ' + ow + '×' + oh + ' px, ' + kb(fileSize);
+        btn.disabled = false;
+      };
+      im.onerror = function(){ origInfo.textContent = 'Could not read that file as an image.'; };
+      im.src = e.target.result;
+    };
+    reader.readAsDataURL(f);
+  });
+
+  btn.addEventListener('click', function(){
+    if(!img) return;
+    var m = modeEl.value, tw, th;
+    var keep = document.getElementById('irAspect').checked;
+    if(m === 'exact'){
+      tw = Math.max(1, parseInt(document.getElementById('irW').value, 10) || ow);
+      th = Math.max(1, parseInt(document.getElementById('irH').value, 10) || oh);
+      if(keep){
+        var s = Math.min(tw/ow, th/oh);
+        tw = Math.max(1, Math.round(ow*s)); th = Math.max(1, Math.round(oh*s));
+      }
+    } else if(m === 'percent'){
+      var p = (parseInt(document.getElementById('irPct').value, 10) || 50) / 100;
+      tw = Math.max(1, Math.round(ow*p)); th = Math.max(1, Math.round(oh*p));
+    } else {
+      var mw = Math.max(1, parseInt(document.getElementById('irMaxW').value, 10) || ow);
+      if(ow <= mw){ tw = ow; th = oh; }
+      else { var s2 = mw/ow; tw = mw; th = Math.max(1, Math.round(oh*s2)); }
+    }
+    var fmt = document.getElementById('irFmt').value;
+    var q = (parseInt(document.getElementById('irQ').value, 10) || 85) / 100;
+    var c = document.createElement('canvas'); c.width = tw; c.height = th;
+    var ctx = c.getContext('2d');
+    if(fmt === 'image/jpeg'){ ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, tw, th); }
+    ctx.drawImage(img, 0, 0, tw, th);
+    c.toBlob(function(blob){
+      if(!blob) return;
+      var ext = fmt === 'image/png' ? 'png' : (fmt === 'image/webp' ? 'webp' : 'jpg');
+      document.getElementById('irOldDim').textContent = ow + '×' + oh;
+      document.getElementById('irNewDim').textContent = tw + '×' + th;
+      document.getElementById('irOldSize').textContent = kb(fileSize);
+      document.getElementById('irNewSize').textContent = kb(blob.size);
+      var url = URL.createObjectURL(blob);
+      document.getElementById('irPreview').src = url;
+      var dl = document.getElementById('irDownload');
+      dl.href = url; dl.download = fileName + '-' + tw + 'x' + th + '.' + ext;
+      document.getElementById('irResult').style.display = '';
+    }, fmt, q);
+  });
+})();
+</script>
+</body>
+</html>

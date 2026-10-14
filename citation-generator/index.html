@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citation Generator — APA & MLA Free | Salman SEO Tools</title>
+<meta name="description" content="Free citation generator by Salman SEO Tools. Create accurate APA 7th and MLA 9th citations for websites and books instantly in your browser — no sign-up.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/citation-generator/">
+<meta property="og:title" content="Citation Generator | Salman SEO Tools">
+<meta property="og:description" content="Generate APA and MLA citations for websites and books — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/citation-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Citation Generator","applicationCategory":"SEO",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/citation-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Citation Generator</h1>
+  <p>Build accurate APA and MLA citations for websites and books in seconds.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Citation Generator</p>
+
+<div class="tool-app">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="cgType">Source type</label>
+      <select id="cgType">
+        <option value="website">Website</option>
+        <option value="book">Book</option>
+      </select>
+    </div>
+    <div>
+      <label class="lbl" for="cgStyle">Citation style</label>
+      <select id="cgStyle">
+        <option value="apa">APA (7th edition)</option>
+        <option value="mla">MLA (9th edition)</option>
+      </select>
+    </div>
+  </div>
+  <label class="lbl" for="cgAuthor">Author <span class="note">(e.g. Smith, John)</span></label>
+  <input type="text" id="cgAuthor" placeholder="Smith, John" autocomplete="off">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="cgYear">Year</label>
+      <input type="text" id="cgYear" placeholder="2024" autocomplete="off">
+    </div>
+    <div>
+      <label class="lbl" for="cgPub">Site name / Publisher</label>
+      <input type="text" id="cgPub" placeholder="Example Site" autocomplete="off">
+    </div>
+  </div>
+  <label class="lbl" for="cgTitle">Title</label>
+  <input type="text" id="cgTitle" placeholder="Title of the page or book" autocomplete="off">
+  <label class="lbl" for="cgUrl">URL <span class="note">(websites only)</span></label>
+  <input type="text" id="cgUrl" placeholder="https://example.com/page" autocomplete="off">
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="genCitation()">Generate Citation</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('cgOut',this)">Copy</button>
+    <button class="btn btn-ghost btn-sm" onclick="['cgAuthor','cgYear','cgPub','cgTitle','cgUrl'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('cgOut').innerHTML='';document.getElementById('cgMsg').innerHTML=''">Clear</button>
+  </div>
+  <div id="cgMsg"></div>
+  <label class="lbl">Your citation</label>
+  <div class="output-area" id="cgOut"><p class="note">Fill in the fields above and click "Generate Citation".</p></div>
+  <p class="note">Everything runs locally in your browser — your input is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Citation Generator</h2>
+  <ol class="steps">
+    <li>Choose the source type (website or book) and the citation style (APA 7th or MLA 9th).</li>
+    <li>Fill in the author, year, title and site name or publisher — plus the URL for websites.</li>
+    <li>Click "Generate Citation" to build a correctly formatted reference.</li>
+    <li>Copy it straight into your bibliography or works-cited list.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Cite Your Sources?</h2>
+  <p>Proper citations give credit to the authors you build on, let readers verify your claims, and keep your work safe from plagiarism accusations. Getting the punctuation and order right by hand is tedious — this generator formats it for you in seconds.</p>
+  <ul>
+    <li><strong>APA 7th &amp; MLA 9th</strong> — the two most widely used academic styles.</li>
+    <li><strong>Websites and books</strong> — the source types students cite most.</li>
+    <li><strong>Correct ordering</strong> — author, year, title and publisher placed per style rules.</li>
+    <li><strong>One-click copy</strong> — paste directly into your reference list.</li>
+    <li><strong>100% private</strong> — everything happens on your device; nothing leaves the page.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this citation generator really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>Which citation styles are supported?</summary><p>APA 7th edition and MLA 9th edition, for websites and books — the combinations most students and researchers need.</p></details>
+  <details><summary>Should I double-check the result?</summary><p>Yes. The generator follows standard formatting rules, but unusual sources (multiple authors, missing dates) may need manual tweaks — always review against your institution's guide.</p></details>
+  <details><summary>Is my input uploaded to a server?</summary><p>No. The citation is built with JavaScript in your own browser, so nothing you type leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">More tools for writers and researchers.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/grammar-checker/"><span class="tool-ico" style="background:#10b981">✍️</span><span><h3>Grammar Checker</h3><p>Find and fix grammar and spelling mistakes.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/article-rewriter/"><span class="tool-ico" style="background:#7c3aed">🔄</span><span><h3>Article Rewriter</h3><p>Rewrite articles with fresh wording in seconds.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/text-summarizer/"><span class="tool-ico" style="background:#8b5cf6">📋</span><span><h3>Text Summarizer</h3><p>Summarize long text into key sentences.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  function v(id){ return document.getElementById(id).value.trim(); }
+  function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  window.genCitation = function(){
+    var type = document.getElementById('cgType').value;
+    var style = document.getElementById('cgStyle').value;
+    var author = v('cgAuthor'), year = v('cgYear'), pub = v('cgPub'), title = v('cgTitle'), url = v('cgUrl');
+    var msg = document.getElementById('cgMsg');
+    var out = document.getElementById('cgOut');
+    msg.innerHTML = '';
+    var missing = [];
+    if(!author) missing.push('Author');
+    if(!year) missing.push('Year');
+    if(!title) missing.push('Title');
+    if(!pub) missing.push(type === 'website' ? 'Site name' : 'Publisher');
+    if(type === 'website' && !url) missing.push('URL');
+    if(missing.length){
+      msg.innerHTML = '<div class="alert alert-warn">Please fill in: ' + escapeHtml(missing.join(', ')) + '.</div>';
+      return;
+    }
+    var cite = '';
+    if(style === 'apa'){
+      if(type === 'website') cite = author + '. (' + year + '). ' + title + '. ' + pub + '. ' + url;
+      else cite = author + '. (' + year + '). ' + title + '. ' + pub + '.';
+    } else {
+      if(type === 'website') cite = author + '. \u201C' + title + '.\u201D ' + pub + ', ' + year + ', ' + url + '.';
+      else cite = author + '. ' + title + '. ' + pub + ', ' + year + '.';
+    }
+    out.innerHTML = '<p style="font-size:16.5px;line-height:1.7">' + escapeHtml(cite) + '</p>' +
+      '<p class="note">Always review against your institution\u2019s style guide before submitting.</p>';
+  };
+})();
+</script>
+</body>
+</html>

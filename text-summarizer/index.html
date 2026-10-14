@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Summarizer — Summarize Text Free | Salman SEO Tools</title>
+<meta name="description" content="Free online text summarizer by Salman SEO Tools. Paste any article or document and extract the key sentences instantly in your browser — no sign-up needed.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/text-summarizer/">
+<meta property="og:title" content="Text Summarizer | Salman SEO Tools">
+<meta property="og:description" content="Turn long articles into short, sharp summaries — free, in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/text-summarizer/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Text Summarizer","applicationCategory":"SEO",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/text-summarizer/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Text Summarizer</h1>
+  <p>Paste any article or document and extract its most important sentences in one click.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Text Summarizer</p>
+
+<div class="tool-app">
+  <label class="lbl" for="tsInput">Paste the text you want to summarize</label>
+  <textarea id="tsInput" placeholder="Paste a long article, essay or report here..."></textarea>
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="tsCount">Summary length (sentences)</label>
+      <select id="tsCount">
+        <option>1</option><option>2</option><option selected>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option>
+      </select>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="summarizeText()">Summarize</button>
+    <button class="btn btn-ghost btn-sm" onclick="copySummary(this)">Copy Summary</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('tsInput').value='';document.getElementById('tsOut').innerHTML='';document.getElementById('tsMsg').innerHTML='';">Clear</button>
+  </div>
+  <div id="tsMsg"></div>
+  <div class="output-area" id="tsOut"><p class="note">Your summary will appear here as a numbered list of key sentences.</p></div>
+  <p class="note">Everything runs locally in your browser — your text is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Text Summarizer</h2>
+  <ol class="steps">
+    <li>Paste your article, essay, report or any long text into the box above.</li>
+    <li>Choose how many key sentences you want in the summary (1–10).</li>
+    <li>Click "Summarize" — the tool scores every sentence and keeps the most important ones in their original order.</li>
+    <li>Copy the result and use it as a TL;DR, abstract, meta snippet or study notes.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Use This Summarizer?</h2>
+  <p>Long content takes time to read. Whether you are skimming research, preparing study notes or writing a quick abstract for an article, an extractive summary gives you the core message in seconds — using the author's own words, so nothing is misrepresented.</p>
+  <ul>
+    <li><strong>Extractive and transparent</strong> — every summary sentence comes verbatim from your text.</li>
+    <li><strong>Frequency-based scoring</strong> — sentences are ranked by how strongly they connect to the text's main topics.</li>
+    <li><strong>Original order preserved</strong> — the summary reads naturally from start to finish.</li>
+    <li><strong>Adjustable length</strong> — pick anywhere from 1 to 10 key sentences.</li>
+    <li><strong>100% private</strong> — summarization happens on your device; nothing leaves the page.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this text summarizer really free?</summary><p>Yes. Every tool on Salman SEO Tools is free with no sign-up and no usage limits.</p></details>
+  <details><summary>How does the summarizer pick sentences?</summary><p>It counts how often meaningful words appear across the whole text, scores each sentence by the importance of the words it contains, and keeps the highest-scoring sentences in their original order.</p></details>
+  <details><summary>Does it rewrite my text?</summary><p>No. This is an extractive summarizer, so each sentence in the summary is copied exactly as it appeared in your input.</p></details>
+  <details><summary>Is my text uploaded to a server?</summary><p>No. The summarization runs with JavaScript in your own browser, so your text never leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Keep working with your text using these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/article-rewriter/"><span class="tool-ico" style="background:#7c3aed">🔄</span><span><h3>Article Rewriter</h3><p>Rewrite articles with fresh wording in seconds.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/plagiarism-checker/"><span class="tool-ico" style="background:#ef4444">🛡️</span><span><h3>Plagiarism Checker</h3><p>Compare texts and highlight duplicate sentences.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/grammar-checker/"><span class="tool-ico" style="background:#10b981">✍️</span><span><h3>Grammar Checker</h3><p>Find and fix grammar and spelling mistakes.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var STOP = ["the","and","for","with","that","this","from","have","has","had","were","was","are","not","but","you","your","they","their","them","she","her","his","him","our","ours","all","any","can","will","would","should","could","there","what","when","where","which","who","whom","how","why","about","into","over","after","before","between","under","again","once","here","than","then","also","just","like","more","most","other","some","such","only","own","same","too","very","its","we","us","of","to","in","on","at","by","as","is","it","be","or","if","so","do","does","did","no","he","me","my","up","out","off","down","an","a"];
+  function splitSentences(t){
+    var m = t.replace(/\s+/g,' ').match(/[^.!?…]+[.!?…]+/g);
+    return m ? m.map(function(s){return s.trim();}).filter(Boolean) : [];
+  }
+  function wordsOf(s){ return (s.toLowerCase().match(/[a-z0-9']+/g) || []); }
+  function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  window.summarizeText = function(){
+    var t = document.getElementById('tsInput').value.trim();
+    var out = document.getElementById('tsOut');
+    var msg = document.getElementById('tsMsg');
+    msg.innerHTML = '';
+    window._tsPlain = '';
+    if(!t){ msg.innerHTML = '<div class="alert alert-err">Please paste some text to summarize.</div>'; out.innerHTML=''; return; }
+    var sents = splitSentences(t);
+    if(sents.length < 2){
+      msg.innerHTML = '<div class="alert alert-warn">Your text has fewer than two sentences — add more text for a meaningful summary.</div>';
+      out.innerHTML = '<ol style="padding-left:22px"><li>' + escapeHtml(t) + '</li></ol>';
+      window._tsPlain = t;
+      return;
+    }
+    var n = parseInt(document.getElementById('tsCount').value, 10) || 3;
+    var freq = {};
+    sents.forEach(function(s){
+      wordsOf(s).forEach(function(w){
+        if(w.length < 3 || STOP.indexOf(w) !== -1) return;
+        freq[w] = (freq[w] || 0) + 1;
+      });
+    });
+    var maxF = 0, k;
+    for(k in freq){ if(freq[k] > maxF) maxF = freq[k]; }
+    if(!maxF) maxF = 1;
+    var scored = sents.map(function(s, i){
+      var sc = 0;
+      wordsOf(s).forEach(function(w){ if(freq[w]) sc += freq[w] / maxF; });
+      return {i:i, s:s, sc:sc};
+    });
+    scored.sort(function(a,b){ return b.sc - a.sc; });
+    var top = scored.slice(0, Math.min(n, sents.length));
+    top.sort(function(a,b){ return a.i - b.i; });
+    out.innerHTML = '<ol style="padding-left:22px">' +
+      top.map(function(o){ return '<li style="margin-bottom:10px">' + escapeHtml(o.s) + '</li>'; }).join('') +
+      '</ol><p class="note">Summary: ' + top.length + ' of ' + sents.length + ' sentences selected.</p>';
+    window._tsPlain = top.map(function(o){ return o.s; }).join(' ');
+  };
+  window.copySummary = function(btn){
+    if(!window._tsPlain) return;
+    navigator.clipboard.writeText(window._tsPlain).then(function(){
+      var o = btn.textContent; btn.textContent = 'Copied ✓';
+      setTimeout(function(){ btn.textContent = o; }, 1600);
+    });
+  };
+})();
+</script>
+</body>
+</html>

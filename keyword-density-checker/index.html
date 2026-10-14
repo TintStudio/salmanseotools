@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyword Density Checker — Analyse Keywords | Salman SEO Tools</title>
+<meta name="description" content="Free keyword density checker by Salman SEO Tools. Paste your text to analyse keyword frequency, n-gram density and total word count instantly in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/keyword-density-checker/">
+<meta property="og:title" content="Keyword Density Checker | Salman SEO Tools">
+<meta property="og:description" content="Analyse keyword frequency and density in any text — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/keyword-density-checker/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Keyword Density Checker","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/keyword-density-checker/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Keyword Density Checker</h1>
+  <p>Find how often each keyword and phrase appears in your content, and see its density as a percentage of total words.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#seo-tools">SEO Tools</a> / Keyword Density Checker</p>
+
+<div class="tool-app">
+  <label class="lbl" for="kdInput">Paste your article or text below</label>
+  <textarea id="kdInput" placeholder="Paste your content here..."></textarea>
+  <div class="form-grid">
+    <div>
+      <span class="lbl">Phrase length (n-grams)</span>
+      <label class="checkline"><input type="radio" name="kdGram" value="1" checked> 1 word</label>
+      <label class="checkline"><input type="radio" name="kdGram" value="2"> 2 words</label>
+      <label class="checkline"><input type="radio" name="kdGram" value="3"> 3 words</label>
+    </div>
+    <div>
+      <label class="lbl" for="kdMin">Minimum word length</label>
+      <input type="number" id="kdMin" value="3" min="1" max="20">
+    </div>
+    <div>
+      <span class="lbl">Filters</span>
+      <label class="checkline"><input type="checkbox" id="kdStop" checked> Exclude common words (the, and, is...)</label>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="analyseDensity()">Analyse</button>
+    <button class="btn btn-ghost" onclick="document.getElementById('kdInput').value='';clearKdResults()">Clear</button>
+  </div>
+  <div class="stat-grid" id="kdStats" style="display:none">
+    <div class="stat"><b id="kdTotal">0</b><span>Total words</span></div>
+    <div class="stat"><b id="kdUnique">0</b><span>Unique phrases</span></div>
+  </div>
+  <div id="kdResults" style="display:none">
+    <div class="result-box">
+      <table class="data" id="kdTable">
+        <thead><tr><th>Keyword</th><th>Count</th><th>Density %</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <p class="note">Showing the top 30 phrases. Everything runs locally in your browser — your text is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Keyword Density Checker</h2>
+  <ol class="steps">
+    <li>Paste your article, blog post or page content into the text box.</li>
+    <li>Choose a phrase length: single words, two-word phrases or three-word phrases, and set the minimum word length.</li>
+    <li>Click "Analyse" to see the top 30 keywords with their counts and density percentages.</li>
+    <li>Adjust your content if any keyword looks over-used, then re-check for a balanced result.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Check Keyword Density?</h2>
+  <p>Keyword density shows how prominent a term is inside your content. A healthy density tells search engines what the page is about, while an unnaturally high density looks like stuffing and can hurt rankings. Checking before you publish keeps your optimisation deliberate instead of accidental.</p>
+  <ul>
+    <li><strong>1, 2 or 3-word phrases</strong> — spot single keywords and longer keyphrases in one pass.</li>
+    <li><strong>Stop-word filtering</strong> — skip filler words like "the" and "and" for cleaner results.</li>
+    <li><strong>Density bars</strong> — visual bars make the most frequent phrases easy to compare at a glance.</li>
+    <li><strong>Adjustable minimum length</strong> — ignore short words that add noise to your analysis.</li>
+    <li><strong>100% private</strong> — analysis happens on your device; nothing leaves the page.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What is a good keyword density?</summary><p>Most SEO guides suggest roughly 1–2% for a primary keyword, but there is no official rule. Natural, reader-friendly writing matters more than hitting an exact number.</p></details>
+  <details><summary>What are n-grams?</summary><p>An n-gram is simply a phrase of n words: a 1-gram is a single word, a 2-gram is a two-word phrase like "seo tools", and a 3-gram is a three-word phrase. Checking longer phrases helps you find the keyphrases your content really targets.</p></details>
+  <details><summary>Why are some words excluded from the results?</summary><p>Common English words such as "the", "and" and "is" add no SEO value, so they are filtered out by default. You can uncheck the filter to include them.</p></details>
+  <details><summary>Is my text sent to a server?</summary><p>No. The whole analysis runs with JavaScript in your browser, so your text never leaves your device.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Keep polishing your content with these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" data-name="word counter count words characters" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="meta tag generator seo tags" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="article rewriter rewrite text" href="/article-rewriter/"><span class="tool-ico" style="background:#7c3aed">🔄</span><span><h3>Article Rewriter</h3><p>Rewrite articles with fresh wording in seconds.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="plagiarism checker duplicate content" href="/plagiarism-checker/"><span class="tool-ico" style="background:#ef4444">🛡️</span><span><h3>Plagiarism Checker</h3><p>Compare texts and highlight duplicate sentences.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var STOPWORDS = ("a,about,above,after,again,against,all,am,an,and,any,are,as,at,be,because,been,before,"+
+  "being,below,between,both,but,by,can,cannot,could,did,do,does,doing,down,during,each,few,for,"+
+  "from,further,had,has,have,having,he,her,here,hers,herself,him,himself,his,how,i,if,in,into,is,"+
+  "it,its,itself,me,more,most,my,myself,no,nor,not,of,off,on,once,only,or,other,ought,our,ours,"+
+  "ourselves,out,over,own,same,she,should,so,some,such,than,that,the,their,theirs,them,themselves,"+
+  "then,there,these,they,this,those,through,to,too,under,until,up,very,was,we,were,what,when,"+
+  "where,which,while,who,whom,why,with,would,you,your,yours,yourself,yourselves").split(",");
+
+  function escapeHtml(s){
+    return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  window.clearKdResults = function(){
+    document.getElementById('kdStats').style.display = 'none';
+    document.getElementById('kdResults').style.display = 'none';
+  };
+  window.analyseDensity = function(){
+    var text = document.getElementById('kdInput').value;
+    var n = parseInt((document.querySelector('input[name="kdGram"]:checked')||{}).value || '1', 10);
+    var minLen = parseInt(document.getElementById('kdMin').value, 10);
+    if(isNaN(minLen) || minLen < 1) minLen = 1;
+    var useStop = document.getElementById('kdStop').checked;
+    var words = (text.toLowerCase().match(/[a-z0-9]+(?:'[a-z0-9]+)?/g) || []);
+    if(!words.length){
+      document.getElementById('kdResults').innerHTML =
+        '<div class="alert alert-warn">Please paste some text first, then click Analyse.</div>';
+      document.getElementById('kdResults').style.display = '';
+      document.getElementById('kdStats').style.display = 'none';
+      return;
+    }
+    var stopSet = {};
+    if(useStop){ STOPWORDS.forEach(function(w){ stopSet[w] = 1; }); }
+    var counts = {}, total = words.length;
+    for(var i = 0; i + n <= words.length; i++){
+      var slice = words.slice(i, i + n);
+      var ok = true;
+      for(var j = 0; j < slice.length; j++){
+        if(slice[j].length < minLen || stopSet[slice[j]]){ ok = false; break; }
+      }
+      if(!ok) continue;
+      var phrase = slice.join(' ');
+      counts[phrase] = (counts[phrase] || 0) + 1;
+    }
+    var entries = Object.keys(counts).map(function(k){ return [k, counts[k]]; });
+    entries.sort(function(a,b){ return b[1] - a[1]; });
+    var top = entries.slice(0, 30);
+    var maxCount = top.length ? top[0][1] : 1;
+    var rows = '';
+    top.forEach(function(e){
+      var density = (e[1] / total * 100).toFixed(1);
+      var width = Math.max(2, Math.round(e[1] / maxCount * 100));
+      rows += '<tr><td>' + escapeHtml(e[0]) + '</td><td>' + e[1] + '</td>' +
+              '<td>' + density + '%<div class="bar"><span style="width:' + width + '%"></span></div></td></tr>';
+    });
+    if(!rows){
+      rows = '<tr><td colspan="3">No phrases matched the current filters. Try lowering the minimum word length or turning off the stop-word filter.</td></tr>';
+    }
+    var box = document.getElementById('kdResults');
+    box.innerHTML = '<div class="result-box"><table class="data"><thead><tr><th>Keyword</th><th>Count</th><th>Density %</th></tr></thead><tbody>' +
+                    rows + '</tbody></table></div>';
+    box.style.display = '';
+    document.getElementById('kdTotal').textContent = total.toLocaleString();
+    document.getElementById('kdUnique').textContent = entries.length.toLocaleString();
+    document.getElementById('kdStats').style.display = '';
+  };
+})();
+</script>
+</body>
+</html>

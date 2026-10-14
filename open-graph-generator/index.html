@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Graph Generator — Social Meta Tags | Salman SEO Tools</title>
+<meta name="description" content="Free Open Graph generator by Salman SEO Tools. Create og: and Twitter Card meta tags so your links show rich titles, descriptions and images on social media.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/open-graph-generator/">
+<meta property="og:title" content="Open Graph Generator | Salman SEO Tools">
+<meta property="og:description" content="Generate Open Graph and Twitter Card meta tags for rich social media previews — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/open-graph-generator/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Open Graph Generator","applicationCategory":"SEO","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/open-graph-generator/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Open Graph Generator</h1>
+  <p>Create Open Graph and Twitter Card meta tags so your pages show rich titles, descriptions and images when shared on social media.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#seo-tools">SEO Tools</a> / Open Graph Generator</p>
+
+<div class="tool-app">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="ogTitle">og:title — Page title</label>
+      <input type="text" id="ogTitle" placeholder="e.g. 10 Tips for a Healthier Lawn">
+    </div>
+    <div>
+      <label class="lbl" for="ogSite">og:site_name — Site name</label>
+      <input type="text" id="ogSite" placeholder="e.g. My Blog">
+    </div>
+  </div>
+  <label class="lbl" for="ogDesc">og:description — Short description</label>
+  <input type="text" id="ogDesc" placeholder="One or two sentences shown under the title">
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="ogImage">og:image — Preview image URL</label>
+      <input type="url" id="ogImage" placeholder="https://example.com/images/preview.jpg">
+    </div>
+    <div>
+      <label class="lbl" for="ogUrl">og:url — Canonical page URL</label>
+      <input type="url" id="ogUrl" placeholder="https://example.com/my-article/">
+    </div>
+  </div>
+  <div class="form-grid">
+    <div>
+      <label class="lbl" for="ogType">og:type</label>
+      <select id="ogType">
+        <option value="website">website</option>
+        <option value="article">article</option>
+      </select>
+    </div>
+    <div>
+      <label class="lbl" for="twCard">twitter:card</label>
+      <select id="twCard">
+        <option value="summary_large_image">summary_large_image</option>
+        <option value="summary">summary</option>
+      </select>
+    </div>
+  </div>
+  <label class="lbl" for="twSite">twitter:site — @username (optional)</label>
+  <input type="text" id="twSite" placeholder="e.g. @myblog">
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="generateOG()">Generate Tags</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyText('ogOut',this)">Copy</button>
+    <button class="btn btn-ghost btn-sm" onclick="downloadOG()">Download .html</button>
+  </div>
+  <label class="lbl">Generated meta tags</label>
+  <div class="result-box" id="ogOut">Fill in the fields above and click "Generate Tags".</div>
+  <p class="note">Paste the generated tags inside the <code>&lt;head&gt;</code> of your page. Image URLs must be absolute (start with https://).</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Open Graph Generator</h2>
+  <ol class="steps">
+    <li>Enter the title, description and image you want people to see when your link is shared.</li>
+    <li>Add the page URL, site name and choose the card type (large image works best for articles).</li>
+    <li>Click <strong>Generate Tags</strong>, then copy the code into your page's <code>&lt;head&gt;</code>.</li>
+    <li>Test the result with Facebook's Sharing Debugger or X's Card Validator.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Use Open Graph Tags?</h2>
+  <p>When someone shares your link on Facebook, LinkedIn, X or WhatsApp, the platform builds a preview from your Open Graph tags. Without them you get a plain grey box — with them you get your title, description and a striking image, which earns far more clicks.</p>
+  <ul>
+    <li><strong>Richer social previews</strong> — control exactly what sharers see on every network.</li>
+    <li><strong>Twitter Cards included</strong> — matching twitter:card and twitter:site tags generated together.</li>
+    <li><strong>Clean, valid markup</strong> — special characters are escaped so the tags never break your page.</li>
+    <li><strong>Copy or download</strong> — paste straight into your HTML or save as a snippet file.</li>
+    <li><strong>Free forever</strong> — no account, no limits, no watermarks.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What is the difference between og:type website and article?</summary><p>Use "website" for homepages and landing pages, and "article" for blog posts and news — it lets platforms show extra metadata like publish date.</p></details>
+  <details><summary>Why isn't my image showing when I share the link?</summary><p>Common causes: a relative image URL (use an absolute https:// URL), an image smaller than 200×200px, or a cached old preview — re-scrape the URL in the platform's debugger.</p></details>
+  <details><summary>Where do I paste the generated tags?</summary><p>Inside the &lt;head&gt; section of your HTML page, alongside your other meta tags.</p></details>
+  <details><summary>Are Twitter Card tags still needed?</summary><p>Yes. X (Twitter) reads its own twitter:card tags, falling back to Open Graph only partially — including both guarantees a good preview everywhere.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Complete your on-page SEO with these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="/meta-tag-generator/"><span class="tool-ico" style="background:#ec4899">🏷️</span><span><h3>Meta Tag Generator</h3><p>Create SEO meta tags for any web page.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/meta-tags-analyzer/"><span class="tool-ico" style="background:#db2777">🔍</span><span><h3>Meta Tags Analyzer</h3><p>Analyze meta tags from pasted HTML code.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/xml-sitemap-generator/"><span class="tool-ico" style="background:#14b8a6">🗺️</span><span><h3>XML Sitemap Generator</h3><p>Generate an XML sitemap from your URL list.</p></span><span class="go">→</span></a>
+    <a class="tool-card" href="/robots-txt-generator/"><span class="tool-ico" style="background:#84cc16">🤖</span><span><h3>Robots.txt Generator</h3><p>Build a robots.txt file to guide search crawlers.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+var ogRaw='';
+function attrEsc(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function htmlEsc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function val(id){return document.getElementById(id).value.trim();}
+function generateOG(){
+  if(!val('ogTitle')&&!val('ogDesc')&&!val('ogImage')){
+    document.getElementById('ogOut').textContent='Please fill in at least the title, description or image first.';
+    return;
+  }
+  var lines=[];
+  function add(prop,name,content){
+    if(!content)return;
+    lines.push('<meta '+(prop?'property':'name')+'="'+(prop?prop:name)+'" content="'+attrEsc(content)+'">');
+  }
+  add(true,'og:title',val('ogTitle'));
+  add(true,'og:description',val('ogDesc'));
+  add(true,'og:image',val('ogImage'));
+  add(true,'og:url',val('ogUrl'));
+  lines.push('<meta property="og:type" content="'+attrEsc(val('ogType'))+'">');
+  add(true,'og:site_name',val('ogSite'));
+  lines.push('<meta name="twitter:card" content="'+attrEsc(val('twCard'))+'">');
+  add(false,'twitter:site',val('twSite'));
+  add(false,'twitter:title',val('ogTitle'));
+  add(false,'twitter:description',val('ogDesc'));
+  add(false,'twitter:image',val('ogImage'));
+  ogRaw=lines.join('\n');
+  document.getElementById('ogOut').textContent=ogRaw;
+}
+function downloadOG(){
+  if(!ogRaw)generateOG();
+  if(!ogRaw||ogRaw.indexOf('<meta')!==0)return;
+  downloadFile('open-graph-tags.html',ogRaw,'text/html');
+}
+</script>
+</body>
+</html>

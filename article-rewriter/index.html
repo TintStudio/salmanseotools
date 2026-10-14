@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article Rewriter — Rewrite Text Free | Salman SEO Tools</title>
+<meta name="description" content="Free article rewriter by Salman SEO Tools. Swap words with smart synonyms, keep your meaning intact, and see a uniqueness score — right in your browser.">
+<link rel="canonical" href="https://salmanseotools.vercel.app/article-rewriter/">
+<meta property="og:title" content="Article Rewriter | Salman SEO Tools">
+<meta property="og:description" content="Rewrite articles with fresh wording in seconds — free, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmanseotools.vercel.app/article-rewriter/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Article Rewriter","applicationCategory":"SEO",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},
+ "url":"https://salmanseotools.vercel.app/article-rewriter/"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Salman SEO Tools home">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Salman <strong>SEO Tools</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/#text-tools">Text Tools</a>
+      <a href="/#seo-tools">SEO Tools</a>
+      <a href="/#image-tools">Image Tools</a>
+      <a href="/#developer-tools">Developer Tools</a>
+      <a href="/#pdf-tools">PDF Tools</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="hero-slim"><div class="container">
+  <h1>Article Rewriter</h1>
+  <p>Paste any article and get a freshly worded version in seconds — synonyms keep your meaning intact while the wording changes.</p>
+</div></div>
+
+<div class="container">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#text-tools">Text Tools</a> / Article Rewriter</p>
+
+<div class="tool-app">
+  <label class="lbl" for="arInput">Paste your article below</label>
+  <textarea id="arInput" placeholder="Paste the article or paragraph you want to rewrite..."></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="arGo">Rewrite Article</button>
+    <button class="btn btn-ghost btn-sm" id="arClear">Clear</button>
+  </div>
+  <div id="arStats" class="stat-grid" style="display:none">
+    <div class="stat"><b id="arUnique">0%</b><span>Uniqueness score</span></div>
+    <div class="stat"><b id="arChanged">0</b><span>Words changed</span></div>
+    <div class="stat"><b id="arWords">0</b><span>Total words</span></div>
+  </div>
+  <label class="lbl" for="arOutput" id="arOutLbl" style="display:none">Rewritten result — review before using</label>
+  <textarea id="arOutput" style="display:none" readonly placeholder="Your rewritten article will appear here..."></textarea>
+  <div class="btn-row" id="arOutBtns" style="display:none">
+    <button class="btn btn-accent btn-sm" onclick="copyText('arOutput',this)">Copy Result</button>
+    <button class="btn btn-ghost btn-sm" id="arAgain">Rewrite Again</button>
+  </div>
+  <div id="arMsg"></div>
+  <p class="note">Everything runs locally in your browser — your text is never uploaded anywhere.</p>
+</div>
+
+<div class="content-block">
+  <h2>How to Use the Article Rewriter</h2>
+  <ol class="steps">
+    <li>Paste your article, blog draft or paragraph into the input box above.</li>
+    <li>Click "Rewrite Article" — the tool swaps eligible words with synonyms from its built-in dictionary.</li>
+    <li>Check the uniqueness score and read through the result to make sure the meaning still flows naturally.</li>
+    <li>Copy the result, or hit "Rewrite Again" for a fresh variation of the same text.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h2>Why Rewrite Articles?</h2>
+  <p>Repurposing content is a normal part of publishing: product descriptions get reused across marketplaces, news gets summarised for newsletters, and old posts get refreshed for a new audience. A synonym-based rewriter gives you a different surface wording of the same ideas, which is a fast starting point for a second draft — though you should always review and polish the output by hand.</p>
+  <ul>
+    <li><strong>Built-in synonym dictionary</strong> — over 100 common English words, each with several alternatives.</li>
+    <li><strong>Uniqueness score</strong> — see exactly what percentage of words was changed.</li>
+    <li><strong>Proper nouns protected</strong> — names and places are never swapped out.</li>
+    <li><strong>Capitalization preserved</strong> — sentence starts keep their capital letters.</li>
+    <li><strong>Randomised wording</strong> — every click produces a different variation.</li>
+    <li><strong>100% private</strong> — the whole rewrite happens on your device.</li>
+  </ul>
+</div>
+
+<div class="content-block faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Is this article rewriter really free?</summary><p>Yes. Like every tool here, it is completely free with no sign-up and no word limits.</p></details>
+  <details><summary>Will the rewritten text pass plagiarism checks?</summary><p>The tool changes wording, not ideas. A high uniqueness score is a good start, but always read the result, restructure sentences where needed, and run it through our plagiarism checker before publishing.</p></details>
+  <details><summary>Does my text get uploaded to a server?</summary><p>No. The rewriting is done with JavaScript in your own browser, so your text never leaves your device.</p></details>
+  <details><summary>Why are some words left unchanged?</summary><p>Words are only replaced when they exist in the synonym dictionary. Proper nouns, brand names and rare terms are deliberately skipped so your text keeps its meaning.</p></details>
+</div>
+
+<div class="content-block">
+  <h2>Recommended Tools</h2>
+  <p class="section-sub">Keep polishing your content with these related free tools.</p>
+  <div class="tool-grid">
+    <a class="tool-card" data-name="plagiarism checker duplicate content originality" href="/plagiarism-checker/"><span class="tool-ico" style="background:#ef4444">🛡️</span><span><h3>Plagiarism Checker</h3><p>Compare texts and highlight duplicate sentences.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="word counter count words characters" href="/word-counter/"><span class="tool-ico" style="background:#4f46e5">📝</span><span><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="grammar checker spelling mistakes fix" href="/grammar-checker/"><span class="tool-ico" style="background:#10b981">✍️</span><span><h3>Grammar Checker</h3><p>Find and fix grammar and spelling mistakes.</p></span><span class="go">→</span></a>
+    <a class="tool-card" data-name="case converter upper lower title case" href="/case-converter/"><span class="tool-ico" style="background:#0ea5e9">🔠</span><span><h3>Case Converter</h3><p>Convert text between upper, lower and title case.</p></span><span class="go">→</span></a>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Salman <strong>SEO Tools</strong></span></a>
+      <p>Free online SEO and text tools that run entirely in your browser. No sign-up, no watermarks — just fast, private utilities for writers, bloggers and SEO professionals.</p>
+    </div>
+    <div><h4>Popular Tools</h4><ul>
+      <li><a href="/word-counter/">Word Counter</a></li>
+      <li><a href="/plagiarism-checker/">Plagiarism Checker</a></li>
+      <li><a href="/article-rewriter/">Article Rewriter</a></li>
+      <li><a href="/grammar-checker/">Grammar Checker</a></li>
+      <li><a href="/image-compressor/">Image Compressor</a></li>
+    </ul></div>
+    <div><h4>More Tools</h4><ul>
+      <li><a href="/json-formatter/">JSON Formatter</a></li>
+      <li><a href="/password-generator/">Password Generator</a></li>
+      <li><a href="/meta-tags-analyzer/">Meta Tags Analyzer</a></li>
+      <li><a href="/favicon-generator/">Favicon Generator</a></li>
+      <li><a href="/age-calculator/">Age Calculator</a></li>
+    </ul></div>
+    <div><h4>Categories</h4><ul>
+      <li><a href="/#text-tools">Text Tools</a></li>
+      <li><a href="/#seo-tools">SEO Tools</a></li>
+      <li><a href="/#image-tools">Image Tools</a></li>
+      <li><a href="/#developer-tools">Developer Tools</a></li>
+      <li><a href="/#pdf-tools">PDF Tools</a></li>
+      <li><a href="/#calculators">Calculators</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom container"><span>© <span id="year"></span> Salman SEO Tools. All rights reserved.</span><span>Free tools, no sign-up required.</span></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var SYN = {
+    ability:["skill","talent","capability"], about:["regarding","concerning","on"],
+    achieve:["accomplish","attain","reach"], active:["lively","dynamic","energetic"],
+    add:["include","insert","append"], also:["too","as well","additionally"],
+    always:["constantly","continually","forever"], amazing:["astonishing","remarkable","wonderful"],
+    answer:["reply","response","solution"], best:["finest","top","greatest"],
+    big:["large","huge","enormous"], better:["improved","superior","enhanced"],
+    build:["create","construct","develop"], change:["alter","modify","transform"],
+    cheap:["inexpensive","affordable","low-cost"], clear:["obvious","evident","plain"],
+    common:["usual","typical","ordinary"], complete:["finish","conclude","finalize"],
+    complex:["complicated","intricate","elaborate"], create:["make","produce","generate"],
+    difficult:["hard","tough","challenging"], discover:["find","uncover","detect"],
+    easy:["simple","effortless","straightforward"], effective:["efficient","successful","powerful"],
+    end:["finish","conclude","close"], enjoy:["like","love","appreciate"],
+    excellent:["great","superb","outstanding"], fast:["quick","rapid","speedy"],
+    free:["complimentary","no-cost","cost-free"], get:["obtain","receive","acquire"],
+    good:["great","fine","nice"], great:["excellent","superb","fantastic"],
+    happy:["glad","delighted","pleased"], hard:["difficult","tough","challenging"],
+    help:["assist","aid","support"], however:["but","nevertheless","yet"],
+    improve:["enhance","upgrade","refine"], increase:["raise","boost","grow"],
+    important:["crucial","vital","essential"], interesting:["fascinating","engaging","captivating"],
+    keep:["retain","maintain","hold"], know:["understand","realize","recognize"],
+    large:["big","huge","vast"], learn:["study","discover","master"],
+    long:["lengthy","extended","prolonged"], make:["create","produce","build"],
+    many:["numerous","several","various"], more:["additional","extra","further"],
+    most:["majority","nearly all"], new:["fresh","novel","recent"],
+    old:["ancient","aged","outdated"], often:["frequently","regularly","commonly"],
+    perfect:["ideal","flawless","excellent"], people:["individuals","folks","persons"],
+    popular:["famous","well-known","trendy"], powerful:["strong","mighty","potent"],
+    quick:["fast","rapid","swift"], quickly:["rapidly","swiftly","speedily"],
+    really:["truly","genuinely","very"], remove:["delete","eliminate","erase"],
+    rich:["wealthy","affluent","prosperous"], sad:["unhappy","gloomy","sorrowful"],
+    safe:["secure","protected","sound"], same:["identical","similar","equal"],
+    say:["state","declare","mention"], show:["display","reveal","demonstrate"],
+    simple:["easy","basic","straightforward"], slow:["sluggish","gradual","unhurried"],
+    small:["little","tiny","compact"], smart:["intelligent","clever","bright"],
+    start:["begin","commence","initiate"], stop:["halt","cease","end"],
+    strong:["powerful","sturdy","robust"], successful:["thriving","prosperous","victorious"],
+    sure:["certain","confident","positive"], take:["grab","seize","obtain"],
+    think:["believe","consider","feel"], time:["period","moment","duration"],
+    today:["now","nowadays","currently"], use:["utilize","employ","apply"],
+    useful:["helpful","beneficial","practical"], very:["extremely","highly","quite"],
+    want:["desire","wish","need"], work:["job","task","labor"],
+    write:["compose","draft","pen"], beautiful:["pretty","lovely","gorgeous"],
+    begin:["start","commence","initiate"], buy:["purchase","acquire","obtain"],
+    choose:["select","pick","opt"], different:["various","diverse","distinct"],
+    find:["discover","locate","uncover"], give:["provide","offer","grant"],
+    have:["possess","own","hold"], house:["home","residence","dwelling"],
+    look:["appear","seem","glance"], love:["adore","cherish","treasure"],
+    need:["require","demand","want"], never:["not ever","at no time"],
+    open:["unlock","reveal","expose"], part:["portion","section","piece"],
+    place:["location","spot","site"], plan:["scheme","strategy","design"],
+    reduce:["decrease","lower","lessen"], remember:["recall","recollect","reminisce"],
+    see:["view","observe","notice"], send:["dispatch","transmit","deliver"],
+    since:["because","as","given that"], soon:["shortly","presently","quickly"],
+    speak:["talk","converse","chat"], spend:["expend","use up"],
+    talk:["speak","converse","chat"], teach:["instruct","educate","train"],
+    tell:["inform","notify","advise"]
+  };
+  var input = document.getElementById('arInput');
+  var output = document.getElementById('arOutput');
+  var msg = document.getElementById('arMsg');
+  var stats = document.getElementById('arStats');
+  function showAlert(kind, text){
+    msg.innerHTML = '<div class="alert alert-'+kind+'">'+text+'</div>';
+  }
+  function rewrite(){
+    var text = input.value;
+    if(!text.trim()){ showAlert('err','Please paste some text first — the input box is empty.'); return; }
+    var total = 0, changed = 0, startOfSentence = true;
+    var result = text.replace(/([A-Za-z]+(?:'[A-Za-z]+)?)([^A-Za-z']*)/g, function(m, word, sep){
+      var key = word.toLowerCase();
+      var isStart = startOfSentence;
+      startOfSentence = /[.!?…]["'”’)\]]*\s*$/.test(sep) || sep.indexOf('\n') !== -1 || sep.length === 0;
+      var list = SYN[key];
+      if(!list) return m;
+      total++;
+      // Leave proper nouns alone (capitalized words that are not at a sentence start)
+      if(!isStart && /^[A-Z]/.test(word)) return m;
+      var alt = list[Math.floor(Math.random()*list.length)];
+      if(alt.toLowerCase() === key) return m;
+      changed++;
+      if(/^[A-Z]/.test(word)) alt = alt.charAt(0).toUpperCase() + alt.slice(1);
+      return alt + sep;
+    });
+    // Count words the regex may have missed (pure totals for the score)
+    var allWords = text.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || [];
+    var denom = allWords.length || 1;
+    var uniq = Math.round(changed / denom * 100);
+    output.value = result;
+    output.style.display = 'block';
+    document.getElementById('arOutLbl').style.display = 'block';
+    document.getElementById('arOutBtns').style.display = 'flex';
+    stats.style.display = 'grid';
+    document.getElementById('arUnique').textContent = uniq + '%';
+    document.getElementById('arChanged').textContent = changed;
+    document.getElementById('arWords').textContent = denom;
+    showAlert('ok','Rewrite complete — '+changed+' of '+denom+' words changed ('+uniq+'% unique). Always review the result before publishing.');
+  }
+  document.getElementById('arGo').addEventListener('click', rewrite);
+  document.getElementById('arAgain').addEventListener('click', rewrite);
+  document.getElementById('arClear').addEventListener('click', function(){
+    input.value = ''; output.value = ''; msg.innerHTML = '';
+    output.style.display = 'none';
+    document.getElementById('arOutLbl').style.display = 'none';
+    document.getElementById('arOutBtns').style.display = 'none';
+    stats.style.display = 'none';
+  });
+})();
+</script>
+</body>
+</html>
